@@ -1287,6 +1287,13 @@ h1 {
   box-shadow: 0 0 0 3px rgba(90, 215, 208, 0.12);
 }
 
+.turnstile-widget {
+  display: grid;
+  align-items: center;
+  min-height: 4.1rem;
+  margin-top: 0.9rem;
+}
+
 .beta-form button {
   display: grid;
   place-items: center;
