@@ -6,10 +6,10 @@
     <title>RIALES | Finanzas personales para Nicaragua</title>
     <meta
       name="description"
-      content="RIALES te ayuda a controlar ingresos, gastos, deudas, efectivo y activos con una experiencia pensada para Nicaragua."
+      content="RIALES es una app de finanzas personales para Nicaragua: ingresos, gastos, deudas, efectivo, activos, voz y PDF en una sola vista."
     />
     <link rel="canonical" href="https://riales.app/" />
-    <link rel="stylesheet" href="/assets/site.css?v=20260626d" />
+    <link rel="stylesheet" href="/assets/site.css?v=20260626s" />
     <script src="/assets/beta-config.js?v=20260626d" defer></script>
     <script src="/assets/beta.js?v=20260626d" defer></script>
   </head>
@@ -20,66 +20,126 @@
       </a>
       <nav class="nav" aria-label="Principal">
         <a href="/">Inicio</a>
-        <a href="#pantallas">Pantallas</a>
+        <a href="#funciona">Cómo funciona</a>
         <a href="#funciones">Funciones</a>
         <a href="#precios">Precios</a>
         <a href="#beta">Beta</a>
-        <a href="#seguridad">Seguridad</a>
       </nav>
+      <details class="mobile-menu">
+        <summary aria-label="Abrir menú">Menú</summary>
+        <div class="mobile-menu-panel">
+          <a href="/">Inicio</a>
+          <a href="#funciona">Cómo funciona</a>
+          <a href="#funciones">Funciones</a>
+          <a href="#precios">Precios</a>
+          <a href="#beta">Beta</a>
+          <a href="/privacidad/">Privacidad</a>
+          <a href="/terminos/">Términos</a>
+        </div>
+      </details>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-copy-block">
-          <h1>Finanzas personales para Nicaragua.</h1>
+          <h1>App de finanzas personales para Nicaragua.</h1>
           <p class="hero-copy">
-            RIALES te ayuda a ordenar ingresos, gastos, efectivo, deudas y
-            activos en córdobas o dólares, con una lectura clara del mes.
+            Ordená ingresos, gastos, deudas, efectivo y activos en una sola app.
+            RIALES está pensada para córdobas, dólares, quincenas y pagos del
+            día a día.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#pantallas">Ver la app</a>
-            <span class="button secondary button-note">Próximamente en Google Play</span>
-          </div>
-          <div class="nicaragua-strip" aria-label="RIALES para uso local">
-            <span>Córdobas</span>
-            <span>Dólares</span>
-            <span>Quincenas</span>
-            <span>Deudas</span>
+            <a class="button" href="#beta">Unirme a la beta</a>
+            <a class="button secondary" href="#funciones">Ver funciones</a>
           </div>
         </div>
 
         <div class="hero-phones" aria-label="Pantallas principales de RIALES">
+          <div class="money-flow-card flow-income">
+            <span>Ingreso</span>
+            <strong>C$ 18,500.00</strong>
+            <small>Salario del mes</small>
+          </div>
+          <div class="money-flow-card flow-pdf" aria-hidden="true">
+            <span>PDF de tarjeta</span>
+            <strong>12 movimientos</strong>
+            <small>Clasificación sugerida</small>
+          </div>
+          <div class="money-flow-card flow-expense" aria-hidden="true">
+            <span>Pago</span>
+            <strong>-C$ 3,200.00</strong>
+            <small>Cuota o gasto fijo</small>
+          </div>
+          <div class="money-flow-card flow-result">
+            <span>Disponible</span>
+            <strong>C$ 4,850.00</strong>
+            <small>Después de gastos</small>
+          </div>
           <div class="device-mockup hero-device secondary-device" aria-hidden="true">
-            <img class="real-screen" src="/assets/screen-calendario.jpg" alt="" width="596" height="1280" />
+            <img class="real-screen" src="/assets/screen-calendario.jpg?v=20260626f" alt="" width="596" height="1280" />
           </div>
 
           <div class="device-mockup hero-device main-device">
-            <img class="real-screen" src="/assets/screen-resumen.jpg" alt="Pantalla real del resumen de RIALES" width="596" height="1280" />
+            <img class="real-screen" src="/assets/screen-resumen.jpg?v=20260626f" alt="Pantalla real del resumen de RIALES" width="596" height="1280" />
           </div>
         </div>
 
         <div class="trust-row" aria-label="Puntos principales">
           <div>
-            <strong>Hecha para Nicaragua</strong>
-            <span>Córdobas, dólares, quincenas y pagos cotidianos.</span>
+            <strong>Registro rápido</strong>
+            <span>Voz, manual o PDF cuando lo necesitás.</span>
           </div>
           <div>
-            <strong>Próximamente en Google Play</strong>
-            <span>Una app para registrar y revisar sin complicarte.</span>
+            <strong>Revisión clara</strong>
+            <span>Confirmás cada dato antes de guardarlo.</span>
           </div>
           <div>
-            <strong>Todo conectado</strong>
-            <span>Ingresos, gastos, deudas, efectivo y activos.</span>
+            <strong>Mes ordenado</strong>
+            <span>Pagos, ingresos y saldo en contexto.</span>
           </div>
+        </div>
+      </section>
+
+      <section class="section" id="funciona">
+        <div class="section-heading">
+          <p class="eyebrow">Cómo funciona</p>
+          <h2>Registrás. Revisás. Seguís tu mes.</h2>
+          <p class="section-lead">
+            Guardás movimientos y RIALES actualiza tu resumen, calendario y
+            balance.
+          </p>
+        </div>
+
+        <div class="step-grid">
+          <article class="step-card">
+            <span>01</span>
+            <h3>Registrá</h3>
+            <p>Agregá ingresos o gastos manualmente, por voz o desde un PDF.</p>
+          </article>
+          <article class="step-card">
+            <span>02</span>
+            <h3>Revisá</h3>
+            <p>Confirmá fecha, moneda y categoría antes de guardar.</p>
+          </article>
+          <article class="step-card">
+            <span>03</span>
+            <h3>Planificá</h3>
+            <p>Programá ingresos, cuotas y gastos recurrentes.</p>
+          </article>
+          <article class="step-card">
+            <span>04</span>
+            <h3>Consultá</h3>
+            <p>Ves resultado, efectivo, deudas, activos y valor neto.</p>
+          </article>
         </div>
       </section>
 
       <section class="section showcase" id="pantallas">
         <div class="section-heading">
-          <h2>Así se ve RIALES por dentro.</h2>
+          <p class="eyebrow">Pantallas reales</p>
+          <h2>Todo a la vista.</h2>
           <p class="section-lead">
-            La experiencia está pensada para revisar rápido el mes, planificar
-            pagos y entender tu situación sin armar hojas de cálculo.
+            Resumen, calendario, indicadores y configuración inicial.
           </p>
         </div>
 
@@ -87,101 +147,115 @@
           <article class="phone-feature featured">
             <div class="phone-copy">
               <p class="eyebrow">Inicio</p>
-              <h3>Todo el mes en una vista</h3>
+              <h3>Resumen</h3>
               <p>
-                Resumen, resultado del mes y balance conviven en una lectura
-                simple para saber dónde estás parado.
+                Efectivo, ingresos, gastos y resultado del mes.
               </p>
             </div>
             <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-resumen.jpg" alt="Pantalla real de resultado del mes en RIALES" width="596" height="1280" />
+              <img class="real-screen" src="/assets/screen-resumen.jpg?v=20260626f" alt="Pantalla real de resultado del mes en RIALES" width="596" height="1280" />
             </div>
           </article>
 
           <article class="phone-feature">
             <div class="phone-copy">
               <p class="eyebrow">Calendario</p>
-              <h3>Lo que viene, por día</h3>
+              <h3>Calendario</h3>
               <p>
-                Ingresos, pagos y deudas planificadas se ven en el calendario
-                para actuar antes de que se te pasen.
+                Pagos, ingresos y recordatorios por fecha.
               </p>
             </div>
             <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-calendario.jpg" alt="Pantalla real del calendario financiero en RIALES" width="596" height="1280" />
+              <img class="real-screen" src="/assets/screen-calendario.jpg?v=20260626f" alt="Pantalla real del calendario financiero en RIALES" width="596" height="1280" />
             </div>
           </article>
 
           <article class="phone-feature">
             <div class="phone-copy">
               <p class="eyebrow">Indicadores</p>
-              <h3>Señales para decidir mejor</h3>
+              <h3>Indicadores</h3>
               <p>
-                Liquidez, endeudamiento, resultado e ingresos se convierten en
-                señales rápidas para leer tu salud financiera.
+                Señales simples sobre liquidez, deudas y resultado.
               </p>
             </div>
             <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-indicadores.jpg" alt="Pantalla real de indicadores financieros en RIALES" width="596" height="1280" />
+              <img class="real-screen" src="/assets/screen-indicadores.jpg?v=20260626f" alt="Pantalla real de indicadores financieros en RIALES" width="596" height="1280" />
             </div>
           </article>
 
           <article class="phone-feature">
             <div class="phone-copy">
               <p class="eyebrow">Guía inicial</p>
-              <h3>Configuración sin abrumar</h3>
+              <h3>Inicio guiado</h3>
               <p>
-                La guía inicial acompaña al usuario paso a paso, solo cuando
-                hace falta, para comenzar con lo esencial.
+                Lo esencial para empezar sin llenar todo de una vez.
               </p>
             </div>
             <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-onboarding.jpg" alt="Pantalla real del onboarding de RIALES" width="596" height="1280" />
+              <img class="real-screen" src="/assets/screen-onboarding.jpg?v=20260626f" alt="Pantalla real del onboarding de RIALES" width="596" height="1280" />
             </div>
           </article>
+        </div>
+      </section>
+
+      <section class="section local-section" id="nicaragua">
+        <div class="local-panel">
+          <div>
+            <p class="eyebrow">Nicaragua</p>
+            <h2>Para tu día a día.</h2>
+            <p class="section-lead">
+              Pagos quincenales, cuotas, efectivo y deudas particulares, sin
+              complicarlo.
+            </p>
+          </div>
+          <div class="local-grid">
+            <div><strong>Córdobas y dólares</strong><span>Montos claros según tu moneda.</span></div>
+            <div><strong>Quincenas</strong><span>Ingresos y pagos por frecuencia.</span></div>
+            <div><strong>Deudas reales</strong><span>Banco, financiera o particular.</span></div>
+            <div><strong>Efectivo</strong><span>Tu saldo disponible de hoy.</span></div>
+          </div>
         </div>
       </section>
 
       <section class="section" id="funciones">
         <div class="section-heading">
           <p class="eyebrow">Funciones principales</p>
-          <h2>Una app para entender y ordenar.</h2>
+          <h2>Lo esencial para llevar tu mes.</h2>
           <p class="section-lead">
-            RIALES convierte movimientos diarios en una lectura financiera útil:
-            resultado del mes, calendario, deudas, activos y valor neto.
+            Registrá rápido, revisá con calma y mirá el resultado.
           </p>
         </div>
 
         <div class="feature-grid">
           <article class="feature">
             <div class="feature-icon">01</div>
-            <h3>Gastos por voz</h3>
-            <p>Hablá, revisá y guardá movimientos sin llenar formularios largos.</p>
+            <h3>Voz</h3>
+            <p>Decí un gasto o ingreso y revisalo antes de guardar.</p>
           </article>
           <article class="feature">
             <div class="feature-icon">02</div>
-            <h3>PDF de tarjeta</h3>
-            <p>Subí tu estado de cuenta y RIALES sugiere la clasificación.</p>
+            <h3>PDF</h3>
+            <p>Subí tu estado de cuenta y revisá los movimientos detectados.</p>
           </article>
           <article class="feature">
             <div class="feature-icon">03</div>
-            <h3>Resultado del mes</h3>
-            <p>Ingresos, gastos, pagos a deudas y ajustes de efectivo en una tabla simple.</p>
+            <h3>Resultado</h3>
+            <p>Ingresos, gastos, deudas y efectivo se resumen en un resultado mensual.</p>
           </article>
           <article class="feature">
             <div class="feature-icon">04</div>
-            <h3>Calendario financiero</h3>
-            <p>Planificá salarios, pagos, cuotas y recordatorios para no perder de vista lo que viene.</p>
+            <h3>Calendario</h3>
+            <p>El calendario muestra lo pendiente, lo pagado y lo que toca hoy.</p>
           </article>
           <article class="feature">
             <div class="feature-icon">05</div>
-            <h3>Préstamos y pagos</h3>
-            <p>Llevá deudas, cuotas, abonos y pagos planificados sin perder fechas.</p>
+            <h3>Deudas</h3>
+            <p>Separá capital, intereses, mora y pagos de deudas formales o particulares.</p>
           </article>
           <article class="feature">
             <div class="feature-icon">06</div>
-            <h3>Bienes y alquileres</h3>
-            <p>Registrá activos, ventas, alquileres y gastos vinculados a tus bienes.</p>
+            <h3>Activos</h3>
+            <p>Sumá activos y efectivo, restá deudas y mirá tu posición real.</p>
           </article>
         </div>
       </section>
@@ -190,39 +264,38 @@
         <div class="pricing-card">
           <div class="pricing-head">
             <p class="eyebrow">Precios</p>
-            <h2>Todo incluido por ahora.</h2>
-            <div class="price-pill">
-              <span>Gratis</span>
-              <strong>C$ 0.00</strong>
-            </div>
+            <h2>Gratis.</h2>
             <p>
-              RIALES está en preparación para beta. Las funciones actuales no
-              tienen costo.
+              Todas las funciones listadas están incluidas sin costo.
             </p>
           </div>
 
           <div class="pricing-table" aria-label="Funciones incluidas">
-            <div class="pricing-row"><span>Ingresos y gastos</span><strong>Incluido</strong></div>
-            <div class="pricing-row"><span>Registro por voz</span><strong>Incluido</strong></div>
-            <div class="pricing-row"><span>PDF de tarjeta con clasificación sugerida</span><strong>Incluido</strong></div>
-            <div class="pricing-row"><span>Calendario financiero</span><strong>Incluido</strong></div>
-            <div class="pricing-row"><span>Resultado del mes y balance</span><strong>Incluido</strong></div>
-            <div class="pricing-row"><span>Deudas, activos y efectivo</span><strong>Incluido</strong></div>
-            <div class="pricing-row"><span>Indicadores financieros</span><strong>Incluido</strong></div>
-            <div class="pricing-row"><span>Datos separados por cuenta</span><strong>Incluido</strong></div>
+            <div class="pricing-row"><span>Registro manual, por voz y PDF</span><strong aria-label="Incluido">✓</strong></div>
+            <div class="pricing-row"><span>Ingresos y gastos únicos o recurrentes</span><strong aria-label="Incluido">✓</strong></div>
+            <div class="pricing-row"><span>Calendario de pagos e ingresos</span><strong aria-label="Incluido">✓</strong></div>
+            <div class="pricing-row"><span>Resultado del mes y balance</span><strong aria-label="Incluido">✓</strong></div>
+            <div class="pricing-row"><span>Deudas, activos y efectivo</span><strong aria-label="Incluido">✓</strong></div>
+            <div class="pricing-row"><span>Indicadores financieros</span><strong aria-label="Incluido">✓</strong></div>
+            <div class="pricing-row"><span>Datos separados por cuenta</span><strong aria-label="Incluido">✓</strong></div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="beta">
+      <section class="section beta-section" id="beta">
         <div class="beta-panel">
           <div class="beta-copy">
             <p class="eyebrow">Beta</p>
             <h2>Sé parte de la beta de RIALES.</h2>
             <p>
-              Estamos preparando el acceso anticipado para usuarios en
-              Nicaragua. Dejanos tus datos y te avisamos cuando abramos cupos.
+              Dejanos tus datos y te avisamos cuando abramos nuevos cupos en
+              Nicaragua.
             </p>
+            <div class="beta-highlights">
+              <span>Usuarios en Nicaragua</span>
+              <span>Android o iOS</span>
+              <span>Invitación por correo</span>
+            </div>
           </div>
 
           <form class="beta-form" id="beta-form">
@@ -244,11 +317,11 @@
                 <input name="email" type="email" autocomplete="email" required />
               </label>
               <label class="full-field">
-                <span>¿Usás Android o iPhone?</span>
+                <span>¿Usás Android o iOS?</span>
                 <select name="device_type" required>
                   <option value="">Seleccioná una opción</option>
                   <option value="android">Android</option>
-                  <option value="ios">iPhone</option>
+                  <option value="ios">iOS</option>
                 </select>
               </label>
             </div>
@@ -260,47 +333,46 @@
         </div>
       </section>
 
-      <section class="section">
-        <div class="flow-panel">
-          <div>
-            <p class="eyebrow">Flujo de uso</p>
-            <h2>Del registro al control.</h2>
-          </div>
-          <div class="flow">
-            <div><strong>1. Configura</strong>Ingresos, efectivo, deudas y activos.</div>
-            <div><strong>2. Registra</strong>Movimientos diarios o planificados.</div>
-            <div><strong>3. Revisa</strong>Resultado del mes y pendientes.</div>
-            <div><strong>4. Ajusta</strong>Efectivo, pagos y datos cuando cambien.</div>
-          </div>
-        </div>
-      </section>
-
       <section class="section" id="seguridad">
         <div class="security-band">
           <div>
-            <p class="eyebrow">Privacidad</p>
-            <h2>Tu información bajo tu cuenta.</h2>
+            <p class="eyebrow">Confianza</p>
+            <h2>Tu información es tuya.</h2>
             <p class="section-lead">
-              La información que registrás pertenece a tu cuenta. RIALES no
-              vende tus datos personales ni financieros.
+              Tus registros financieros quedan asociados a tu cuenta. No
+              vendemos tus datos personales ni financieros.
             </p>
           </div>
           <div class="mini-list">
-            <div>Tus registros financieros pertenecen a tu cuenta.</div>
-            <div>No vendemos tus datos personales ni financieros.</div>
-            <div>Podés solicitar la eliminación de tu cuenta y datos cuando lo necesités.</div>
+            <div>Tus registros pertenecen a tu cuenta.</div>
+            <div>Cada usuario ve solo su propia información.</div>
+            <div>Privacidad y términos disponibles cuando los necesités.</div>
+            <div>Podés solicitar la eliminación de tu cuenta y datos.</div>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer-inner">
-        <span>RIALES &copy; 2026</span>
+      <div class="footer-inner footer-brand-row">
+        <div class="footer-brand">
+          <img class="footer-logo" src="/assets/logo-app.png" alt="RIALES" width="560" height="160" />
+          <p>Finanzas personales para Nicaragua.</p>
+          <a href="mailto:contacto@riales.app">contacto@riales.app</a>
+        </div>
         <div class="footer-links">
+          <a href="/">Inicio</a>
+          <a href="#funciona">Cómo funciona</a>
+          <a href="#funciones">Funciones</a>
+          <a href="#precios">Precios</a>
+          <a href="#beta">Beta</a>
           <a href="/privacidad/">Privacidad</a>
           <a href="/terminos/">Términos</a>
         </div>
+      </div>
+      <div class="footer-inner footer-bottom">
+        <span>RIALES &copy; 2026</span>
+        <span>Finanzas personales para Nicaragua.</span>
       </div>
     </footer>
   </body>
