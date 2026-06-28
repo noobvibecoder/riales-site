@@ -1035,7 +1035,7 @@ h1 {
 
 .pricing-card {
   display: grid;
-  grid-template-columns: minmax(17rem, 0.72fr) minmax(0, 1.28fr);
+  grid-template-columns: 1fr;
   align-items: stretch;
   gap: 0.7rem;
   overflow: hidden;
@@ -1106,7 +1106,7 @@ h1 {
 
 .pricing-head {
   display: grid;
-  align-content: space-between;
+  align-content: start;
   gap: 0.75rem;
   border: 1px solid rgba(16, 48, 72, 0.08);
   border-radius: 1.1rem;
@@ -1125,74 +1125,6 @@ h1 {
   font-weight: 760;
   letter-spacing: 0;
   margin-bottom: 0;
-}
-
-.pricing-head p {
-  max-width: 32rem;
-  margin-bottom: 0;
-  color: var(--muted);
-  line-height: 1.55;
-}
-
-.pricing-mini-list {
-  display: grid;
-  gap: 0.42rem;
-  margin: 1.05rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.pricing-mini-list li {
-  position: relative;
-  padding-left: 1.05rem;
-  color: var(--muted-strong);
-  font-size: 0.93rem;
-  line-height: 1.35;
-}
-
-.pricing-mini-list li::before {
-  content: "";
-  position: absolute;
-  top: 0.55em;
-  left: 0;
-  width: 0.42rem;
-  height: 0.42rem;
-  border-radius: 999px;
-  background: var(--cyan);
-}
-
-.price-pill {
-  width: 100%;
-  min-width: 0;
-  border: 1px solid rgba(90, 215, 208, 0.28);
-  border-radius: 1rem;
-  padding: 0.82rem 0.95rem;
-  background: rgba(90, 215, 208, 0.12);
-  text-align: left;
-}
-
-.price-pill span {
-  display: block;
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 760;
-  text-transform: uppercase;
-}
-
-.price-pill strong {
-  display: block;
-  color: var(--cyan);
-  font-size: clamp(1.6rem, 4vw, 2.25rem);
-  font-weight: 780;
-  line-height: 1.05;
-}
-
-.price-pill small {
-  display: block;
-  margin-top: 0.25rem;
-  color: var(--muted);
-  font-size: 0.86rem;
-  line-height: 1.35;
 }
 
 .pricing-body {
@@ -1801,10 +1733,6 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .price-pill {
-    margin-top: 0.35rem;
-  }
-
   .pricing-row {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.55rem;
@@ -1845,11 +1773,6 @@ h1 {
   .security-band,
   .local-panel {
     padding: 1rem;
-  }
-
-  .price-pill {
-    border-radius: 0.9rem;
-    padding: 0.7rem 0.85rem;
   }
 
   .pricing-table {
