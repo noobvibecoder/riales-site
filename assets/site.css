@@ -1007,7 +1007,7 @@ h1 {
   column-gap: 0.85rem;
   row-gap: 0.7rem;
   min-height: 0;
-  padding: 1rem;
+  padding: 1.08rem;
   background:
     radial-gradient(circle at 100% 0%, rgba(111, 162, 255, 0.12), transparent 12rem),
     #ffffff;
@@ -1016,23 +1016,47 @@ h1 {
 .feature-icon {
   display: grid;
   place-items: center;
-  width: 2.55rem;
-  height: 2.55rem;
+  width: 2.72rem;
+  height: 2.72rem;
   border: 1px solid rgba(90, 215, 208, 0.35);
   border-radius: 0.8rem;
   background: rgba(90, 215, 208, 0.1);
   color: var(--brand);
-  font-weight: 950;
+}
+
+.feature-icon svg {
+  width: 1.42rem;
+  height: 1.42rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.85;
+}
+
+.feature:nth-child(2) .feature-icon,
+.feature:nth-child(5) .feature-icon {
+  border-color: rgba(111, 162, 255, 0.28);
+  background: rgba(111, 162, 255, 0.12);
+  color: #4678d9;
+}
+
+.feature:nth-child(3) .feature-icon,
+.feature:nth-child(6) .feature-icon {
+  border-color: rgba(245, 158, 11, 0.27);
+  background: rgba(245, 158, 11, 0.12);
+  color: #b96d05;
 }
 
 .feature h3 {
   margin: 0;
-  font-size: 1.18rem;
+  font-size: 1.24rem;
 }
 
 .feature p {
   grid-column: 1 / -1;
   margin: 0;
+  font-size: 1rem;
 }
 
 .feature p,
@@ -1252,7 +1276,7 @@ h1 {
 .pricing-comparison td {
   border-right: 1px solid rgba(16, 48, 72, 0.08);
   border-bottom: 1px solid rgba(16, 48, 72, 0.08);
-  padding: 1rem;
+  padding: 1.08rem;
   vertical-align: middle;
 }
 
@@ -1325,11 +1349,61 @@ h1 {
   text-align: left;
 }
 
-.pricing-comparison tbody th span {
+.pricing-feature-label {
+  display: flex;
+  align-items: center;
+  gap: 0.72rem;
+  width: 100%;
+  font-size: 1.04rem;
+  font-weight: 610;
+  line-height: 1.32;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.pricing-feature-label span {
   display: block;
-  font-size: 0.98rem;
-  font-weight: 560;
-  line-height: 1.28;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.pricing-feature-icon {
+  flex: 0 0 auto;
+  width: 2.35rem;
+  height: 2.35rem;
+  border: 1px solid rgba(90, 215, 208, 0.26);
+  border-radius: 0.82rem;
+  padding: 0.5rem;
+  background: rgba(90, 215, 208, 0.1);
+  color: var(--green);
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.pricing-comparison tbody tr:nth-child(2) .pricing-feature-icon,
+.pricing-comparison tbody tr:nth-child(5) .pricing-feature-icon {
+  border-color: rgba(111, 162, 255, 0.25);
+  background: rgba(111, 162, 255, 0.11);
+  color: #4678d9;
+}
+
+.pricing-comparison tbody tr:nth-child(3) .pricing-feature-icon,
+.pricing-comparison tbody tr:nth-child(7) .pricing-feature-icon {
+  border-color: rgba(245, 158, 11, 0.26);
+  background: rgba(245, 158, 11, 0.11);
+  color: #b96d05;
+}
+
+.pricing-comparison tbody tr:nth-child(4) .pricing-feature-icon,
+.pricing-comparison tbody tr:nth-child(6) .pricing-feature-icon {
+  border-color: rgba(18, 128, 122, 0.22);
+  background: rgba(18, 128, 122, 0.1);
+  color: #0f766e;
 }
 
 .pricing-comparison tbody th small {
@@ -1343,7 +1417,7 @@ h1 {
 
 .pricing-comparison td {
   color: var(--muted-strong);
-  font-size: 0.96rem;
+  font-size: 1rem;
   line-height: 1.42;
   text-align: center;
 }
@@ -1357,14 +1431,14 @@ h1 {
 .pricing-comparison .limit-value {
   display: inline-block;
   color: var(--ink);
-  font-size: 1rem;
-  font-weight: 560;
+  font-size: 1.08rem;
+  font-weight: 610;
   line-height: 1.18;
 }
 
 .pricing-comparison .muted-value {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.98rem;
 }
 
 .pricing-row {
@@ -1990,13 +2064,13 @@ h1 {
   }
 
   .billing-option {
-    font-size: 0.84rem;
+    font-size: 0.88rem;
   }
 
   .billing-option small {
     display: block;
     margin-top: 0.12rem;
-    font-size: 0.64rem;
+    font-size: 0.72rem;
   }
 
   .pricing-row {
@@ -2073,9 +2147,9 @@ h1 {
     min-width: 0;
     border-right: 0;
     border-bottom: 1px solid rgba(16, 48, 72, 0.08);
-    padding: 0.72rem 0.78rem;
-    font-size: 0.82rem;
-    line-height: 1.32;
+    padding: 0.88rem 0.92rem;
+    font-size: 0.96rem;
+    line-height: 1.4;
     overflow-wrap: anywhere;
   }
 
@@ -2094,16 +2168,18 @@ h1 {
 
   .pricing-comparison tbody th {
     grid-column: 1 / -1;
+    display: block;
+    width: 100%;
     border-right: 0;
     border-bottom: 1px solid rgba(16, 48, 72, 0.08);
-    padding: 0.72rem 0.78rem;
+    padding: 0.88rem 0.92rem;
     background: rgba(247, 250, 252, 0.9);
   }
 
   .pricing-comparison tbody td {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(4.8rem, 0.36fr) minmax(0, 1fr);
+    grid-template-columns: minmax(5.65rem, 0.42fr) minmax(0, 1fr);
     align-items: center;
     min-height: 0;
     gap: 0.8rem;
@@ -2115,7 +2191,7 @@ h1 {
     position: static;
     justify-self: start;
     color: var(--muted);
-    font-size: 0.76rem;
+    font-size: 0.88rem;
     font-weight: 600;
     letter-spacing: 0;
     line-height: 1.15;
@@ -2128,26 +2204,46 @@ h1 {
 
   .pricing-comparison thead small,
   .pricing-comparison td small {
-    font-size: 0.72rem;
+    font-size: 0.84rem;
   }
 
-  .pricing-comparison tbody th span {
-    font-size: 0.92rem;
+  .pricing-comparison tbody td small {
+    grid-column: 2;
+    justify-self: end;
+    max-width: 11rem;
+    text-align: right;
+  }
+
+  .pricing-feature-label {
+    gap: 0.68rem;
+    font-size: 1.02rem;
+    line-height: 1.34;
+  }
+
+  .pricing-feature-icon {
+    width: 2.28rem;
+    height: 2.28rem;
+    border-radius: 0.78rem;
+    padding: 0.48rem;
   }
 
   .pricing-comparison thead span {
-    font-size: 0.82rem;
+    font-size: 0.96rem;
   }
 
   .pricing-comparison thead strong {
     justify-self: end;
     margin-top: 0;
-    font-size: clamp(1.15rem, 5vw, 1.48rem);
+    font-size: clamp(1.34rem, 5.8vw, 1.68rem);
     text-align: right;
   }
 
   .pricing-comparison td strong,
   .pricing-comparison .limit-value {
+    font-size: 1.08rem;
+  }
+
+  .pricing-comparison .muted-value {
     font-size: 0.96rem;
   }
 
@@ -2187,8 +2283,8 @@ h1 {
   .step-card p,
   .feature p,
   .local-grid span {
-    font-size: 0.86rem;
-    line-height: 1.42;
+    font-size: 0.92rem;
+    line-height: 1.48;
   }
 
   .feature-grid {
@@ -2197,19 +2293,23 @@ h1 {
 
   .feature {
     column-gap: 0.7rem;
-    row-gap: 0.55rem;
-    padding: 0.78rem;
+    row-gap: 0.62rem;
+    padding: 0.9rem;
   }
 
   .feature-icon {
-    width: 2.1rem;
-    height: 2.1rem;
+    width: 2.36rem;
+    height: 2.36rem;
     border-radius: 0.75rem;
-    font-size: 0.78rem;
+  }
+
+  .feature-icon svg {
+    width: 1.22rem;
+    height: 1.22rem;
   }
 
   .feature h3 {
-    font-size: 1rem;
+    font-size: 1.08rem;
   }
 
   .local-grid {
