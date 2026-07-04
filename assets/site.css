@@ -1106,9 +1106,11 @@ h1 {
 
 .pricing-head {
   display: grid;
+  grid-template-columns: minmax(0, 52rem) auto;
   align-content: start;
-  gap: 0.5rem;
-  max-width: 52rem;
+  align-items: end;
+  gap: 1.2rem;
+  max-width: none;
 }
 
 .pricing-head .eyebrow {
@@ -1119,9 +1121,105 @@ h1 {
 .pricing-head h2 {
   max-width: 15ch;
   font-size: clamp(2.35rem, 4.6vw, 3.55rem);
-  font-weight: 760;
+  font-weight: 700;
   letter-spacing: 0;
   margin-bottom: 0;
+}
+
+.pricing-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  min-width: max-content;
+}
+
+.billing-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.62rem;
+  border: 1px solid rgba(16, 48, 72, 0.12);
+  border-radius: 999px;
+  padding: 0.42rem 0.54rem;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 14px 36px rgba(16, 48, 72, 0.07);
+  cursor: pointer;
+  user-select: none;
+}
+
+.billing-option {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 520;
+  line-height: 1;
+}
+
+.billing-option small {
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 560;
+}
+
+.billing-switch[data-billing="monthly"] .billing-option-monthly,
+.billing-switch[data-billing="annual"] .billing-option-annual {
+  color: var(--ink);
+  font-weight: 620;
+}
+
+.switch-shell {
+  position: relative;
+  display: inline-grid;
+  width: 3.05rem;
+  height: 1.62rem;
+}
+
+.billing-input {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.switch-track {
+  position: relative;
+  display: block;
+  border: 1px solid rgba(16, 48, 72, 0.12);
+  border-radius: 999px;
+  background: rgba(16, 48, 72, 0.08);
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.switch-track::before {
+  content: "";
+  position: absolute;
+  top: 0.18rem;
+  left: 0.2rem;
+  width: 1.12rem;
+  height: 1.12rem;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(16, 48, 72, 0.18);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.billing-input:checked + .switch-track {
+  border-color: rgba(90, 215, 208, 0.42);
+  background: rgba(90, 215, 208, 0.24);
+}
+
+.billing-input:checked + .switch-track::before {
+  transform: translateX(1.34rem);
+  background: var(--green);
+}
+
+.billing-input:focus-visible + .switch-track {
+  outline: 3px solid rgba(111, 162, 255, 0.3);
+  outline-offset: 3px;
 }
 
 .pricing-body {
@@ -1177,7 +1275,7 @@ h1 {
   width: 27%;
   color: var(--muted);
   font-size: 0.78rem;
-  font-weight: 820;
+  font-weight: 650;
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -1198,7 +1296,7 @@ h1 {
   display: block;
   color: var(--ink);
   font-size: 1.02rem;
-  font-weight: 740;
+  font-weight: 620;
 }
 
 .pricing-comparison thead strong {
@@ -1206,8 +1304,8 @@ h1 {
   margin-top: 0.32rem;
   color: var(--ink);
   font-family: Sora, Inter, sans-serif;
-  font-size: clamp(1.8rem, 2.8vw, 2.45rem);
-  font-weight: 720;
+  font-size: clamp(1.62rem, 2.55vw, 2.2rem);
+  font-weight: 620;
   line-height: 1;
 }
 
@@ -1230,7 +1328,7 @@ h1 {
 .pricing-comparison tbody th span {
   display: block;
   font-size: 0.98rem;
-  font-weight: 680;
+  font-weight: 560;
   line-height: 1.28;
 }
 
@@ -1255,12 +1353,12 @@ h1 {
   background: rgba(247, 250, 252, 0.46);
 }
 
-.pricing-comparison td strong {
+.pricing-comparison td strong,
+.pricing-comparison .limit-value {
   display: inline-block;
   color: var(--ink);
-  font-family: Sora, Inter, sans-serif;
-  font-size: 1.12rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 560;
   line-height: 1.18;
 }
 
@@ -1830,6 +1928,10 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .pricing-toolbar {
+    justify-content: flex-start;
+  }
+
   .pricing-table {
     grid-template-columns: 1fr;
   }
@@ -1880,6 +1982,23 @@ h1 {
     gap: 0.45rem;
   }
 
+  .billing-switch {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.42rem 0.5rem;
+  }
+
+  .billing-option {
+    font-size: 0.84rem;
+  }
+
+  .billing-option small {
+    display: block;
+    margin-top: 0.12rem;
+    font-size: 0.66rem;
+  }
+
   .pricing-row {
     min-height: 0;
     padding: 0.58rem 0.65rem;
@@ -1920,11 +2039,18 @@ h1 {
   }
 
   .pricing-comparison thead {
-    display: none;
+    display: grid;
+    margin-bottom: 0.72rem;
   }
 
   .pricing-comparison tbody {
     gap: 0.72rem;
+  }
+
+  .pricing-comparison thead tr {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.52rem;
   }
 
   .pricing-comparison tbody tr {
@@ -1956,10 +2082,10 @@ h1 {
   .pricing-comparison thead th {
     display: grid;
     align-content: center;
-    min-height: 5.7rem;
+    min-height: 5.55rem;
     border: 1px solid rgba(16, 48, 72, 0.1);
     border-radius: 0.95rem;
-    padding: 0.72rem 0.5rem;
+    padding: 0.68rem 0.48rem;
     text-align: center;
     box-shadow: 0 10px 28px rgba(16, 48, 72, 0.05);
   }
@@ -1988,7 +2114,7 @@ h1 {
     justify-self: start;
     color: var(--muted);
     font-size: 0.76rem;
-    font-weight: 760;
+    font-weight: 600;
     letter-spacing: 0;
     line-height: 1.15;
     text-transform: none;
@@ -1998,6 +2124,7 @@ h1 {
     border-bottom: 1px solid rgba(16, 48, 72, 0.08);
   }
 
+  .pricing-comparison thead small,
   .pricing-comparison td small {
     font-size: 0.72rem;
   }
@@ -2006,8 +2133,17 @@ h1 {
     font-size: 0.92rem;
   }
 
-  .pricing-comparison td strong {
-    font-size: 1.04rem;
+  .pricing-comparison thead span {
+    font-size: 0.82rem;
+  }
+
+  .pricing-comparison thead strong {
+    font-size: clamp(1.15rem, 4.6vw, 1.42rem);
+  }
+
+  .pricing-comparison td strong,
+  .pricing-comparison .limit-value {
+    font-size: 0.96rem;
   }
 
   .pricing-comparison tbody td:last-child {

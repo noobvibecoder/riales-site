@@ -9,9 +9,10 @@
       content="RIALES es una app de finanzas personales para Nicaragua: ingresos, gastos, deudas, efectivo, activos, voz y PDF en una sola vista."
     />
     <link rel="canonical" href="https://riales.app/" />
-    <link rel="stylesheet" href="/assets/site.css?v=20260704d" />
+    <link rel="stylesheet" href="/assets/site.css?v=20260704e" />
     <script src="/assets/beta-config.js?v=20260627b" defer></script>
     <script src="/assets/beta.js?v=20260627b" defer></script>
+    <script src="/assets/pricing.js?v=20260704a" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -258,14 +259,38 @@
               <p class="section-lead">
                 Tres niveles para empezar gratis, crecer con más capacidad o
                 automatizar registros bancarios. Los límites de funciones son
-                mensuales y los planes pagos pueden pagarse anual por
-                adelantado con 30% de descuento.
+                mensuales y los planes pagos tienen 30% de descuento al pagar
+                el año completo.
               </p>
+            </div>
+            <div class="pricing-toolbar">
+              <label class="billing-switch" for="billing-toggle">
+                <span class="billing-option billing-option-monthly">Mensual</span>
+                <span class="switch-shell">
+                  <input
+                    class="billing-input"
+                    id="billing-toggle"
+                    type="checkbox"
+                    data-billing-toggle
+                    aria-label="Mostrar pago anual con descuento"
+                  />
+                  <span class="switch-track" aria-hidden="true"></span>
+                </span>
+                <span class="billing-option billing-option-annual">
+                  Anual <small>30% menos</small>
+                </span>
+              </label>
             </div>
           </div>
 
           <div class="pricing-body">
-            <div class="pricing-comparison-wrap" role="region" aria-label="Comparación de planes de RIALES">
+            <div
+              class="pricing-comparison-wrap"
+              data-pricing-card
+              data-billing="monthly"
+              role="region"
+              aria-label="Comparación de planes de RIALES"
+            >
               <table class="pricing-comparison">
                 <thead>
                   <tr>
@@ -277,67 +302,71 @@
                     </th>
                     <th scope="col" class="plan-heading plan-pro">
                       <span>Pro</span>
-                      <strong>C$ 93</strong>
-                      <small>al mes, más capacidad</small>
+                      <strong
+                        class="billing-price"
+                        data-monthly="C$ 93"
+                        data-annual="C$ 781.20"
+                      >C$ 93</strong>
+                      <small
+                        class="billing-detail"
+                        data-monthly="al mes, más capacidad"
+                        data-annual="al año, equivale a C$ 65.10/mes"
+                      >al mes, más capacidad</small>
                     </th>
                     <th scope="col" class="plan-heading plan-mega">
                       <span>Mega Pro</span>
-                      <strong>C$ 290</strong>
-                      <small>al mes, con automatización</small>
+                      <strong
+                        class="billing-price"
+                        data-monthly="C$ 290"
+                        data-annual="C$ 2,436"
+                      >C$ 290</strong>
+                      <small
+                        class="billing-detail"
+                        data-monthly="al mes, con automatización"
+                        data-annual="al año, equivale a C$ 203/mes"
+                      >al mes, con automatización</small>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">
-                      <span>Pago anual anticipado</span>
-                      <small>30% menos en planes pagos.</small>
-                    </th>
-                    <td data-plan="Gratis"><span class="muted-value">No aplica</span></td>
-                    <td data-plan="Pro">
-                      <strong>C$ 781.20</strong>
-                      <small>Equivale a C$ 65.10 al mes.</small>
-                    </td>
-                    <td data-plan="Mega Pro">
-                      <strong>C$ 2,436</strong>
-                      <small>Equivale a C$ 203 al mes.</small>
-                    </td>
-                  </tr>
-                  <tr>
                     <th scope="row"><span>Ingresos/gastos</span></th>
-                    <td data-plan="Gratis"><strong>30</strong></td>
-                    <td data-plan="Pro"><strong>100</strong></td>
-                    <td data-plan="Mega Pro"><strong>200</strong></td>
+                    <td data-plan="Gratis"><span class="limit-value">30</span></td>
+                    <td data-plan="Pro"><span class="limit-value">100</span></td>
+                    <td data-plan="Mega Pro"><span class="limit-value">200</span></td>
                   </tr>
                   <tr>
                     <th scope="row"><span>Activos/deudas</span></th>
-                    <td data-plan="Gratis"><strong>5/5</strong></td>
-                    <td data-plan="Pro"><strong>20/20</strong></td>
-                    <td data-plan="Mega Pro"><strong>40/40</strong></td>
+                    <td data-plan="Gratis"><span class="limit-value">5/5</span></td>
+                    <td data-plan="Pro"><span class="limit-value">20/20</span></td>
+                    <td data-plan="Mega Pro"><span class="limit-value">40/40</span></td>
                   </tr>
                   <tr>
                     <th scope="row"><span>Ingresos/gastos recurrentes</span></th>
-                    <td data-plan="Gratis"><strong>10</strong></td>
-                    <td data-plan="Pro"><strong>50</strong></td>
-                    <td data-plan="Mega Pro"><strong>100</strong></td>
+                    <td data-plan="Gratis"><span class="limit-value">10</span></td>
+                    <td data-plan="Pro"><span class="limit-value">50</span></td>
+                    <td data-plan="Mega Pro"><span class="limit-value">100</span></td>
                   </tr>
                   <tr>
                     <th scope="row"><span>Cargas masivas de PDF bancario</span></th>
-                    <td data-plan="Gratis"><strong>1</strong></td>
-                    <td data-plan="Pro"><strong>5</strong></td>
-                    <td data-plan="Mega Pro"><strong>20</strong></td>
+                    <td data-plan="Gratis"><span class="limit-value">1</span></td>
+                    <td data-plan="Pro"><span class="limit-value">5</span></td>
+                    <td data-plan="Mega Pro"><span class="limit-value">20</span></td>
                   </tr>
                   <tr>
                     <th scope="row"><span>Notificaciones push de recordatorio</span></th>
-                    <td data-plan="Gratis"><strong>5</strong></td>
-                    <td data-plan="Pro"><strong>30</strong></td>
-                    <td data-plan="Mega Pro"><strong>60</strong></td>
+                    <td data-plan="Gratis"><span class="limit-value">5</span></td>
+                    <td data-plan="Pro"><span class="limit-value">30</span></td>
+                    <td data-plan="Mega Pro"><span class="limit-value">60</span></td>
                   </tr>
                   <tr>
                     <th scope="row"><span>SMS bancario</span></th>
                     <td data-plan="Gratis"><span class="muted-value">No incluido</span></td>
                     <td data-plan="Pro"><span class="muted-value">No incluido</span></td>
-                    <td data-plan="Mega Pro"><strong>Automático</strong><small>Por integración de SMS bancario.</small></td>
+                    <td data-plan="Mega Pro">
+                      <span class="limit-value">Automático</span>
+                      <small>Por integración de SMS bancario.</small>
+                    </td>
                   </tr>
                 </tbody>
               </table>
