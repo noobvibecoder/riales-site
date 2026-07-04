@@ -9,7 +9,9 @@
       content="RIALES es una app de finanzas personales para Nicaragua: ingresos, gastos, deudas, efectivo, activos, voz y PDF en una sola vista."
     />
     <link rel="canonical" href="https://riales.app/" />
-    <link rel="stylesheet" href="/assets/site.css?v=20260704q" />
+    <link rel="stylesheet" href="/assets/site.css?v=20260704r" />
+    <script src="/assets/beta-config.js?v=20260627b" defer></script>
+    <script src="/assets/beta.js?v=20260627b" defer></script>
     <script src="/assets/pricing.js?v=20260704a" defer></script>
   </head>
   <body>
@@ -19,17 +21,17 @@
       </a>
       <nav class="nav" aria-label="Principal">
         <a href="/">Inicio</a>
-        <a href="#funciona">Paso a paso</a>
         <a href="#funciones">Funciones</a>
         <a href="#precios">Precios</a>
+        <a href="#beta">Beta</a>
       </nav>
       <details class="mobile-menu">
         <summary aria-label="Abrir menú">Menú</summary>
         <div class="mobile-menu-panel">
           <a href="/">Inicio</a>
-          <a href="#funciona">Paso a paso</a>
           <a href="#funciones">Funciones</a>
           <a href="#precios">Precios</a>
+          <a href="#beta">Beta</a>
         </div>
       </details>
     </header>
@@ -69,11 +71,11 @@
             <small>Después de gastos</small>
           </div>
           <div class="device-mockup hero-device secondary-device" aria-hidden="true">
-            <img class="real-screen" src="/assets/screen-registro.jpg?v=20260703b" alt="" width="596" height="1280" />
+            <img class="real-screen" src="/assets/screen-registro.png?v=20260704a" alt="" width="900" height="1970" />
           </div>
 
           <div class="device-mockup hero-device main-device">
-            <img class="real-screen" src="/assets/screen-resumen.jpg?v=20260704e" alt="Pantalla real del resumen de RIALES" width="596" height="1280" />
+            <img class="real-screen" src="/assets/screen-resumen.png?v=20260704a" alt="Pantalla real del resumen de RIALES" width="900" height="1970" />
           </div>
         </div>
 
@@ -86,40 +88,6 @@
             <strong>Carga masiva desde PDF</strong>
             <span>Subís el estado de cuenta de tu tarjeta de crédito y cargás muchos movimientos de una sola vez.</span>
           </div>
-        </div>
-      </section>
-
-      <section class="section" id="funciona">
-        <div class="section-heading">
-          <p class="eyebrow">Paso a paso</p>
-          <h2>Registrás. Revisás. Seguís tu mes.</h2>
-          <p class="section-lead">
-            Guardás movimientos y RIALES actualiza tu resumen, calendario y
-            balance.
-          </p>
-        </div>
-
-        <div class="step-grid">
-          <article class="step-card">
-            <span>01</span>
-            <h3>Registrá</h3>
-            <p>Agregá ingresos o gastos manualmente, por voz o desde un PDF.</p>
-          </article>
-          <article class="step-card">
-            <span>02</span>
-            <h3>Revisá</h3>
-            <p>Confirmá fecha, moneda y categoría antes de guardar.</p>
-          </article>
-          <article class="step-card">
-            <span>03</span>
-            <h3>Planificá</h3>
-            <p>Programá ingresos, cuotas y gastos recurrentes.</p>
-          </article>
-          <article class="step-card">
-            <span>04</span>
-            <h3>Consultá</h3>
-            <p>Ves resultado, efectivo, deudas, activos y valor neto.</p>
-          </article>
         </div>
       </section>
 
@@ -141,7 +109,7 @@
               </p>
             </div>
             <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-resumen.jpg?v=20260704e" alt="Pantalla real de resultado del mes en RIALES" width="596" height="1280" />
+              <img class="real-screen" src="/assets/screen-resumen.png?v=20260704a" alt="Pantalla real de resultado del mes en RIALES" width="900" height="1970" />
             </div>
           </article>
 
@@ -153,7 +121,7 @@
               </p>
             </div>
             <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-registro.jpg?v=20260703b" alt="Pantalla real de registro rápido en RIALES" width="596" height="1280" />
+              <img class="real-screen" src="/assets/screen-registro.png?v=20260704a" alt="Pantalla real de registro rápido en RIALES" width="900" height="1970" />
             </div>
           </article>
 
@@ -165,7 +133,7 @@
               </p>
             </div>
             <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-calendario.jpg?v=20260703b" alt="Pantalla real del calendario financiero en RIALES" width="596" height="1280" />
+              <img class="real-screen" src="/assets/screen-calendario.png?v=20260704a" alt="Pantalla real del calendario financiero en RIALES" width="900" height="1970" />
             </div>
           </article>
 
@@ -177,7 +145,7 @@
               </p>
             </div>
             <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-indicadores.jpg?v=20260703b" alt="Pantalla real de indicadores financieros en RIALES" width="596" height="1280" />
+              <img class="real-screen" src="/assets/screen-indicadores.png?v=20260704a" alt="Pantalla real de indicadores financieros en RIALES" width="900" height="1970" />
             </div>
           </article>
         </div>
@@ -281,7 +249,7 @@
           <div class="pricing-head">
             <div>
               <p class="eyebrow">Precios</p>
-              <h2>Elegí cuánto necesitás.</h2>
+              <h2>Elegí tu plan.</h2>
             </div>
             <div class="pricing-toolbar">
               <label class="billing-switch" for="billing-toggle">
@@ -305,36 +273,335 @@
 
           <div class="pricing-body">
             <div
-              class="pricing-plans"
+              class="pricing-comparison-wrap"
               data-pricing-card
               data-billing="monthly"
-              aria-label="Planes de RIALES"
+              role="region"
+              aria-label="Comparación de planes de RIALES"
             >
-              <article class="pricing-plan pricing-plan-free">
-                <span>Gratis</span>
-                <strong>C$ 0</strong>
-                <small>Siempre</small>
-              </article>
-              <article class="pricing-plan pricing-plan-pro">
-                <span>Pro</span>
-                <strong
-                  class="billing-price"
-                  data-monthly="C$ 93"
-                  data-annual="C$ 781"
-                >C$ 93</strong>
-                <small data-monthly="mensual" data-annual="anual">mensual</small>
-              </article>
-              <article class="pricing-plan pricing-plan-mega">
-                <span>Mega Pro</span>
-                <strong
-                  class="billing-price"
-                  data-monthly="C$ 293"
-                  data-annual="C$ 2,461"
-                >C$ 293</strong>
-                <small data-monthly="mensual" data-annual="anual">mensual</small>
-              </article>
+              <table class="pricing-comparison">
+                <thead>
+                  <tr>
+                    <th scope="col" class="feature-heading">Concepto</th>
+                    <th scope="col" class="plan-heading plan-free">
+                      <span>Gratis</span>
+                      <strong>C$ 0</strong>
+                    </th>
+                    <th scope="col" class="plan-heading plan-pro">
+                      <span>Relax</span>
+                      <strong
+                        class="billing-price"
+                        data-monthly="C$ 93"
+                        data-annual="C$ 781"
+                      >C$ 93</strong>
+                    </th>
+                    <th scope="col" class="plan-heading plan-mega">
+                      <span>Pro</span>
+                      <strong
+                        class="billing-price"
+                        data-monthly="C$ 293"
+                        data-annual="C$ 2,461"
+                      >C$ 293</strong>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <span class="pricing-feature-label">
+                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <path d="M7 3.75h10a2 2 0 0 1 2 2v14.5l-2.1-1.15-2.1 1.15-2.1-1.15-2.1 1.15-2.1-1.15-2.1 1.15V5.75a2 2 0 0 1 2-2Z" />
+                          <path d="M9 8h6M9 12h6M9 16h3" />
+                        </svg>
+                        <span>Registros de Ingresos/gastos</span>
+                      </span>
+                    </th>
+                    <td data-plan="Gratis"><span class="limit-value">30</span></td>
+                    <td data-plan="Relax"><span class="limit-value">100</span></td>
+                    <td data-plan="Pro"><span class="limit-value">500</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="pricing-feature-label">
+                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <path d="M4.5 9.25h15v9.5a1.75 1.75 0 0 1-1.75 1.75H6.25a1.75 1.75 0 0 1-1.75-1.75v-9.5Z" />
+                          <path d="M7 9.25V7.5A4.5 4.5 0 0 1 11.5 3h1A4.5 4.5 0 0 1 17 7.5v1.75" />
+                          <path d="M8 14h8" />
+                        </svg>
+                        <span>Activos/deudas</span>
+                      </span>
+                    </th>
+                    <td data-plan="Gratis"><span class="limit-value">5</span></td>
+                    <td data-plan="Relax"><span class="limit-value">10</span></td>
+                    <td data-plan="Pro"><span class="limit-value">50</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="pricing-feature-label">
+                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <path d="M7 4.5v3M17 4.5v3" />
+                          <path d="M5.5 7h13A1.5 1.5 0 0 1 20 8.5v10A1.5 1.5 0 0 1 18.5 20h-13A1.5 1.5 0 0 1 4 18.5v-10A1.5 1.5 0 0 1 5.5 7Z" />
+                          <path d="M4 11h16M8 15h3M13 15h3" />
+                        </svg>
+                        <span>Ingresos/gastos recurrentes</span>
+                      </span>
+                    </th>
+                    <td data-plan="Gratis"><span class="limit-value">10</span></td>
+                    <td data-plan="Relax"><span class="limit-value">30</span></td>
+                    <td data-plan="Pro"><span class="limit-value">150</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="pricing-feature-label">
+                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <path d="M7 3.75h7l4 4v10.5A2.75 2.75 0 0 1 15.25 21h-8.5A2.75 2.75 0 0 1 4 18.25V6.5A2.75 2.75 0 0 1 6.75 3.75H7Z" />
+                          <path d="M14 3.75v4h4" />
+                          <path d="M8 12.5h8M8 16h5" />
+                        </svg>
+                        <span>Cargas masivas de PDF bancario</span>
+                      </span>
+                    </th>
+                    <td data-plan="Gratis"><span class="limit-value">1</span></td>
+                    <td data-plan="Relax"><span class="limit-value">3</span></td>
+                    <td data-plan="Pro"><span class="limit-value">15</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="pricing-feature-label">
+                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <path d="M18 10.75A6 6 0 0 0 6 10.75v3.1l-1.45 2.45A1.1 1.1 0 0 0 5.5 18h13a1.1 1.1 0 0 0 .95-1.7L18 13.85v-3.1Z" />
+                          <path d="M9.75 18.25a2.25 2.25 0 0 0 4.5 0" />
+                        </svg>
+                        <span>Notificaciones push de recordatorio</span>
+                      </span>
+                    </th>
+                    <td data-plan="Gratis"><span class="limit-value">5</span></td>
+                    <td data-plan="Relax"><span class="limit-value">30</span></td>
+                    <td data-plan="Pro"><span class="limit-value">150</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="pricing-feature-label">
+                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <path d="M8 4.75h8A3.25 3.25 0 0 1 19.25 8v8A3.25 3.25 0 0 1 16 19.25H8A3.25 3.25 0 0 1 4.75 16V8A3.25 3.25 0 0 1 8 4.75Z" />
+                          <path d="M9 12h6M12 9v6" />
+                          <path d="M7 2.75v2M12 2.75v2M17 2.75v2M7 19.25v2M12 19.25v2M17 19.25v2" />
+                        </svg>
+                        <span>Exportación de datos para IA</span>
+                      </span>
+                    </th>
+                    <td data-plan="Gratis">
+                      <span class="availability-mark is-unavailable" aria-label="No incluido">×</span>
+                    </td>
+                    <td data-plan="Relax"><span class="limit-value">1</span></td>
+                    <td data-plan="Pro"><span class="limit-value">10</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="pricing-feature-label">
+                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <path d="M5.75 5h12.5A2.75 2.75 0 0 1 21 7.75v6.5A2.75 2.75 0 0 1 18.25 17H11l-4.25 3v-3h-1A2.75 2.75 0 0 1 3 14.25v-6.5A2.75 2.75 0 0 1 5.75 5Z" />
+                          <path d="M7.5 9.5h9M7.5 13h5.5" />
+                        </svg>
+                        <span>SMS bancario</span>
+                      </span>
+                    </th>
+                    <td data-plan="Gratis">
+                      <span class="availability-mark is-unavailable" aria-label="No incluido">×</span>
+                    </td>
+                    <td data-plan="Relax">
+                      <span class="availability-mark is-unavailable" aria-label="No incluido">×</span>
+                    </td>
+                    <td data-plan="Pro">
+                      <div class="included-copy included-copy-with-mark">
+                        <span class="availability-mark is-available" aria-label="Incluido">✓</span>
+                        <p>Automatización de registro de gastos por integración de SMS bancario.</p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="pricing-mobile-plans" aria-label="Planes completos de RIALES">
+                <article class="pricing-mobile-plan mobile-plan-free">
+                  <header>
+                    <span>Gratis</span>
+                    <strong>C$ 0</strong>
+                  </header>
+                  <p class="pricing-includes-title">Incluye:</p>
+                  <dl>
+                    <div>
+                      <dt>Registros de Ingresos/gastos</dt>
+                      <dd>30</dd>
+                    </div>
+                    <div>
+                      <dt>Activos/deudas</dt>
+                      <dd>5</dd>
+                    </div>
+                    <div>
+                      <dt>Ingresos/gastos recurrentes</dt>
+                      <dd>10</dd>
+                    </div>
+                    <div>
+                      <dt>Cargas masivas de PDF bancario</dt>
+                      <dd>1</dd>
+                    </div>
+                    <div>
+                      <dt>Notificaciones push de recordatorio</dt>
+                      <dd>5</dd>
+                    </div>
+                    <div>
+                      <dt>Exportación de datos para IA</dt>
+                      <dd>
+                        <span class="availability-mark is-unavailable" aria-label="No incluido">×</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>SMS bancario</dt>
+                      <dd>
+                        <span class="availability-mark is-unavailable" aria-label="No incluido">×</span>
+                      </dd>
+                    </div>
+                  </dl>
+                </article>
+
+                <article class="pricing-mobile-plan mobile-plan-pro">
+                  <header>
+                    <span>Relax</span>
+                    <strong
+                      class="billing-price"
+                      data-monthly="C$ 93"
+                      data-annual="C$ 781"
+                    >C$ 93</strong>
+                  </header>
+                  <p class="pricing-includes-title">Incluye:</p>
+                  <dl>
+                    <div>
+                      <dt>Registros de Ingresos/gastos</dt>
+                      <dd>100</dd>
+                    </div>
+                    <div>
+                      <dt>Activos/deudas</dt>
+                      <dd>10</dd>
+                    </div>
+                    <div>
+                      <dt>Ingresos/gastos recurrentes</dt>
+                      <dd>30</dd>
+                    </div>
+                    <div>
+                      <dt>Cargas masivas de PDF bancario</dt>
+                      <dd>3</dd>
+                    </div>
+                    <div>
+                      <dt>Notificaciones push de recordatorio</dt>
+                      <dd>30</dd>
+                    </div>
+                    <div>
+                      <dt>Exportación de datos para IA</dt>
+                      <dd>1</dd>
+                    </div>
+                    <div>
+                      <dt>SMS bancario</dt>
+                      <dd>
+                        <span class="availability-mark is-unavailable" aria-label="No incluido">×</span>
+                      </dd>
+                    </div>
+                  </dl>
+                </article>
+
+                <article class="pricing-mobile-plan mobile-plan-mega">
+                  <header>
+                    <span>Pro</span>
+                    <strong
+                      class="billing-price"
+                      data-monthly="C$ 293"
+                      data-annual="C$ 2,461"
+                    >C$ 293</strong>
+                  </header>
+                  <p class="pricing-includes-title">Incluye:</p>
+                  <dl>
+                    <div>
+                      <dt>Registros de Ingresos/gastos</dt>
+                      <dd>500</dd>
+                    </div>
+                    <div>
+                      <dt>Activos/deudas</dt>
+                      <dd>50</dd>
+                    </div>
+                    <div>
+                      <dt>Ingresos/gastos recurrentes</dt>
+                      <dd>150</dd>
+                    </div>
+                    <div>
+                      <dt>Cargas masivas de PDF bancario</dt>
+                      <dd>15</dd>
+                    </div>
+                    <div>
+                      <dt>Notificaciones push de recordatorio</dt>
+                      <dd>150</dd>
+                    </div>
+                    <div>
+                      <dt>Exportación de datos para IA</dt>
+                      <dd>10</dd>
+                    </div>
+                    <div>
+                      <dt>SMS bancario</dt>
+                      <dd class="included-note">
+                        <span class="availability-mark is-available" aria-label="Incluido">✓</span>
+                        <span>Automatización por SMS bancario.</span>
+                      </dd>
+                    </div>
+                  </dl>
+                </article>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section beta-section" id="beta">
+        <div class="beta-panel">
+          <div class="beta-copy">
+            <p class="eyebrow">Beta</p>
+            <h2>Sé parte de la beta de RIALES.</h2>
+            <p>
+              Dejanos tus datos y te avisamos cuando abramos nuevos cupos en
+              Nicaragua.
+            </p>
+          </div>
+
+          <form class="beta-form" id="beta-form">
+            <div class="form-grid">
+              <label>
+                <span>Nombre</span>
+                <input name="first_name" autocomplete="given-name" required />
+              </label>
+              <label>
+                <span>Apellido</span>
+                <input name="last_name" autocomplete="family-name" required />
+              </label>
+              <label>
+                <span>Teléfono celular</span>
+                <input name="phone" autocomplete="tel" inputmode="tel" required />
+              </label>
+              <label>
+                <span>Correo electrónico</span>
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+              <label class="full-field">
+                <span>¿Usás Android o iOS?</span>
+                <select name="device_type" required>
+                  <option value="">Seleccioná una opción</option>
+                  <option value="android">Android</option>
+                  <option value="ios">iOS</option>
+                </select>
+              </label>
+            </div>
+            <div class="turnstile-widget" id="beta-turnstile"></div>
+            <button type="submit">Quiero entrar a la beta</button>
+            <p class="form-status" id="beta-form-status" role="status" aria-live="polite">
+              Usaremos estos datos solo para contactarte sobre la beta.
+            </p>
+          </form>
         </div>
       </section>
 
