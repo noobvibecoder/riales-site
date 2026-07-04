@@ -358,17 +358,6 @@ h1 {
     0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
-.hero-app-logo {
-  position: absolute;
-  top: 0.28rem;
-  left: 1.08rem;
-  z-index: 3;
-  width: clamp(4rem, 36%, 4.85rem);
-  height: auto;
-  filter: brightness(0) invert(1) drop-shadow(0 0.08rem 0.25rem rgba(0, 0, 0, 0.32));
-  pointer-events: none;
-}
-
 .hero-device.main-device {
   --device-width: clamp(15.6rem, 19.6vw, 18.3rem);
   z-index: 2;
