@@ -1190,6 +1190,30 @@ h1 {
   font-size: 0.9rem;
 }
 
+.annual-option {
+  border: 1px solid rgba(90, 215, 208, 0.26);
+  border-radius: 0.85rem;
+  padding: 0.72rem 0.78rem;
+  background: rgba(90, 215, 208, 0.08);
+}
+
+.annual-option span {
+  color: #0f746c;
+  font-size: 0.78rem;
+  font-weight: 760;
+  text-transform: uppercase;
+}
+
+.annual-option strong {
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+}
+
+.annual-option small {
+  color: var(--muted-strong);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
 .pricing-plan ul {
   display: grid;
   gap: 0.55rem;
