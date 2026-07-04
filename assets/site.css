@@ -1685,7 +1685,7 @@ h1 {
 .footer-brand {
   display: grid;
   gap: 0.45rem;
-  max-width: 22rem;
+  max-width: none;
 }
 
 .footer-logo {
@@ -1695,26 +1695,22 @@ h1 {
   filter: brightness(0) invert(1);
 }
 
-.footer-brand p {
-  margin: 0;
-  color: #b9c7d4;
-  line-height: 1.45;
-}
-
-.footer-brand a {
-  color: #dce6ef;
-  text-decoration: none;
-}
-
+.footer-contact-row,
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9rem;
+  column-gap: 0.8rem;
+  row-gap: 0.45rem;
 }
 
+.footer-contact-row a,
 .footer-links a {
   color: #dce6ef;
   text-decoration: none;
+}
+
+.footer-contact-row a + a {
+  color: #b9c7d4;
 }
 
 .footer-bottom {
@@ -2421,6 +2417,11 @@ h1 {
   .footer {
     margin-top: 1.2rem;
     padding: 1.55rem 1.2rem 1.8rem;
+  }
+
+  .footer-contact-row {
+    column-gap: 0.55rem;
+    font-size: 0.9rem;
   }
 
   .footer-links {
