@@ -1267,7 +1267,7 @@ h1 {
 }
 
 .pricing-comparison thead th {
-  height: 8.2rem;
+  height: 6.6rem;
   background: linear-gradient(180deg, #f7fafc 0%, #edf5f8 100%);
 }
 
@@ -2082,7 +2082,7 @@ h1 {
   .pricing-comparison thead th {
     display: grid;
     align-content: center;
-    min-height: 5.55rem;
+    min-height: 4.8rem;
     border: 1px solid rgba(16, 48, 72, 0.1);
     border-radius: 0.95rem;
     padding: 0.68rem 0.48rem;
