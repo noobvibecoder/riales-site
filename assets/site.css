@@ -308,7 +308,7 @@ h1 {
 .device-mockup::before {
   content: "";
   position: absolute;
-  top: 0.55rem;
+  top: 0.22rem;
   left: 50%;
   z-index: 2;
   width: 0.46rem;
