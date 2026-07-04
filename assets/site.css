@@ -1459,6 +1459,28 @@ h1 {
   font-size: 0.98rem;
 }
 
+.availability-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.8rem;
+  min-height: 1.8rem;
+  border-radius: 999px;
+  font-size: 1.18rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.availability-mark.is-unavailable {
+  background: rgba(216, 75, 99, 0.1);
+  color: var(--red);
+}
+
+.availability-mark.is-available {
+  background: rgba(0, 159, 115, 0.1);
+  color: var(--green);
+}
+
 .included-copy {
   display: grid;
   gap: 0.22rem;
@@ -1467,11 +1489,22 @@ h1 {
   text-align: left;
 }
 
+.included-copy-with-mark {
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 0.55rem;
+}
+
 .included-copy span {
   color: var(--riales-purple);
   font-size: 0.78rem;
   font-weight: 760;
   line-height: 1.15;
+}
+
+.included-copy .availability-mark {
+  color: var(--green);
+  font-size: 1rem;
 }
 
 .included-copy p {
@@ -2265,6 +2298,10 @@ h1 {
   }
 
   .pricing-mobile-plan dd.included-note {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.45rem;
     max-width: 12.5rem;
     color: var(--muted-strong);
     font-size: 0.9rem;
