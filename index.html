@@ -9,7 +9,7 @@
       content="RIALES es una app de finanzas personales para Nicaragua: ingresos, gastos, deudas, efectivo, activos, voz y PDF en una sola vista."
     />
     <link rel="canonical" href="https://riales.app/" />
-    <link rel="stylesheet" href="/assets/site.css?v=20260627c" />
+    <link rel="stylesheet" href="/assets/site.css?v=20260703d" />
     <script src="/assets/beta-config.js?v=20260627b" defer></script>
     <script src="/assets/beta.js?v=20260627b" defer></script>
   </head>
@@ -20,6 +20,7 @@
       </a>
       <nav class="nav" aria-label="Principal">
         <a href="/">Inicio</a>
+        <a href="#demo">Demo</a>
         <a href="#funciona">Paso a paso</a>
         <a href="#funciones">Funciones</a>
         <a href="#precios">Precios</a>
@@ -29,6 +30,7 @@
         <summary aria-label="Abrir menú">Menú</summary>
         <div class="mobile-menu-panel">
           <a href="/">Inicio</a>
+          <a href="#demo">Demo</a>
           <a href="#funciona">Paso a paso</a>
           <a href="#funciones">Funciones</a>
           <a href="#precios">Precios</a>
@@ -49,7 +51,7 @@
           </p>
           <div class="hero-actions">
             <a class="button" href="#beta">Unirme a la beta</a>
-            <a class="button secondary" href="#funciones">Ver funciones</a>
+            <a class="button secondary" href="#demo">Ver demo</a>
           </div>
         </div>
 
@@ -75,26 +77,52 @@
             <small>Después de gastos</small>
           </div>
           <div class="device-mockup hero-device secondary-device" aria-hidden="true">
-            <img class="real-screen" src="/assets/screen-calendario.jpg?v=20260626f" alt="" width="596" height="1280" />
+            <img class="real-screen" src="/assets/screen-registro.jpg?v=20260703b" alt="" width="596" height="1280" />
           </div>
 
           <div class="device-mockup hero-device main-device">
-            <img class="real-screen" src="/assets/screen-resumen.jpg?v=20260627a" alt="Pantalla real del resumen de RIALES" width="596" height="1280" />
+            <img class="real-screen" src="/assets/screen-resumen.jpg?v=20260703b" alt="Pantalla real del resumen de RIALES" width="596" height="1280" />
           </div>
         </div>
 
-        <div class="trust-row" aria-label="Puntos principales">
+        <div class="trust-row expense-capture-row" aria-label="Registro de gastos">
           <div>
-            <strong>Registro rápido</strong>
-            <span>Voz, manual o PDF cuando lo necesitás.</span>
+            <strong>Gastos por voz</strong>
+            <span>Salís de la gasolinera o la tienda, se lo decís al celular y el gasto queda registrado al momento.</span>
           </div>
           <div>
-            <strong>Revisión clara</strong>
-            <span>Confirmás cada dato antes de guardarlo.</span>
+            <strong>Carga masiva desde PDF</strong>
+            <span>Subís el estado de cuenta de tu tarjeta de crédito y cargás muchos movimientos de una sola vez.</span>
           </div>
-          <div>
-            <strong>Mes ordenado</strong>
-            <span>Pagos, ingresos y saldo en contexto.</span>
+        </div>
+      </section>
+
+      <section class="section demo-section" id="demo">
+        <div class="demo-layout">
+          <div class="demo-copy">
+            <p class="eyebrow">Demo</p>
+            <h2>Así se registra un gasto.</h2>
+            <p class="section-lead">
+              En 20 segundos: abrís el registro rápido, elegís voz o estado de
+              cuenta, revisás tu calendario y mirás tus indicadores.
+            </p>
+          </div>
+
+          <div class="device-mockup demo-device">
+            <video
+              class="real-screen demo-video"
+              src="/assets/riales-demo-20s.mp4?v=20260703b"
+              poster="/assets/screen-registro.jpg?v=20260703b"
+              width="596"
+              height="1280"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+              preload="metadata"
+              aria-label="Demo de 20 segundos de uso de RIALES"
+            ></video>
           </div>
         </div>
       </section>
@@ -138,7 +166,7 @@
           <p class="eyebrow">Pantallas reales</p>
           <h2>Todo a la vista.</h2>
           <p class="section-lead">
-            Resumen, calendario, indicadores y configuración inicial.
+            Resumen, registro por voz o PDF, calendario e indicadores.
           </p>
         </div>
 
@@ -151,7 +179,19 @@
               </p>
             </div>
             <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-resumen.jpg?v=20260627a" alt="Pantalla real de resultado del mes en RIALES" width="596" height="1280" />
+              <img class="real-screen" src="/assets/screen-resumen.jpg?v=20260703b" alt="Pantalla real de resultado del mes en RIALES" width="596" height="1280" />
+            </div>
+          </article>
+
+          <article class="phone-feature">
+            <div class="phone-copy">
+              <h3>Registro rápido</h3>
+              <p>
+                Voz, manual o estado de cuenta PDF para cargar gastos.
+              </p>
+            </div>
+            <div class="device-mockup">
+              <img class="real-screen" src="/assets/screen-registro.jpg?v=20260703b" alt="Pantalla real de registro rápido en RIALES" width="596" height="1280" />
             </div>
           </article>
 
@@ -163,7 +203,7 @@
               </p>
             </div>
             <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-calendario.jpg?v=20260626f" alt="Pantalla real del calendario financiero en RIALES" width="596" height="1280" />
+              <img class="real-screen" src="/assets/screen-calendario.jpg?v=20260703b" alt="Pantalla real del calendario financiero en RIALES" width="596" height="1280" />
             </div>
           </article>
 
@@ -175,19 +215,7 @@
               </p>
             </div>
             <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-indicadores.jpg?v=20260626f" alt="Pantalla real de indicadores financieros en RIALES" width="596" height="1280" />
-            </div>
-          </article>
-
-          <article class="phone-feature">
-            <div class="phone-copy">
-              <h3>Inicio guiado</h3>
-              <p>
-                Lo esencial para empezar sin llenar todo de una vez.
-              </p>
-            </div>
-            <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-onboarding.jpg?v=20260626f" alt="Pantalla real del onboarding de RIALES" width="596" height="1280" />
+              <img class="real-screen" src="/assets/screen-indicadores.jpg?v=20260703b" alt="Pantalla real de indicadores financieros en RIALES" width="596" height="1280" />
             </div>
           </article>
         </div>
@@ -259,44 +287,58 @@
           <div class="pricing-head">
             <div>
               <p class="eyebrow">Precios</p>
-              <h2>Gratis.</h2>
+              <h2>Elegí cuánto necesitás.</h2>
+              <p class="section-lead">
+                Tres niveles para empezar gratis, crecer con más capacidad o
+                automatizar registros bancarios.
+              </p>
             </div>
           </div>
 
           <div class="pricing-body">
-            <div class="pricing-table" aria-label="Funciones incluidas">
-              <div class="pricing-row">
-                <span><b>Registro rápido</b><small>Manual, por voz y desde PDF.</small></span>
-                <strong aria-label="Incluido">✓</strong>
-              </div>
-              <div class="pricing-row">
-                <span><b>Movimientos flexibles</b><small>Ingresos y gastos únicos o recurrentes.</small></span>
-                <strong aria-label="Incluido">✓</strong>
-              </div>
-              <div class="pricing-row">
-                <span><b>Calendario financiero</b><small>Pagos e ingresos ordenados por fecha.</small></span>
-                <strong aria-label="Incluido">✓</strong>
-              </div>
-              <div class="pricing-row">
-                <span><b>Resumen del mes</b><small>Resultado, balance y efectivo disponible.</small></span>
-                <strong aria-label="Incluido">✓</strong>
-              </div>
-              <div class="pricing-row">
-                <span><b>Deudas y activos</b><small>Cuotas, bienes y valor neto en contexto.</small></span>
-                <strong aria-label="Incluido">✓</strong>
-              </div>
-              <div class="pricing-row">
-                <span><b>Indicadores</b><small>Señales simples de liquidez y avance.</small></span>
-                <strong aria-label="Incluido">✓</strong>
-              </div>
-              <div class="pricing-row">
-                <span><b>Cuenta privada</b><small>Datos financieros separados por usuario.</small></span>
-                <strong aria-label="Incluido">✓</strong>
-              </div>
-              <div class="pricing-row">
-                <span><b>Respaldo local</b><small>Guardá una copia cuando necesités.</small></span>
-                <strong aria-label="Incluido">✓</strong>
-              </div>
+            <div class="pricing-plans" aria-label="Planes de RIALES">
+              <article class="pricing-plan">
+                <div class="plan-header">
+                  <h3>Gratis</h3>
+                  <p><strong>C$ 0</strong><span>para empezar</span></p>
+                </div>
+                <ul>
+                  <li>30 gastos e ingresos al mes</li>
+                  <li>5 activos y 5 deudas</li>
+                  <li>Hasta 10 gastos e ingresos recurrentes al mes</li>
+                  <li>1 carga masiva de PDF bancario</li>
+                  <li>5 notificaciones push de recordatorio</li>
+                </ul>
+              </article>
+
+              <article class="pricing-plan highlighted">
+                <div class="plan-header">
+                  <h3>Mensual</h3>
+                  <p><strong>C$ 190</strong><span>al mes</span></p>
+                </div>
+                <ul>
+                  <li>100 gastos e ingresos al mes</li>
+                  <li>20 activos y 20 deudas</li>
+                  <li>Hasta 50 gastos e ingresos recurrentes planificados</li>
+                  <li>5 cargas masivas de PDF bancario</li>
+                  <li>30 notificaciones push de recordatorio</li>
+                </ul>
+              </article>
+
+              <article class="pricing-plan">
+                <div class="plan-header">
+                  <h3>Automático</h3>
+                  <p><strong>C$ 250</strong><span>al mes</span></p>
+                </div>
+                <ul>
+                  <li>200 gastos e ingresos al mes</li>
+                  <li>40 activos y 40 deudas</li>
+                  <li>Hasta 100 gastos e ingresos recurrentes planificados</li>
+                  <li>10 cargas masivas de PDF bancario</li>
+                  <li>60 notificaciones push de recordatorio</li>
+                  <li>Registro automático por integración de SMS bancario</li>
+                </ul>
+              </article>
             </div>
           </div>
         </div>
@@ -311,11 +353,6 @@
               Dejanos tus datos y te avisamos cuando abramos nuevos cupos en
               Nicaragua.
             </p>
-            <div class="beta-highlights">
-              <span>Usuarios en Nicaragua</span>
-              <span>Android o iOS</span>
-              <span>Invitación por correo</span>
-            </div>
           </div>
 
           <form class="beta-form" id="beta-form">

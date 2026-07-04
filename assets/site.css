@@ -176,6 +176,10 @@ main {
   overflow: hidden;
 }
 
+main section[id] {
+  scroll-margin-top: 6.25rem;
+}
+
 .hero,
 .section,
 .footer-inner,
@@ -586,6 +590,10 @@ h1 {
   margin-top: 0.6rem;
 }
 
+.trust-row.expense-capture-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .trust-row div,
 .feature,
 .legal-card,
@@ -610,6 +618,36 @@ h1 {
 .trust-row span {
   color: var(--muted);
   font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.demo-section {
+  background:
+    linear-gradient(180deg, rgba(237, 245, 248, 0.68), rgba(255, 255, 255, 0));
+}
+
+.demo-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(14rem, 22rem);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4.5rem);
+}
+
+.demo-copy {
+  max-width: 38rem;
+}
+
+.demo-copy h2 {
+  max-width: 13ch;
+}
+
+.demo-device {
+  --device-width: min(100%, 19rem);
+  justify-self: center;
+}
+
+.demo-video {
+  cursor: pointer;
 }
 
 .section {
@@ -1037,16 +1075,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr;
   align-items: stretch;
-  gap: 0.55rem;
-  overflow: hidden;
-  border: 1px solid var(--line-strong);
-  border-radius: 1.5rem;
-  padding: 0.7rem;
-  background:
-    radial-gradient(circle at 12% 4%, rgba(111, 162, 255, 0.15), transparent 18rem),
-    radial-gradient(circle at 100% 100%, rgba(90, 215, 208, 0.16), transparent 18rem),
-    #ffffff;
-  box-shadow: 0 22px 70px rgba(16, 48, 72, 0.08);
+  gap: 1rem;
 }
 
 .comparison-panel {
@@ -1108,10 +1137,7 @@ h1 {
   display: grid;
   align-content: start;
   gap: 0.5rem;
-  border: 1px solid rgba(16, 48, 72, 0.08);
-  border-radius: 1.1rem;
-  padding: clamp(0.9rem, 2.4vw, 1.2rem);
-  background: rgba(255, 255, 255, 0.66);
+  max-width: 52rem;
 }
 
 .pricing-head .eyebrow {
@@ -1120,7 +1146,7 @@ h1 {
 }
 
 .pricing-head h2 {
-  max-width: 13ch;
+  max-width: 15ch;
   font-size: clamp(2.35rem, 4.6vw, 3.55rem);
   font-weight: 760;
   letter-spacing: 0;
@@ -1136,6 +1162,87 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.55rem;
+}
+
+.pricing-plans {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.pricing-plan {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: clamp(0.95rem, 2.4vw, 1.15rem);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(90, 215, 208, 0.12), transparent 12rem),
+    #ffffff;
+  box-shadow: 0 18px 60px rgba(16, 48, 72, 0.07);
+}
+
+.pricing-plan.highlighted {
+  border-color: rgba(111, 162, 255, 0.36);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(111, 162, 255, 0.16), transparent 12rem),
+    #ffffff;
+}
+
+.plan-header {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.plan-header h3 {
+  margin: 0;
+  font-size: 1.28rem;
+  line-height: 1.1;
+}
+
+.plan-header p {
+  display: grid;
+  gap: 0.1rem;
+  margin: 0;
+}
+
+.plan-header strong {
+  color: var(--ink);
+  font-family: Sora, Inter, sans-serif;
+  font-size: clamp(1.85rem, 3vw, 2.35rem);
+  line-height: 1;
+}
+
+.plan-header span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.pricing-plan ul {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pricing-plan li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.5rem;
+  color: var(--muted-strong);
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.pricing-plan li::before {
+  content: "";
+  width: 0.48rem;
+  height: 0.48rem;
+  margin-top: 0.42rem;
+  border-radius: 999px;
+  background: var(--cyan);
 }
 
 .pricing-row {
@@ -1183,53 +1290,35 @@ h1 {
 
 .beta-panel {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  gap: 1rem;
+  grid-template-columns: minmax(17rem, 0.88fr) minmax(20rem, 1.12fr);
+  gap: clamp(1.2rem, 4vw, 3rem);
   align-items: start;
-  border: 1px solid var(--line-strong);
-  border-radius: 1.5rem;
-  padding: clamp(1rem, 3vw, 1.4rem);
-  background:
-    radial-gradient(circle at 92% 18%, rgba(90, 215, 208, 0.16), transparent 18rem),
-    #ffffff;
-  box-shadow: 0 22px 70px rgba(16, 48, 72, 0.08);
 }
 
 .beta-section {
-  padding-top: clamp(2.2rem, 5vw, 4rem);
+  padding-top: clamp(1rem, 3vw, 2rem);
 }
 
-.beta-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin-top: 1rem;
+.beta-copy {
+  max-width: 34rem;
 }
 
-.beta-highlights span {
-  border: 1px solid rgba(90, 215, 208, 0.28);
-  border-radius: 999px;
-  padding: 0.42rem 0.62rem;
-  background: rgba(90, 215, 208, 0.08);
-  color: #0f746c;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.beta-copy,
 .beta-form {
   border: 1px solid rgba(111, 162, 255, 0.18);
   border-radius: 1.1rem;
-  padding: clamp(1.1rem, 3vw, 1.45rem);
+  padding: clamp(1rem, 2.5vw, 1.3rem);
   background: rgba(247, 250, 252, 0.76);
+  box-shadow: 0 18px 60px rgba(16, 48, 72, 0.07);
 }
 
 .beta-copy h2 {
-  max-width: 12ch;
-  margin-bottom: 0.8rem;
+  max-width: 15ch;
+  margin-bottom: 0.7rem;
+  font-size: clamp(2rem, 3.6vw, 2.85rem);
 }
 
 .beta-copy p {
+  max-width: 28rem;
   color: var(--muted);
   line-height: 1.55;
 }
@@ -1283,6 +1372,12 @@ h1 {
   align-items: center;
   min-height: 4.1rem;
   margin-top: 0.9rem;
+}
+
+.turnstile-widget:empty {
+  display: none;
+  min-height: 0;
+  margin-top: 0;
 }
 
 .beta-form button {
@@ -1543,6 +1638,7 @@ h1 {
 
 @media (max-width: 980px) {
   .hero,
+  .demo-layout,
   .phone-feature,
   .phone-feature:nth-child(even),
   .pricing-card,
@@ -1558,6 +1654,7 @@ h1 {
   }
 
   .hero-copy-block,
+  .demo-copy,
   .section-heading,
   .phone-copy {
     max-width: none;
@@ -1574,6 +1671,7 @@ h1 {
   .trust-row,
   .step-grid,
   .feature-grid,
+  .pricing-plans,
   .phone-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1680,7 +1778,12 @@ h1 {
   }
 
   .trust-row,
+  .pricing-plans,
   .phone-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-row.expense-capture-row {
     grid-template-columns: 1fr;
   }
 
@@ -1858,10 +1961,6 @@ h1 {
     border: 0;
     padding: 0;
     background: transparent;
-  }
-
-  .beta-highlights {
-    display: none;
   }
 
   .form-grid {
