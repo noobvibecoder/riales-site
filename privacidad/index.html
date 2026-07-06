@@ -40,7 +40,7 @@
           Esta política explica qué datos usa RIALES, para qué se usan, cómo se
           protegen y qué opciones tenés sobre la información asociada a tu cuenta.
         </p>
-        <p class="legal-date">Última actualización: junio de 2026.</p>
+        <p class="legal-date">Última actualización: 6 de julio de 2026.</p>
       </section>
 
       <section class="content">
@@ -57,8 +57,9 @@
           <h2>2. Alcance</h2>
           <p>
             Esta política aplica al uso de la app RIALES, sus funciones de
-            registro financiero, respaldo, importación, calendario, deudas,
-            activos, indicadores y al sitio público de RIALES.
+            cuenta, autenticación, registro financiero, respaldo, importación,
+            calendario, deudas, activos, indicadores, clasificación automática,
+            SMS bancarios, voz y al sitio público de RIALES.
           </p>
         </article>
 
@@ -66,25 +67,30 @@
           <h2>3. Datos que podemos usar</h2>
           <ul>
             <li>
-              <strong>Datos de cuenta:</strong> correo electrónico,
-              identificador de usuario, estado de sesión y datos necesarios para
-              iniciar sesión.
+              <strong>Datos de cuenta:</strong> nombre, correo electrónico,
+              identificador de usuario, proveedor de inicio de sesión, estado de
+              sesión y datos necesarios para crear, abrir y proteger tu cuenta.
             </li>
             <li>
               <strong>Datos financieros:</strong> ingresos, gastos, categorías,
-              deudas, pagos, efectivo, activos, alquileres, calendario,
-              registros, ajustes y respaldos que ingresás o confirmás en la app.
+              gastos recurrentes, ingresos recurrentes, deudas, pagos a deuda,
+              abonos, intereses y otros cargos, efectivo, activos, alquileres,
+              calendario, registros, ajustes, monedas, tasa de cambio,
+              clasificaciones y respaldos que ingresás o confirmás en la app.
             </li>
             <li>
               <strong>Datos de importación:</strong> archivos que seleccionás
-              voluntariamente, como estados de cuenta o respaldos, para extraer
-              movimientos o restaurar información.
+              voluntariamente, como estados de cuenta PDF o respaldos, texto
+              extraído, movimientos detectados, duplicados, registros ignorados y
+              decisiones de revisión para extraer movimientos o restaurar
+              información.
             </li>
             <li>
               <strong>Datos de voz:</strong> si usás registro por voz, la app
               puede pedir permiso de micrófono para convertir lo que decís en un
               movimiento. RIALES no usa esa función para escuchar de forma
-              permanente.
+              permanente y no guarda grabaciones de audio como parte del
+              presupuesto.
             </li>
             <li>
               <strong>Datos de SMS bancarios:</strong> si activás la captura
@@ -92,6 +98,17 @@
               nuevos y procesar únicamente mensajes de remitentes que vos
               autorizás. Esos mensajes se usan para crear gastos pendientes de
               revisión; no se registran movimientos sin tu confirmación.
+            </li>
+            <li>
+              <strong>Reglas de clasificación:</strong> cuando corregís una
+              clasificación automática, RIALES puede guardar esa preferencia
+              asociada a tu cuenta para sugerir mejor la categoría y el gasto en
+              futuras importaciones, SMS o registros por voz.
+            </li>
+            <li>
+              <strong>Exportación para IA:</strong> si usás la opción de copiar
+              resumen para IA, la app prepara texto y lo copia al portapapeles.
+              RIALES no lo envía automáticamente a servicios externos de IA.
             </li>
             <li>
               <strong>Datos de preferencias:</strong> moneda seleccionada,
@@ -128,6 +145,14 @@
               Detectar compras desde SMS bancarios autorizados por vos y dejarlas
               como pendientes para que las revisés antes de guardarlas.
             </li>
+            <li>
+              Aprender de correcciones manuales para mejorar sugerencias de
+              clasificación en PDF, SMS y voz.
+            </li>
+            <li>
+              Manejar registros en distintas monedas y mostrar saldos globales
+              convertidos según la moneda y tasa configuradas en la app.
+            </li>
             <li>Permitir respaldo, restauración y eliminación de datos.</li>
             <li>Responder solicitudes de soporte, beta o contacto.</li>
             <li>Prevenir abuso, errores, accesos no autorizados o fallas.</li>
@@ -137,10 +162,17 @@
         <article class="legal-card">
           <h2>5. Cómo se guarda y protege la información</h2>
           <p>
-            La información financiera se asocia a tu cuenta. La app usa controles
-            de acceso por usuario para que cada cuenta vea únicamente sus datos.
-            También puede guardar información local en tu dispositivo para
-            funcionamiento, respaldo o continuidad de uso.
+            En producción, la información financiera se asocia a tu cuenta y se
+            guarda en Supabase, nuestro proveedor de autenticación y base de
+            datos. La app usa controles de acceso por usuario para que cada
+            cuenta vea únicamente sus datos.
+          </p>
+          <p>
+            En modo cuenta, RIALES es una app online-first: no usa el
+            almacenamiento del dispositivo como fuente operativa de tus datos
+            financieros. Puede conservar datos técnicos necesarios para sesión,
+            permisos, procesamiento temporal o respaldos explícitos que vos
+            generás o restaurás.
           </p>
           <p>
             Usamos medidas razonables de seguridad, incluyendo comunicación
@@ -154,9 +186,14 @@
           <p>RIALES no vende tus datos personales ni financieros.</p>
           <p>
             Podemos usar proveedores necesarios para operar la app, como
-            autenticación, base de datos, almacenamiento, envío de correos,
-            análisis de errores o infraestructura. Esos proveedores solo deben
-            procesar datos para prestar el servicio.
+            autenticación, base de datos, almacenamiento, correo, tiendas de
+            aplicaciones, análisis de errores o infraestructura. Esos proveedores
+            solo deben procesar datos para prestar el servicio.
+          </p>
+          <p>
+            RIALES no conecta con bancos, no comparte tus datos con bancos y no
+            realiza pagos por vos. Si elegís iniciar sesión con Google, Google
+            procesa esa autenticación según sus propias políticas.
           </p>
           <p>
             También podemos compartir información si lo exige una obligación
@@ -166,7 +203,7 @@
         </article>
 
         <article class="legal-card">
-          <h2>7. Archivos, PDF, SMS y voz</h2>
+          <h2>7. Archivos, PDF, SMS, voz y permisos</h2>
           <p>
             Si subís un PDF, archivo bancario o respaldo, RIALES lo usa para
             leer, clasificar o restaurar la información que vos solicitás. Antes
@@ -185,6 +222,11 @@
             gasto pendiente o descartarlo. Podés desactivar esta función o quitar
             remitentes cuando querás desde la app o desde los permisos de Android.
           </p>
+          <p>
+            Si el sistema operativo permite biometría y decidís usarla, esa
+            validación ocurre en tu dispositivo para facilitar el acceso. RIALES
+            no recibe ni almacena tus datos biométricos.
+          </p>
         </article>
 
         <article class="legal-card">
@@ -200,6 +242,13 @@
             Algunas copias temporales, respaldos técnicos o registros de
             seguridad pueden tardar un tiempo razonable en desaparecer por
             completo.
+          </p>
+          <p>
+            La función de borrar todo y empezar desde cero elimina los datos
+            financieros y configuraciones de RIALES asociados a tu cuenta, pero
+            no borra por sí sola tu correo, contraseña o cuenta de autenticación.
+            Para eliminar la cuenta completa debés usar la ruta de eliminación de
+            cuenta.
           </p>
           <p>
             Los respaldos o archivos que guardés fuera de RIALES quedan bajo tu
