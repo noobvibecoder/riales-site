@@ -100,6 +100,21 @@
               revisión; no se registran movimientos sin tu confirmación.
             </li>
             <li>
+              <strong>Notificaciones push:</strong> si el dispositivo las
+              permite, RIALES puede guardar preferencias y datos técnicos de
+              OneSignal para enviarte avisos configurables.
+            </li>
+            <li>
+              <strong>Anuncios:</strong> el plan gratis puede mostrar anuncios
+              mediante Google AdMob. Relax y Pro permiten usar RIALES sin
+              anuncios.
+            </li>
+            <li>
+              <strong>Planes y compras:</strong> si contratás Relax o Pro,
+              Google Play procesa la compra y RIALES guarda el estado del plan
+              necesario para habilitar funciones y límites.
+            </li>
+            <li>
               <strong>Reglas de clasificación:</strong> cuando corregís una
               clasificación automática, RIALES puede guardar esa preferencia
               asociada a tu cuenta para sugerir mejor la categoría y el gasto en
@@ -116,9 +131,11 @@
               app correctamente.
             </li>
             <li>
-              <strong>Datos técnicos:</strong> información básica de uso,
-              seguridad, errores y funcionamiento para proteger la cuenta y
-              mejorar la estabilidad de la app.
+              <strong>Datos técnicos y diagnósticos:</strong> información básica
+              de uso, seguridad, errores, pantalla actual, versión y
+              funcionamiento para proteger la cuenta y mejorar la estabilidad de
+              la app. Los reportes de problema se redactan para evitar tokens,
+              contraseñas y números sensibles.
             </li>
             <li>
               <strong>Datos de beta o contacto:</strong> si te registrás para
@@ -153,6 +170,12 @@
               Manejar registros en distintas monedas y mostrar saldos globales
               convertidos según la moneda y tasa configuradas en la app.
             </li>
+            <li>
+              Enviar notificaciones push configurables, sin incluir montos,
+              comercios ni saldos sensibles en el contenido.
+            </li>
+            <li>Mostrar anuncios en el plan gratis y quitarlos en Relax y Pro.</li>
+            <li>Procesar el estado de planes y compras hechas por Google Play.</li>
             <li>Permitir respaldo, restauración y eliminación de datos.</li>
             <li>Responder solicitudes de soporte, beta o contacto.</li>
             <li>Prevenir abuso, errores, accesos no autorizados o fallas.</li>
@@ -187,8 +210,10 @@
           <p>
             Podemos usar proveedores necesarios para operar la app, como
             autenticación, base de datos, almacenamiento, correo, tiendas de
-            aplicaciones, análisis de errores o infraestructura. Esos proveedores
-            solo deben procesar datos para prestar el servicio.
+            aplicaciones, notificaciones push, anuncios, análisis de errores o
+            infraestructura. Esos proveedores incluyen Supabase, OneSignal,
+            Google AdMob, Google Play y Google si elegís iniciar sesión con
+            Google. Solo deben procesar datos para prestar el servicio.
           </p>
           <p>
             RIALES no conecta con bancos, no comparte tus datos con bancos y no
