@@ -293,7 +293,7 @@ h1 {
   --device-width: min(100%, 18.4rem);
   position: relative;
   width: var(--device-width);
-  aspect-ratio: 9 / 19.7;
+  aspect-ratio: 430 / 932;
   border: 1px solid rgba(8, 24, 35, 0.16);
   border-radius: var(--phone-radius);
   padding: 0.3rem;
@@ -309,11 +309,11 @@ h1 {
 .device-mockup::before {
   content: "";
   position: absolute;
-  top: 0.22rem;
+  top: 0.43rem;
   left: 50%;
   z-index: 2;
-  width: 0.46rem;
-  height: 0.46rem;
+  width: 0.28rem;
+  height: 0.28rem;
   border-radius: 999px;
   border: 1px solid rgba(222, 232, 240, 0.18);
   background: #020912;
