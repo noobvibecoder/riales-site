@@ -307,23 +307,6 @@ h1 {
     var(--shadow);
 }
 
-.device-mockup::before {
-  content: "";
-  position: absolute;
-  top: 0.43rem;
-  left: 50%;
-  z-index: 2;
-  width: 0.28rem;
-  height: 0.28rem;
-  border-radius: 999px;
-  border: 1px solid rgba(222, 232, 240, 0.18);
-  background: #020912;
-  box-shadow:
-    0 0 0 1px rgba(2, 9, 18, 0.72),
-    0 0.08rem 0.18rem rgba(255, 255, 255, 0.06);
-  transform: translateX(-50%);
-}
-
 .device-mockup::after {
   content: "";
   position: absolute;
@@ -712,7 +695,7 @@ h1 {
 
 .phone-gallery {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.85rem;
 }
 
@@ -1638,6 +1621,68 @@ h1 {
   color: var(--red);
 }
 
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 0.75rem;
+}
+
+.faq-list details {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 14px 42px rgba(16, 48, 72, 0.06);
+}
+
+.faq-list summary {
+  position: relative;
+  padding: 1rem 3rem 1rem 1rem;
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 850;
+  line-height: 1.4;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 999px;
+  background: rgba(111, 162, 255, 0.12);
+  color: var(--brand-strong);
+  font-size: 1.2rem;
+  transform: translateY(-50%);
+}
+
+.faq-list details[open] summary::after {
+  content: "−";
+}
+
+.faq-list p {
+  margin: 0;
+  border-top: 1px solid var(--line);
+  padding: 0.9rem 1rem 1rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.faq-list p a {
+  color: var(--brand-strong);
+  font-weight: 800;
+}
+
 .flow-panel,
 .security-band {
   display: grid;
@@ -1907,7 +1952,8 @@ h1 {
 
   .trust-row,
   .feature-grid,
-  .phone-gallery {
+  .phone-gallery,
+  .faq-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -2013,7 +2059,8 @@ h1 {
   }
 
   .trust-row,
-  .phone-gallery {
+  .phone-gallery,
+  .faq-list {
     grid-template-columns: 1fr;
   }
 
