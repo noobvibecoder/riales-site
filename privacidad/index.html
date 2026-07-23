@@ -40,7 +40,7 @@
           Esta política explica qué datos usa RIALES, para qué se usan, cómo se
           protegen y qué opciones tenés sobre la información asociada a tu cuenta.
         </p>
-        <p class="legal-date">Última actualización: 6 de julio de 2026.</p>
+        <p class="legal-date">Última actualización: 23 de julio de 2026.</p>
       </section>
 
       <section class="content">
@@ -57,9 +57,10 @@
           <h2>2. Alcance</h2>
           <p>
             Esta política aplica al uso de la app RIALES, sus funciones de
-            cuenta, autenticación, registro financiero, respaldo, importación,
-            calendario, deudas, activos, indicadores, clasificación automática,
-            SMS bancarios, voz y al sitio público de RIALES.
+            cuenta, autenticación, registro financiero, importación, calendario,
+            deudas, metas de ahorro, activos, indicadores, clasificación
+            automática, SMS bancarios, voz, planes, anuncios y al sitio público
+            de RIALES.
           </p>
         </article>
 
@@ -75,22 +76,28 @@
               <strong>Datos financieros:</strong> ingresos, gastos, categorías,
               gastos recurrentes, ingresos recurrentes, deudas, pagos a deuda,
               abonos, intereses y otros cargos, efectivo, activos, alquileres,
-              calendario, registros, ajustes, monedas, tasa de cambio,
-              clasificaciones y respaldos que ingresás o confirmás en la app.
+              calendario, metas de ahorro, registros, ajustes, monedas, tasa de
+              cambio, clasificaciones y preferencias que ingresás o confirmás en
+              la app.
             </li>
             <li>
-              <strong>Datos de importación:</strong> archivos que seleccionás
-              voluntariamente, como estados de cuenta PDF o respaldos, texto
-              extraído, movimientos detectados, duplicados, registros ignorados y
-              decisiones de revisión para extraer movimientos o restaurar
-              información.
+              <strong>Datos bancarios parciales:</strong> información que
+              ingresás o que se extrae de un SMS, como los últimos cuatro
+              dígitos de una tarjeta o cuenta. RIALES no solicita credenciales
+              bancarias ni números completos para conectarse a un banco.
+            </li>
+            <li>
+              <strong>Datos de importación:</strong> estados de cuenta PDF que
+              seleccionás voluntariamente. El archivo original se procesa en el
+              dispositivo y RIALES no lo transmite ni lo conserva en Supabase;
+              solo se sincronizan los movimientos y decisiones que confirmás.
             </li>
             <li>
               <strong>Datos de voz:</strong> si usás registro por voz, la app
               puede pedir permiso de micrófono para convertir lo que decís en un
-              movimiento. RIALES no usa esa función para escuchar de forma
-              permanente y no guarda grabaciones de audio como parte del
-              resumen mensual ni de tus movimientos.
+              movimiento. El servicio de reconocimiento del dispositivo o de su
+              proveedor puede procesar el audio para producir la transcripción.
+              RIALES no escucha permanentemente ni guarda grabaciones de audio.
             </li>
             <li>
               <strong>Datos de SMS bancarios:</strong> si activás la captura
@@ -102,16 +109,21 @@
             <li>
               <strong>Notificaciones push:</strong> si el dispositivo las
               permite, RIALES puede guardar preferencias y datos técnicos de
-              OneSignal para enviarte avisos configurables.
+              OneSignal, como el identificador de suscripción push, para enviarte
+              avisos configurables.
             </li>
             <li>
               <strong>Anuncios:</strong> el plan gratis puede mostrar anuncios
               automáticos mediante Google AdMob. Relax y Pro no muestran
               anuncios automáticos. En cualquier plan podés aceptar
               voluntariamente un anuncio para obtener un crédito
-              cuando se agota una cuota compatible. La verificación transmite a
-              Google y RIALES el identificador de usuario, bloque de anuncio,
-              transacción y recompensa, pero no el contenido financiero.
+              cuando se agota una cuota compatible. El SDK puede tratar la
+              dirección IP para estimar ubicación aproximada, interacciones,
+              diagnósticos e identificadores del dispositivo o de la app para
+              publicidad, analítica y prevención de fraude. La verificación de
+              una recompensa transmite a Google y RIALES el identificador de
+              usuario, bloque de anuncio, transacción y recompensa, pero no el
+              contenido financiero.
             </li>
             <li>
               <strong>Planes y compras:</strong> si contratás Relax o Pro,
@@ -144,7 +156,9 @@
             <li>
               <strong>Datos de beta o contacto:</strong> si te registrás para
               una beta o nos escribís, podemos guardar nombre, apellido, correo,
-              teléfono y tipo de dispositivo para responderte.
+              teléfono y tipo de dispositivo para responderte. Cloudflare
+              Turnstile puede tratar datos técnicos del navegador y la red para
+              prevenir envíos automatizados.
             </li>
           </ul>
         </article>
@@ -183,7 +197,10 @@
               obtener créditos únicamente cuando lo aceptás.
             </li>
             <li>Procesar el estado de planes y compras hechas por Google Play.</li>
-            <li>Permitir respaldo, restauración y eliminación de datos.</li>
+            <li>
+              Mantener respaldos cifrados para recuperación del servicio y
+              permitir la eliminación de datos.
+            </li>
             <li>Responder solicitudes de soporte, beta o contacto.</li>
             <li>Prevenir abuso, errores, accesos no autorizados o fallas.</li>
           </ul>
@@ -201,13 +218,18 @@
             En modo cuenta, RIALES es una app online-first: no usa el
             almacenamiento del dispositivo como fuente operativa de tus datos
             financieros. Puede conservar datos técnicos necesarios para sesión,
-            permisos, procesamiento temporal o respaldos explícitos que vos
-            generás o restaurás.
+            permisos y procesamiento temporal.
           </p>
           <p>
             Usamos medidas razonables de seguridad, incluyendo comunicación
             segura, sesiones protegidas y controles de acceso. Aun así, ningún
             sistema digital puede prometer seguridad absoluta.
+          </p>
+          <p>
+            Para recuperación del servicio mantenemos respaldos operativos
+            cifrados diarios, con retención máxima de 35 días, restauración
+            verificada y la clave custodiada por separado. No son una función de
+            restauración individual dentro de la app.
           </p>
         </article>
 
@@ -220,7 +242,9 @@
             aplicaciones, notificaciones push, anuncios, análisis de errores o
             infraestructura. Esos proveedores incluyen Supabase, OneSignal,
             Google AdMob, Google Play y Google si elegís iniciar sesión con
-            Google. Solo deben procesar datos para prestar el servicio.
+            Google. El sitio oficial también puede usar Cloudflare Turnstile
+            para prevenir abuso. Solo deben procesar datos para prestar el
+            servicio correspondiente.
           </p>
           <p>
             RIALES no conecta con bancos, no comparte tus datos con bancos y no
@@ -235,12 +259,12 @@
         </article>
 
         <article class="legal-card">
-          <h2>7. Archivos, PDF, SMS, voz y permisos</h2>
+          <h2>7. PDF, SMS, voz y permisos</h2>
           <p>
-            Si subís un PDF, archivo bancario o respaldo, RIALES lo usa para
-            leer, clasificar o restaurar la información que vos solicitás. Antes
-            de guardar movimientos importados, debés revisarlos y confirmar que
-            están correctos.
+            Si seleccionás un PDF bancario, RIALES lo procesa localmente para
+            sugerir movimientos. El archivo original no se envía a Supabase.
+            Antes de guardar movimientos importados, debés revisarlos y confirmar
+            que están correctos.
           </p>
           <p>
             Si usás voz, la app convierte tu instrucción en datos para crear un
@@ -251,7 +275,10 @@
             Si activás la captura por SMS bancario, RIALES procesa solo SMS
             nuevos de remitentes que agregaste en la app. El texto del SMS puede
             guardarse temporalmente en el dispositivo hasta convertirlo en un
-            gasto pendiente o descartarlo. Podés desactivar esta función o quitar
+            gasto pendiente o descartarlo, con un máximo de 200 mensajes o siete
+            días y cifrado mediante Android Keystore. Los campos extraídos pueden
+            sincronizarse como candidatos de movimiento y los pendientes remotos
+            vencen a los siete días. Podés desactivar esta función o quitar
             remitentes cuando querás desde la app o desde los permisos de Android.
           </p>
           <p>
@@ -264,16 +291,22 @@
         <article class="legal-card">
           <h2>8. Conservación y eliminación</h2>
           <p>
-            Conservamos tus datos mientras mantengás una cuenta activa o mientras
-            sea necesario para operar la app, cumplir obligaciones, resolver
-            problemas o proteger el servicio.
+            Los datos financieros confirmados se conservan mientras exista tu
+            cuenta o hasta que los borrés. Los plazos máximos de los datos
+            operativos son: 30 días para diagnósticos; siete días para ventanas
+            antiabuso, pendientes SMS y recibos de sincronización; 90 días para
+            entregas push, recibos técnicos de Google Play y evidencia de
+            retención; y 400 días para uso del plan y recibos técnicos de
+            anuncios con recompensa.
           </p>
           <p>
             Podés solicitar la
             <a href="/eliminacion-cuenta/">eliminación de tu cuenta y datos</a>.
-            Algunas copias temporales, respaldos técnicos o registros de
-            seguridad pueden tardar un tiempo razonable en desaparecer por
-            completo.
+            La eliminación retira la cuenta y sus datos de los sistemas activos.
+            Las copias cifradas de recuperación pueden conservar esos datos hasta
+            completar su rotación máxima de 35 días y solo se usan para recuperar
+            el servicio. Una obligación legal, de seguridad o antifraude puede
+            exigir una conservación limitada adicional.
           </p>
           <p>
             La función de borrar todo y empezar desde cero elimina los datos
@@ -283,12 +316,9 @@
             cuenta.
           </p>
           <p>
-            Los respaldos o archivos que guardés fuera de RIALES quedan bajo tu
-            control y responsabilidad.
-          </p>
-          <p>
-            Los recibos técnicos usados para impedir créditos duplicados por
-            anuncios se conservan hasta 400 días.
+            RIALES ya no ofrece descargar o restaurar respaldos manuales desde la
+            app. Borrar datos o empezar desde cero no se puede deshacer mediante
+            una restauración individual.
           </p>
         </article>
 
