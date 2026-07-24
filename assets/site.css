@@ -227,7 +227,7 @@ h1 {
   max-width: 11.6ch;
   margin-bottom: 1rem;
   font-size: clamp(3rem, 5.7vw, 5.15rem);
-  line-height: 0.94;
+  line-height: 1.04;
   letter-spacing: 0;
 }
 
@@ -1926,7 +1926,7 @@ h1 {
     max-width: 15ch;
     margin-inline: auto;
     font-size: clamp(2.32rem, 10vw, 3.1rem);
-    line-height: 1;
+    line-height: 1.04;
   }
 
   .hero-copy {
