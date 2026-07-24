@@ -153,6 +153,8 @@
         return;
       }
 
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'beta_signup_success' });
       form.reset();
       resetTurnstile();
       setStatus('Listo. Ya estás en la lista para la beta de RIALES.', 'success');
