@@ -15,10 +15,10 @@
     <title>RIALES | Finanzas personales para Nicaragua</title>
     <meta
       name="description"
-      content="RIALES es una app de finanzas personales para Nicaragua: registrá ingresos y gastos, proyectá tu efectivo, organizá metas de ahorro, deudas y activos."
+      content="RIALES organiza tus finanzas y convierte los SMS bancarios de Android en gastos pendientes que revisás antes de guardar."
     />
     <link rel="canonical" href="https://riales.app/" />
-    <link rel="stylesheet" href="/assets/site.css?v=20260723a" />
+    <link rel="stylesheet" href="/assets/site.css?v=20260728m" />
     <script src="/assets/beta-config.js?v=20260627b" defer></script>
     <script src="/assets/beta.js?v=20260723a" defer></script>
     <script src="/assets/pricing.js?v=20260704a" defer></script>
@@ -33,18 +33,18 @@
         <img class="brand-logo" src="/assets/logo-app.png" alt="RIALES" width="560" height="160" />
       </a>
       <nav class="nav" aria-label="Principal">
-        <a href="/">Inicio</a>
+        <a href="#sms">Automatización</a>
         <a href="#funciones">Funciones</a>
         <a href="#precios">Precios</a>
-        <a href="#beta">Beta</a>
+        <a class="nav-cta" href="#beta">Unite a la beta</a>
       </nav>
       <details class="mobile-menu">
         <summary aria-label="Abrir menú">Menú</summary>
         <div class="mobile-menu-panel">
-          <a href="/">Inicio</a>
+          <a href="#sms">Automatización</a>
           <a href="#funciones">Funciones</a>
           <a href="#precios">Precios</a>
-          <a href="#beta">Beta</a>
+          <a href="#beta">Unite a la beta</a>
         </div>
       </details>
     </header>
@@ -54,180 +54,209 @@
         <div class="hero-copy-block">
           <h1>App de finanzas personales para Nicaragua.</h1>
           <p class="hero-copy">
-            Registrá lo que entra y sale, anticipá tu efectivo y avanzá hacia
-            tus metas desde un solo lugar.
+            Registrá ingresos y gastos, organizá tus pagos y proyectá tu
+            efectivo. RIALES también prepara automáticamente tus gastos desde
+            los SMS de tu banco.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#precios">Ver planes</a>
+            <a class="button" href="#beta">Unite a la beta</a>
           </div>
         </div>
 
-        <div class="hero-phones" aria-label="Pantallas principales de RIALES">
-          <div class="money-flow-card flow-income">
-            <span>Ingreso</span>
-            <strong>C$ 15,000.00</strong>
-            <small>Ingreso principal</small>
-          </div>
-          <div class="money-flow-card flow-pdf" aria-hidden="true">
-            <span>PDF de tarjeta</span>
-            <strong>12 movimientos</strong>
-            <small>Clasificación sugerida</small>
-          </div>
-          <div class="money-flow-card flow-expense" aria-hidden="true">
-            <span>Gastos</span>
-            <strong>-C$ 10,000.00</strong>
-            <small>Gastos del mes</small>
-          </div>
-          <div class="money-flow-card flow-result">
-            <span>Efectivo</span>
-            <strong>C$ 7,000.00</strong>
-            <small>Saldo disponible</small>
-          </div>
-          <div class="device-mockup hero-device secondary-device" aria-hidden="true">
-            <img class="real-screen" src="/assets/screen-registro.png?v=20260718a" alt="" width="430" height="932" />
-          </div>
-
+        <div class="hero-phones" aria-label="Pantalla principal de RIALES">
           <div class="device-mockup hero-device main-device">
-            <img class="real-screen" src="/assets/screen-resumen.png?v=20260718a" alt="Pantalla real del resumen de RIALES" width="430" height="932" />
+            <img class="real-screen" src="/assets/screen-resumen.png?v=20260728g" alt="Pantalla real del resumen de RIALES" width="430" height="897" />
           </div>
         </div>
 
-        <div class="trust-row expense-capture-row" aria-label="Registro de gastos">
-          <div>
-            <strong>Gastos por voz</strong>
-            <span>Salís de la gasolinera o la tienda, se lo decís al celular y el gasto queda registrado al momento.</span>
+      </section>
+
+      <section class="section beta-section" id="beta">
+        <div class="beta-panel">
+          <div class="beta-copy">
+            <p class="eyebrow">Beta</p>
+            <h2>Sé parte de la beta de RIALES.</h2>
+            <p>
+              Ingresa tus datos y te contactaremos para participar en la beta
+              y ayudarnos a mejorar la app.
+            </p>
           </div>
-          <div>
-            <strong>Carga masiva desde PDF</strong>
-            <span>Subís el estado de cuenta de tu tarjeta de crédito y cargás muchos movimientos de una sola vez.</span>
+
+          <form class="beta-form" id="beta-form">
+            <div class="form-grid">
+              <label>
+                <span>Nombre</span>
+                <input name="first_name" autocomplete="given-name" required />
+              </label>
+              <label>
+                <span>Apellido</span>
+                <input name="last_name" autocomplete="family-name" required />
+              </label>
+              <label>
+                <span>Teléfono celular</span>
+                <input name="phone" autocomplete="tel" inputmode="tel" required />
+              </label>
+              <label>
+                <span>Correo electrónico</span>
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+              <label class="full-field">
+                <span>¿Usás Android o iOS?</span>
+                <select name="device_type" required>
+                  <option value="">Seleccioná una opción</option>
+                  <option value="android">Android</option>
+                  <option value="ios">iOS</option>
+                </select>
+              </label>
+            </div>
+            <div class="turnstile-widget" id="beta-turnstile"></div>
+            <button type="submit">Quiero entrar a la beta</button>
+            <p class="form-status" id="beta-form-status" role="status" aria-live="polite">
+              Usaremos estos datos solo para contactarte sobre la beta.
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section sms-section" id="sms">
+        <div class="sms-panel">
+          <div class="sms-copy">
+            <h2>Tus gastos bancarios, listos para registrar.</h2>
+            <p class="section-lead">
+              Agregá el remitente de tu banco. Cuando llegue un SMS de compra,
+              RIALES te enviará una notificación para que confirmés la
+              clasificación de tu gasto y lo guardés, ¡sin complicaciones!
+            </p>
+            <ol class="sms-steps">
+              <li>
+                <span>1</span>
+                <div>
+                  <strong>Elegí el remitente</strong>
+                  <p>Agregá el nombre o número que usa tu banco.</p>
+                </div>
+              </li>
+              <li>
+                <span>2</span>
+                <div>
+                  <strong>RIALES detecta el gasto</strong>
+                  <p>Se clasifica automáticamente.</p>
+                </div>
+              </li>
+              <li>
+                <span>3</span>
+                <div>
+                  <strong>Revisá y confirmá</strong>
+                  <p>Confirmá el monto, el comercio y la categoría.</p>
+                </div>
+              </li>
+            </ol>
+            <a class="button sms-button" href="#beta">Quiero probarlo</a>
+          </div>
+
+          <div class="sms-visual" aria-label="Configuración de remitente y gasto SMS pendiente">
+            <div class="device-mockup sms-device">
+              <img class="real-screen" src="/assets/screen-sms-remitente.png?v=20260728g" alt="Pantalla real de configuración de un remitente bancario en RIALES" width="430" height="897" />
+            </div>
+            <div class="sms-popup-stack">
+              <aside class="sms-review-popup sms-popup-compact sms-popup-secondary" aria-label="Gasto de gasolina pendiente de revisar">
+                <div class="sms-popup-top">
+                  <span class="sms-popup-icon" aria-hidden="true">✓</span>
+                  <div>
+                    <small>Pendiente de revisar</small>
+                    <strong>GASOLINERA</strong>
+                  </div>
+                </div>
+                <div class="sms-popup-compact-row">
+                  <span>Transporte</span>
+                  <strong>C$ 980.00</strong>
+                </div>
+              </aside>
+
+              <aside class="sms-review-popup sms-popup-compact sms-popup-tertiary" aria-label="Gasto de farmacia pendiente de revisar">
+                <div class="sms-popup-top">
+                  <span class="sms-popup-icon" aria-hidden="true">✓</span>
+                  <div>
+                    <small>Pendiente de revisar</small>
+                    <strong>FARMACIA</strong>
+                  </div>
+                </div>
+                <div class="sms-popup-compact-row">
+                  <span>Salud</span>
+                  <strong>C$ 465.25</strong>
+                </div>
+              </aside>
+
+              <aside class="sms-review-popup sms-popup-primary" aria-label="Gasto de supermercado pendiente de revisar">
+                <div class="sms-popup-top">
+                  <span class="sms-popup-icon" aria-hidden="true">✓</span>
+                  <div>
+                    <small>Nuevo gasto detectado</small>
+                    <strong>Pendiente de revisar</strong>
+                  </div>
+                </div>
+                <div class="sms-popup-row">
+                  <span>Comercio</span>
+                  <strong>SUPERMERCADO</strong>
+                </div>
+                <div class="sms-popup-row">
+                  <span>Monto</span>
+                  <strong>C$ 1,245.60</strong>
+                </div>
+                <div class="sms-popup-row">
+                  <span>Categoría sugerida</span>
+                  <strong>Compras del hogar</strong>
+                </div>
+                <div class="sms-popup-action">Revisar gasto <span aria-hidden="true">→</span></div>
+              </aside>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section showcase" id="pantallas">
         <div class="section-heading">
-          <p class="eyebrow">Pantallas reales</p>
-          <h2>Todo a la vista.</h2>
+          <h2>Tus finanzas a la vista. Todo claro.</h2>
           <p class="section-lead">
-            Resumen, proyección, metas de ahorro, detalle del mes, registro,
-            calendario, indicadores y activos.
+            Tu resumen te da toda la información necesaria.
           </p>
         </div>
 
-        <div class="phone-gallery">
-          <article class="phone-feature featured">
-            <div class="phone-copy">
-              <h3>Resumen</h3>
-              <p>
-                Efectivo, ingresos, gastos y resultado del mes.
-              </p>
-            </div>
-            <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-resumen.png?v=20260718a" alt="Pantalla real del resumen de RIALES" width="430" height="932" />
-            </div>
-          </article>
-
-          <article class="phone-feature">
-            <div class="phone-copy">
-              <h3>Proyección</h3>
-              <p>
-                Estimá tu efectivo hasta un año hacia adelante.
-              </p>
-            </div>
-            <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-proyeccion.png?v=20260718a" alt="Pantalla real de proyección de efectivo en RIALES" width="430" height="932" />
-            </div>
-          </article>
-
-          <article class="phone-feature">
-            <div class="phone-copy">
-              <h3>Metas de ahorro</h3>
-              <p>
-                Compará tu avance real con el esperado para la fecha objetivo.
-              </p>
-            </div>
-            <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-metas-ahorro.png?v=20260718a" alt="Pantalla real de metas de ahorro en RIALES" width="430" height="932" />
-            </div>
-          </article>
-
-          <article class="phone-feature">
-            <div class="phone-copy">
-              <h3>Detalle del mes</h3>
-              <p>
-                Revisá el resultado, el balance y cada categoría.
-              </p>
-            </div>
-            <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-detalle-mes.png?v=20260718a" alt="Pantalla real del detalle del mes y balance en RIALES" width="430" height="932" />
-            </div>
-          </article>
-
-          <article class="phone-feature">
-            <div class="phone-copy">
-              <h3>Registro rápido</h3>
-              <p>
-                Voz, manual o estado de cuenta PDF para cargar gastos.
-              </p>
-            </div>
-            <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-registro.png?v=20260718a" alt="Pantalla real de registro rápido en RIALES" width="430" height="932" />
-            </div>
-          </article>
-
-          <article class="phone-feature">
-            <div class="phone-copy">
-              <h3>Calendario</h3>
-              <p>
-                Pagos, ingresos y recordatorios por fecha.
-              </p>
-            </div>
-            <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-calendario.png?v=20260718a" alt="Pantalla real del calendario financiero en RIALES" width="430" height="932" />
-            </div>
-          </article>
-
-          <article class="phone-feature">
-            <div class="phone-copy">
-              <h3>Indicadores</h3>
-              <p>
-                Señales simples sobre liquidez, deudas y resultado.
-              </p>
-            </div>
-            <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-indicadores.png?v=20260718a" alt="Pantalla real de indicadores financieros en RIALES" width="430" height="932" />
-            </div>
-          </article>
-
-          <article class="phone-feature">
-            <div class="phone-copy">
-              <h3>Activos</h3>
-              <p>
-                Seguimiento del valor, compra, venta e ingresos vinculados.
-              </p>
-            </div>
-            <div class="device-mockup">
-              <img class="real-screen" src="/assets/screen-activos.png?v=20260718a" alt="Pantalla real de activos en RIALES" width="430" height="932" />
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section local-section" id="nicaragua">
-        <div class="local-panel">
-          <div>
-            <p class="eyebrow">Nicaragua</p>
-            <h2>Para tu día a día.</h2>
-            <p class="section-lead">
-              Ingresos, cuotas, efectivo y deudas particulares, sin complicarlo.
-            </p>
+        <div class="summary-infographic" aria-label="Partes principales de la pantalla Resumen">
+          <div class="device-mockup summary-device">
+            <img class="real-screen" src="/assets/screen-resumen.png?v=20260728g" alt="Pantalla real del resumen de RIALES" width="430" height="897" />
           </div>
-          <div class="local-grid">
-            <div><strong>Córdobas y dólares</strong><span>Cada registro conserva su moneda original.</span></div>
-            <div><strong>Frecuencias</strong><span>Ingresos y pagos según tu ritmo.</span></div>
-            <div><strong>Deudas reales</strong><span>Banco, financiera o particular.</span></div>
-            <div><strong>Efectivo</strong><span>Tu saldo disponible de hoy.</span></div>
-          </div>
+
+          <aside class="summary-callout callout-cash">
+            <span class="callout-value" aria-hidden="true">C$</span>
+            <div>
+              <strong>Efectivo</strong>
+              <p>Tu saldo disponible hoy.</p>
+            </div>
+          </aside>
+
+          <aside class="summary-callout callout-month">
+            <span class="callout-value" aria-hidden="true">↑↓</span>
+            <div>
+              <strong>Tu mes</strong>
+              <p>Ingresos, gastos y resultado.</p>
+            </div>
+          </aside>
+
+          <aside class="summary-callout callout-health">
+            <span class="callout-value" aria-hidden="true">27</span>
+            <div>
+              <strong>Salud financiera</strong>
+              <p>Una lectura rápida de tus finanzas.</p>
+            </div>
+          </aside>
+
+          <aside class="summary-callout callout-goals">
+            <span class="callout-value" aria-hidden="true">24%</span>
+            <div>
+              <strong>Metas de ahorro</strong>
+              <p>Tu avance hacia cada objetivo.</p>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -235,10 +264,6 @@
         <div class="section-heading">
           <p class="eyebrow">Funciones principales</p>
           <h2>Más control, menos trabajo.</h2>
-          <p class="section-lead">
-            Desde el registro diario hasta tus próximos meses, sin perder de
-            vista la moneda original de cada movimiento.
-          </p>
         </div>
 
         <div class="feature-grid">
@@ -250,7 +275,7 @@
               </svg>
             </div>
             <h3>Registro flexible</h3>
-            <p>Agregá ingresos y gastos por voz, manualmente o desde un PDF, siempre con revisión antes de guardar.</p>
+            <p>Agregá ingresos y gastos por voz, manualmente o desde un PDF. Siempre los revisás antes de guardar.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">
@@ -261,7 +286,7 @@
               </svg>
             </div>
             <h3>Proyección</h3>
-            <p>Estimá tu efectivo hasta un año adelante con recurrentes o con la tendencia de consumo incluida.</p>
+            <p>Mirá cómo puede cambiar tu efectivo durante los próximos meses.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">
@@ -272,7 +297,7 @@
               </svg>
             </div>
             <h3>Metas de ahorro</h3>
-            <p>Definí monto y fecha, compará lo ahorrado con lo esperado y programá aportes recurrentes.</p>
+            <p>Definí una meta, una fecha y cuánto querés aportar.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">
@@ -283,7 +308,7 @@
               </svg>
             </div>
             <h3>Calendario y recurrentes</h3>
-            <p>Revisá lo pendiente por fecha y marcá pagos, ingresos y aportes de ahorro como listos u omitidos.</p>
+            <p>Mirá tus próximos pagos e ingresos en el calendario.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">
@@ -293,7 +318,7 @@
               </svg>
             </div>
             <h3>Resumen y balance</h3>
-            <p>Consultá efectivo a hoy, resultado del período, indicadores y el detalle de tu balance.</p>
+            <p>Revisá tu efectivo, ingresos, gastos y resultado del mes.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">
@@ -303,7 +328,7 @@
               </svg>
             </div>
             <h3>Deudas</h3>
-            <p>Llevá cuotas, abonos y pagos, separando capital de intereses y otros cargos.</p>
+            <p>Llevá el saldo, las cuotas y los pagos de tus deudas.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">
@@ -314,17 +339,18 @@
               </svg>
             </div>
             <h3>Activos</h3>
-            <p>Registrá su valor, compra, venta, alquiler recurrente y gastos vinculados.</p>
+            <p>Guardá el valor de tus bienes y sus ingresos o gastos.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M5.75 5h12.5A2.75 2.75 0 0 1 21 7.75v6.5A2.75 2.75 0 0 1 18.25 17H11l-4.25 3v-3h-1A2.75 2.75 0 0 1 3 14.25v-6.5A2.75 2.75 0 0 1 5.75 5Z" />
-                <path d="M7.5 9.5h9M7.5 13h5.5" />
+                <path d="M4.5 17.5a8 8 0 1 1 15 0" />
+                <path d="m12 12 4-4" />
+                <circle cx="12" cy="12" r="1.25" />
               </svg>
             </div>
-            <h3>Registro automático de gastos por SMS bancario</h3>
-            <p>En Android, registra automáticamente como pendientes los gastos detectados en remitentes que elegís, para que los revisés antes de guardarlos.</p>
+            <h3>Salud financiera</h3>
+            <p>Revisá tu puntaje y los indicadores clave de tus finanzas.</p>
           </article>
         </div>
       </section>
@@ -336,24 +362,25 @@
               <p class="eyebrow">Precios</p>
               <h2>Elegí tu plan.</h2>
             </div>
-            <div class="pricing-toolbar">
-              <label class="billing-switch" for="billing-toggle">
-                <span class="billing-option billing-option-monthly">Mensual</span>
-                <span class="switch-shell">
-                  <input
-                    class="billing-input"
-                    id="billing-toggle"
-                    type="checkbox"
-                    data-billing-toggle
-                    aria-label="Mostrar pago anual con descuento"
-                  />
-                  <span class="switch-track" aria-hidden="true"></span>
-                </span>
-                <span class="billing-option billing-option-annual">
-                  Anual <small>30% de descuento</small>
-                </span>
-              </label>
-            </div>
+          </div>
+
+          <div class="pricing-toolbar">
+            <label class="billing-switch" for="billing-toggle">
+              <span class="billing-option billing-option-monthly">Mensual</span>
+              <span class="switch-shell">
+                <input
+                  class="billing-input"
+                  id="billing-toggle"
+                  type="checkbox"
+                  data-billing-toggle
+                  aria-label="Mostrar pago anual con descuento"
+                />
+                <span class="switch-track" aria-hidden="true"></span>
+              </span>
+              <span class="billing-option billing-option-annual">
+                Anual <small>30% de descuento</small>
+              </span>
+            </label>
           </div>
 
           <div class="pricing-body">
@@ -674,53 +701,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="section beta-section" id="beta">
-        <div class="beta-panel">
-          <div class="beta-copy">
-            <p class="eyebrow">Beta</p>
-            <h2>Sé parte de la beta de RIALES.</h2>
-            <p>
-              Dejanos tus datos y te avisamos cuando abramos nuevos cupos en
-              Nicaragua.
-            </p>
-          </div>
-
-          <form class="beta-form" id="beta-form">
-            <div class="form-grid">
-              <label>
-                <span>Nombre</span>
-                <input name="first_name" autocomplete="given-name" required />
-              </label>
-              <label>
-                <span>Apellido</span>
-                <input name="last_name" autocomplete="family-name" required />
-              </label>
-              <label>
-                <span>Teléfono celular</span>
-                <input name="phone" autocomplete="tel" inputmode="tel" required />
-              </label>
-              <label>
-                <span>Correo electrónico</span>
-                <input name="email" type="email" autocomplete="email" required />
-              </label>
-              <label class="full-field">
-                <span>¿Usás Android o iOS?</span>
-                <select name="device_type" required>
-                  <option value="">Seleccioná una opción</option>
-                  <option value="android">Android</option>
-                  <option value="ios">iOS</option>
-                </select>
-              </label>
-            </div>
-            <div class="turnstile-widget" id="beta-turnstile"></div>
-            <button type="submit">Quiero entrar a la beta</button>
-            <p class="form-status" id="beta-form-status" role="status" aria-live="polite">
-              Usaremos estos datos solo para contactarte sobre la beta.
-            </p>
-          </form>
         </div>
       </section>
 
