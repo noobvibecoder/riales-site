@@ -1479,7 +1479,7 @@ h1 {
 }
 
 .pricing-comparison .feature-heading {
-  width: 27%;
+  width: 30%;
   color: var(--muted);
   font-size: 0.78rem;
   font-weight: 650;
@@ -1531,7 +1531,7 @@ h1 {
 }
 
 .pricing-comparison tbody th {
-  width: 27%;
+  width: 30%;
   background: rgba(247, 250, 252, 0.88);
   color: var(--ink);
   text-align: left;
@@ -1573,22 +1573,19 @@ h1 {
   stroke-width: 1.8;
 }
 
-.pricing-comparison tbody tr:nth-child(2) .pricing-feature-icon,
-.pricing-comparison tbody tr:nth-child(5) .pricing-feature-icon {
+.pricing-comparison tbody tr:nth-child(2) .pricing-feature-icon {
   border-color: rgba(111, 162, 255, 0.25);
   background: rgba(111, 162, 255, 0.11);
   color: #4678d9;
 }
 
-.pricing-comparison tbody tr:nth-child(3) .pricing-feature-icon,
-.pricing-comparison tbody tr:nth-child(7) .pricing-feature-icon {
+.pricing-comparison tbody tr:nth-child(3) .pricing-feature-icon {
   border-color: rgba(245, 158, 11, 0.26);
   background: rgba(245, 158, 11, 0.11);
   color: #b96d05;
 }
 
-.pricing-comparison tbody tr:nth-child(4) .pricing-feature-icon,
-.pricing-comparison tbody tr:nth-child(6) .pricing-feature-icon {
+.pricing-comparison tbody tr:nth-child(4) .pricing-feature-icon {
   border-color: rgba(18, 128, 122, 0.22);
   background: rgba(18, 128, 122, 0.1);
   color: #0f766e;
@@ -1608,6 +1605,12 @@ h1 {
   font-size: 1rem;
   line-height: 1.42;
   text-align: center;
+}
+
+.pricing-comparison tbody th,
+.pricing-comparison tbody td {
+  height: 4.8rem;
+  padding-block: 1.2rem;
 }
 
 .pricing-comparison tbody tr:nth-child(even) th,
@@ -2441,7 +2444,7 @@ h1 {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: end;
     gap: 0.75rem;
-    min-height: 5.1rem;
+    min-height: 4.8rem;
     padding: 1rem 1.1rem;
     background: linear-gradient(160deg, var(--ink) 0%, var(--brand-strong) 100%);
   }
@@ -2489,8 +2492,8 @@ h1 {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 0.9rem;
-    min-height: 3.45rem;
-    padding: 0.9rem 1.1rem;
+    min-height: 3.8rem;
+    padding: 1rem 1.1rem;
     border-top: 1px solid rgba(16, 48, 72, 0.08);
   }
 
@@ -2930,10 +2933,7 @@ h1 {
 .pricing-feature-icon,
 .pricing-comparison tbody tr:nth-child(2) .pricing-feature-icon,
 .pricing-comparison tbody tr:nth-child(3) .pricing-feature-icon,
-.pricing-comparison tbody tr:nth-child(4) .pricing-feature-icon,
-.pricing-comparison tbody tr:nth-child(5) .pricing-feature-icon,
-.pricing-comparison tbody tr:nth-child(6) .pricing-feature-icon,
-.pricing-comparison tbody tr:nth-child(7) .pricing-feature-icon {
+.pricing-comparison tbody tr:nth-child(4) .pricing-feature-icon {
   border-color: var(--line);
   background: var(--panel-2);
   color: var(--ink);
