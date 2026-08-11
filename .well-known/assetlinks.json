@@ -1,0 +1,22 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.riales",
+      "sha256_cert_fingerprints": [
+        "41:56:77:CE:B5:C6:AE:E6:76:05:DB:45:27:E0:4C:E0:A3:33:71:74:A5:5B:3F:FB:22:AC:BA:B5:73:81:40:51"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.riales.qa",
+      "sha256_cert_fingerprints": [
+        "A9:5A:C0:DA:21:A7:4E:EF:57:BB:43:68:49:A9:89:39:8F:49:43:F9:7D:BD:06:A0:F7:25:C2:D6:28:4A:81:5A"
+      ]
+    }
+  }
+]
