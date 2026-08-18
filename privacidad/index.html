@@ -53,7 +53,7 @@
           Esta política explica qué datos usa RIALES, para qué se usan, cómo se
           protegen y qué opciones tenés sobre la información asociada a tu cuenta.
         </p>
-        <p class="legal-date">Última actualización: 24 de julio de 2026.</p>
+        <p class="legal-date">Última actualización: 16 de agosto de 2026.</p>
       </section>
 
       <section class="content">
@@ -72,8 +72,8 @@
             Esta política aplica al uso de la app RIALES, sus funciones de
             cuenta, autenticación, registro financiero, importación, calendario,
             deudas, metas de ahorro, activos, indicadores, clasificación
-            automática, SMS bancarios, voz, planes, anuncios y al sitio público
-            de RIALES.
+            automática, comprobantes compartidos, SMS bancarios, voz, planes,
+            anuncios y al sitio público de RIALES.
           </p>
         </article>
 
@@ -104,6 +104,14 @@
               seleccionás voluntariamente. El archivo original se procesa en el
               dispositivo y RIALES no lo transmite ni lo conserva en Supabase;
               solo se sincronizan los movimientos y decisiones que confirmás.
+            </li>
+            <li>
+              <strong>Comprobantes compartidos:</strong> una imagen o PDF de una
+              página que enviás desde otra app. El OCR es local: el original y
+              el texto completo no se transmiten a Supabase ni a un servicio de
+              IA. Android no copia el archivo; iOS puede conservar solo el tipo
+              elegido y texto protegido durante un máximo de 15 minutos. Solo
+              se sincroniza el movimiento que revisás y confirmás.
             </li>
             <li>
               <strong>Datos de voz:</strong> si usás registro por voz, la app
@@ -142,6 +150,15 @@
               <strong>Planes y compras:</strong> si contratás Relax o Pro,
               Google Play procesa la compra y RIALES guarda el estado del plan
               necesario para habilitar funciones y límites.
+            </li>
+            <li>
+              <strong>Integridad de compras:</strong> en Android, Play Integrity
+              puede procesar un hash opaco ligado a la cuenta y compra, el
+              paquete, versión y firma de la app, la licencia y señales de
+              integridad del dispositivo. RIALES recibe los veredictos centrales
+              para seguridad y prevención de fraude. El hash no contiene datos
+              financieros legibles, y RIALES no persiste ni registra el token o
+              el hash.
             </li>
             <li>
               <strong>Reglas de clasificación:</strong> cuando corregís una
@@ -194,8 +211,9 @@
               indicadores, deudas, activos, efectivo y balance.
             </li>
             <li>
-              Procesar archivos o entradas de voz que vos seleccionás para
-              sugerir movimientos y clasificaciones.
+              Procesar localmente archivos, comprobantes compartidos o entradas
+              de voz que vos seleccionás para sugerir movimientos y
+              clasificaciones.
             </li>
             <li>
               Detectar compras desde SMS bancarios autorizados por vos y dejarlas
@@ -218,6 +236,10 @@
               obtener créditos únicamente cuando lo aceptás.
             </li>
             <li>Procesar el estado de planes y compras hechas por Google Play.</li>
+            <li>
+              Ayudar a detectar compras Android desde apps o dispositivos no
+              reconocidos mediante Play Integrity.
+            </li>
             <li>
               Mantener respaldos cifrados para recuperación del servicio y
               permitir la eliminación de datos.
@@ -244,6 +266,12 @@
             almacenamiento del dispositivo como fuente operativa de tus datos
             financieros. Puede conservar datos técnicos necesarios para sesión,
             permisos y procesamiento temporal.
+          </p>
+          <p>
+            En iOS, el texto OCR protegido de un comprobante compartido puede
+            permanecer hasta 15 minutos para completar el traspaso a RIALES y
+            se elimina al consumirlo o vencer. Android mantiene el URI solo en
+            memoria. La imagen o PDF original no se copia.
           </p>
           <p>
             Usamos medidas razonables de seguridad, incluyendo comunicación
@@ -273,6 +301,10 @@
             servicio correspondiente.
           </p>
           <p>
+            Google Play Integrity actúa como proveedor de seguridad de compras
+            Android y trata solo el contexto técnico descrito arriba.
+          </p>
+          <p>
             RIALES no conecta con bancos, no comparte tus datos con bancos y no
             realiza pagos por vos. Si elegís iniciar sesión con Google, Google
             procesa esa autenticación según sus propias políticas.
@@ -285,12 +317,18 @@
         </article>
 
         <article class="legal-card">
-          <h2>7. PDF, SMS, voz y permisos</h2>
+          <h2>7. PDF, comprobantes compartidos, SMS, voz y permisos</h2>
           <p>
             Si seleccionás un PDF bancario, RIALES lo procesa localmente para
             sugerir movimientos. El archivo original no se envía a Supabase.
             Antes de guardar movimientos importados, debés revisarlos y confirmar
             que están correctos.
+          </p>
+          <p>
+            Si compartís una imagen o PDF de una página desde otra app, elegís
+            primero Gasto o Ingreso. RIALES ejecuta OCR local y te pide revisar
+            monto, moneda, fecha y descripción antes de guardar. El original no
+            se envía a Supabase ni se conserva como adjunto.
           </p>
           <p>
             Si usás voz, la app convierte tu instrucción en datos para crear un

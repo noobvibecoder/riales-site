@@ -2715,6 +2715,29 @@ h1 {
   }
 }
 
+.google-play-badge-link {
+  display: inline-flex;
+  width: min(100%, 15rem);
+  border-radius: 0.75rem;
+  line-height: 0;
+  transition: transform 160ms ease;
+}
+
+.google-play-badge-link:hover {
+  transform: translateY(-1px);
+}
+
+.google-play-badge-link:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+.google-play-badge {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 440px) {
   .feature-grid {
     grid-template-columns: 1fr;
