@@ -3207,30 +3207,22 @@ h1 {
   font-weight: 900;
 }
 
-.callout-cash,
-.callout-health {
+.callout-net-worth,
+.callout-expenses {
   left: 0;
 }
 
-.callout-month,
 .callout-goals {
   right: 0;
 }
 
-.callout-cash {
-  top: 13%;
-}
-
-.callout-month {
-  top: 34%;
-}
-
-.callout-health {
-  top: 57%;
-}
-
+.callout-net-worth,
 .callout-goals {
-  top: 72%;
+  top: 18%;
+}
+
+.callout-expenses {
+  top: 58%;
 }
 
 @media (max-width: 720px) {
