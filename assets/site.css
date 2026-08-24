@@ -1530,6 +1530,18 @@ h1 {
   line-height: 1.4;
 }
 
+.pricing-comparison .plan-heading small {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.pricing-currency-note {
+  margin: 0.8rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
 .pricing-comparison tbody th {
   width: 30%;
   background: rgba(247, 250, 252, 0.88);
@@ -2470,6 +2482,18 @@ h1 {
     font-weight: 680;
     line-height: 1;
     text-align: right;
+  }
+
+  .pricing-mobile-price {
+    text-align: right;
+  }
+
+  .pricing-mobile-price small {
+    display: block;
+    margin-top: 0.28rem;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.74rem;
+    line-height: 1.2;
   }
 
   .pricing-includes-title {
