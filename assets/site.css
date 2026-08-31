@@ -2505,16 +2505,6 @@ h1 {
     line-height: 1.2;
   }
 
-  .pricing-includes-title {
-    margin: 0;
-    padding: 0.82rem 1.1rem 0.68rem;
-    border-top: 1px solid rgba(16, 48, 72, 0.08);
-    color: var(--brand-strong);
-    font-size: 0.88rem;
-    font-weight: 760;
-    line-height: 1.2;
-  }
-
   .pricing-mobile-plan dl {
     display: grid;
     margin: 0;
