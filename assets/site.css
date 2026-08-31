@@ -1474,7 +1474,7 @@ h1 {
 }
 
 .pricing-comparison thead th {
-  height: 6.6rem;
+  height: 7.5rem;
   background: linear-gradient(180deg, #f7fafc 0%, #edf5f8 100%);
 }
 
@@ -2474,6 +2474,15 @@ h1 {
     font-size: 1.02rem;
     font-weight: 680;
     line-height: 1.1;
+  }
+
+  .pricing-mobile-plan-name small {
+    display: block;
+    margin-top: 0.32rem;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 0.76rem;
+    font-weight: 560;
+    line-height: 1.25;
   }
 
   .pricing-mobile-plan header strong {
