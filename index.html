@@ -15,7 +15,7 @@
     <title>RIALES | Finanzas personales para Nicaragua</title>
     <meta
       name="description"
-      content="RIALES organiza tus finanzas y convierte los SMS bancarios de Android en gastos pendientes que revisás antes de guardar."
+      content="RIALES organiza tus cuentas en córdobas y dólares, tus movimientos y tus pagos; además convierte los SMS bancarios de Android en gastos pendientes que revisás antes de guardar."
     />
     <link rel="canonical" href="https://riales.app/" />
     <link rel="stylesheet" href="/assets/site.css?v=20260818e" />
@@ -52,9 +52,10 @@
         <div class="hero-copy-block">
           <h1>App de finanzas personales para Nicaragua.</h1>
           <p class="hero-copy">
-            Registrá ingresos y gastos, organizá tus pagos y proyectá tu
-            efectivo. RIALES también prepara automáticamente tus gastos desde
-            los SMS de tu banco.
+            Organizá tus cuentas en córdobas y dólares, registrá movimientos,
+            controlá tus pagos y proyectá tu efectivo.
+            RIALES también prepara automáticamente tus gastos desde los SMS de
+            tu banco.
           </p>
           <div class="hero-actions">
             <a class="google-play-badge-link" href="https://play.google.com/store/apps/details?id=app.riales" target="_blank" rel="noopener noreferrer" aria-label="Descargar RIALES en Google Play">
@@ -258,12 +259,13 @@
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M4.5 19.5h15" />
-                <path d="M7 16.5v-5M12 16.5v-9M17 16.5v-12" />
+                <rect x="3.5" y="5" width="17" height="14" rx="2.5" />
+                <path d="M3.5 9h17M7.5 14h3" />
+                <path d="m14 13 2-2 2 2M18 11v5M14 17l-2 2-2-2M10 19v-5" />
               </svg>
             </div>
-            <h3>Resumen y balance</h3>
-            <p>Revisá tu efectivo, ingresos, gastos y resultado del mes.</p>
+            <h3>Cuentas y transferencias</h3>
+            <p>Separá tus saldos en C$ y $, y transferí entre tus cuentas con la tasa de cambio que corresponda.</p>
           </article>
           <article class="feature">
             <div class="feature-icon" aria-hidden="true">
@@ -354,7 +356,7 @@
                       <strong
                         class="billing-price"
                         data-monthly="C$ 183"
-                        data-annual="C$ 1,538"
+                        data-annual="C$ 1,537"
                       >C$ 183</strong>
                     </th>
                   </tr>
@@ -367,11 +369,80 @@
                           <path d="M7 3.75h10a2 2 0 0 1 2 2v14.5l-2.1-1.15-2.1 1.15-2.1-1.15-2.1 1.15-2.1-1.15-2.1 1.15V5.75a2 2 0 0 1 2-2Z" />
                           <path d="M9 8h6M9 12h6M9 16h3" />
                         </svg>
-                        <span>Registros de ingresos/gastos</span>
+                        <span>Registros financieros</span>
                       </span>
                     </th>
-                    <td data-plan="Gratis"><span class="limit-value">100/mes</span></td>
-                    <td data-plan="Pro"><span class="limit-value">Ilimitado</span></td>
+                    <td data-plan="Gratis"><span class="limit-value">30/mes + anuncios</span></td>
+                    <td data-plan="Pro"><span class="limit-value">Sin límite</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="pricing-feature-label">
+                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <path d="M4 7.5h16v10H4z" />
+                          <path d="M7 7.5V5h10v2.5M8 12h8" />
+                        </svg>
+                        <span>Cuentas bancarias</span>
+                      </span>
+                    </th>
+                    <td data-plan="Gratis"><span class="limit-value">2</span></td>
+                    <td data-plan="Pro"><span class="limit-value">Sin límite</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="pricing-feature-label">
+                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <rect x="3.5" y="5" width="17" height="14" rx="2.5" />
+                          <path d="M3.5 9h17M7.5 14h3" />
+                        </svg>
+                        <span>Tarjetas de crédito</span>
+                      </span>
+                    </th>
+                    <td data-plan="Gratis"><span class="limit-value">1</span></td>
+                    <td data-plan="Pro"><span class="limit-value">Sin límite</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="pricing-feature-label">
+                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <path d="M5 5.5h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-7l-4.5 3v-3H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Z" />
+                          <path d="M7.5 10h9M7.5 13h5" />
+                        </svg>
+                        <span>Remitentes SMS</span>
+                      </span>
+                    </th>
+                    <td data-plan="Gratis"><span class="limit-value">1</span></td>
+                    <td data-plan="Pro"><span class="limit-value">Sin límite</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="pricing-feature-label">
+                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <path d="M7 3.75h7l4 4v10.5A2.75 2.75 0 0 1 15.25 21h-8.5A2.75 2.75 0 0 1 4 18.25V6.5A2.75 2.75 0 0 1 6.75 3.75H7Z" />
+                          <path d="M14 3.75v4h4" />
+                          <path d="M8 12.5h8M8 16h5" />
+                        </svg>
+                        <span>Cargas de PDF bancario</span>
+                      </span>
+                    </th>
+                    <td data-plan="Gratis"><span class="limit-value">Con anuncios</span></td>
+                    <td data-plan="Pro"><span class="limit-value">Sin límite</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <span class="pricing-feature-label">
+                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <path d="M8 4.75h8A3.25 3.25 0 0 1 19.25 8v8A3.25 3.25 0 0 1 16 19.25H8A3.25 3.25 0 0 1 4.75 16V8A3.25 3.25 0 0 1 8 4.75Z" />
+                          <path d="M9 12h6M12 9v6" />
+                          <path d="M7 2.75v2M12 2.75v2M17 2.75v2M7 19.25v2M12 19.25v2M17 19.25v2" />
+                        </svg>
+                        <span>Exportación de datos para IA</span>
+                      </span>
+                    </th>
+                    <td data-plan="Gratis">
+                      <span class="limit-value">Con anuncios</span>
+                    </td>
+                    <td data-plan="Pro"><span class="limit-value">Sin límite</span></td>
                   </tr>
                   <tr>
                     <th scope="row">
@@ -390,36 +461,6 @@
                       <span class="availability-mark is-available" aria-label="Sí">✓</span>
                     </td>
                   </tr>
-                  <tr>
-                    <th scope="row">
-                      <span class="pricing-feature-label">
-                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                          <path d="M7 3.75h7l4 4v10.5A2.75 2.75 0 0 1 15.25 21h-8.5A2.75 2.75 0 0 1 4 18.25V6.5A2.75 2.75 0 0 1 6.75 3.75H7Z" />
-                          <path d="M14 3.75v4h4" />
-                          <path d="M8 12.5h8M8 16h5" />
-                        </svg>
-                        <span>Cargas de PDF bancario</span>
-                      </span>
-                    </th>
-                    <td data-plan="Gratis"><span class="limit-value">Con anuncios</span></td>
-                    <td data-plan="Pro"><span class="limit-value">Ilimitado</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <span class="pricing-feature-label">
-                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                          <path d="M8 4.75h8A3.25 3.25 0 0 1 19.25 8v8A3.25 3.25 0 0 1 16 19.25H8A3.25 3.25 0 0 1 4.75 16V8A3.25 3.25 0 0 1 8 4.75Z" />
-                          <path d="M9 12h6M12 9v6" />
-                          <path d="M7 2.75v2M12 2.75v2M17 2.75v2M7 19.25v2M12 19.25v2M17 19.25v2" />
-                        </svg>
-                        <span>Exportación de datos para IA</span>
-                      </span>
-                    </th>
-                    <td data-plan="Gratis">
-                      <span class="limit-value">Con anuncios</span>
-                    </td>
-                    <td data-plan="Pro"><span class="limit-value">Ilimitado</span></td>
-                  </tr>
                 </tbody>
               </table>
               <div class="pricing-mobile-plans" aria-label="Planes completos de RIALES">
@@ -431,14 +472,20 @@
                   <p class="pricing-includes-title">Incluye:</p>
                   <dl>
                     <div>
-                      <dt>Registros de ingresos/gastos</dt>
-                      <dd>100/mes</dd>
+                      <dt>Registros financieros</dt>
+                      <dd>30/mes + anuncios</dd>
                     </div>
                     <div>
-                      <dt>Sin anuncios</dt>
-                      <dd>
-                        <span class="availability-mark is-unavailable" aria-label="No">×</span>
-                      </dd>
+                      <dt>Cuentas bancarias</dt>
+                      <dd>2</dd>
+                    </div>
+                    <div>
+                      <dt>Tarjetas de crédito</dt>
+                      <dd>1</dd>
+                    </div>
+                    <div>
+                      <dt>Remitentes SMS</dt>
+                      <dd>1</dd>
                     </div>
                     <div>
                       <dt>Cargas de PDF bancario</dt>
@@ -447,6 +494,12 @@
                     <div>
                       <dt>Exportación de datos para IA</dt>
                       <dd>Con anuncios</dd>
+                    </div>
+                    <div>
+                      <dt>Sin anuncios</dt>
+                      <dd>
+                        <span class="availability-mark is-unavailable" aria-label="No">×</span>
+                      </dd>
                     </div>
                   </dl>
                 </article>
@@ -458,29 +511,41 @@
                       <strong
                         class="billing-price"
                         data-monthly="C$ 183"
-                        data-annual="C$ 1,538"
+                        data-annual="C$ 1,537"
                       >C$ 183</strong>
                     </div>
                   </header>
                   <p class="pricing-includes-title">Incluye:</p>
                   <dl>
                     <div>
-                      <dt>Registros de ingresos/gastos</dt>
-                      <dd>Ilimitado</dd>
+                      <dt>Registros financieros</dt>
+                      <dd>Sin límite</dd>
+                    </div>
+                    <div>
+                      <dt>Cuentas bancarias</dt>
+                      <dd>Sin límite</dd>
+                    </div>
+                    <div>
+                      <dt>Tarjetas de crédito</dt>
+                      <dd>Sin límite</dd>
+                    </div>
+                    <div>
+                      <dt>Remitentes SMS</dt>
+                      <dd>Sin límite</dd>
+                    </div>
+                    <div>
+                      <dt>Cargas de PDF bancario</dt>
+                      <dd>Sin límite</dd>
+                    </div>
+                    <div>
+                      <dt>Exportación de datos para IA</dt>
+                      <dd>Sin límite</dd>
                     </div>
                     <div>
                       <dt>Sin anuncios</dt>
                       <dd>
                         <span class="availability-mark is-available" aria-label="Sí">✓</span>
                       </dd>
-                    </div>
-                    <div>
-                      <dt>Cargas de PDF bancario</dt>
-                      <dd>Ilimitado</dd>
-                    </div>
-                    <div>
-                      <dt>Exportación de datos para IA</dt>
-                      <dd>Ilimitado</dd>
                     </div>
                   </dl>
                 </article>
