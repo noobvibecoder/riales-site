@@ -1490,6 +1490,7 @@ h1 {
 .pricing-comparison .plan-heading {
   color: #ffffff;
   text-align: center;
+  vertical-align: top;
 }
 
 .pricing-comparison .plan-free {
@@ -1509,6 +1510,31 @@ h1 {
   color: #ffffff;
   font-size: 1.02rem;
   font-weight: 620;
+}
+
+.pricing-plan-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 1.5rem;
+}
+
+.pricing-comparison thead .pricing-recommended-badge,
+.pricing-mobile-plan header .pricing-recommended-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.35rem;
+  padding: 0.18rem 0.46rem;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  font-size: 0.66rem;
+  font-weight: 750;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .pricing-comparison thead strong {
@@ -2454,7 +2480,7 @@ h1 {
   .pricing-mobile-plan header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
-    align-items: end;
+    align-items: start;
     gap: 0.75rem;
     min-height: 4.8rem;
     padding: 1rem 1.1rem;
@@ -2476,13 +2502,8 @@ h1 {
     line-height: 1.1;
   }
 
-  .pricing-mobile-plan-name small {
-    display: block;
-    margin-top: 0.32rem;
-    color: rgba(255, 255, 255, 0.76);
-    font-size: 0.76rem;
-    font-weight: 560;
-    line-height: 1.25;
+  .pricing-mobile-plan .pricing-plan-title {
+    justify-content: flex-start;
   }
 
   .pricing-mobile-plan header strong {
@@ -2494,6 +2515,7 @@ h1 {
   }
 
   .pricing-mobile-price {
+    max-width: 10.75rem;
     text-align: right;
   }
 
