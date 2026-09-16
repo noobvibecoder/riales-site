@@ -12,6 +12,7 @@
   const button = form.querySelector('button[type="submit"]');
   let turnstileWidgetId = null;
   let turnstileToken = '';
+  let submitting = false;
 
   const setStatus = (message, type) => {
     status.textContent = message;
@@ -57,22 +58,16 @@
     captcha_failed: 'No pudimos validar la verificación anti-spam. Intentá de nuevo.',
     captcha_required: 'Marcá la verificación anti-spam antes de continuar.',
     captcha_unavailable: 'La verificación anti-spam no respondió. Intentá nuevamente.',
-    duplicate_email: 'Ya tenemos una solicitud con esos datos en la lista beta de RIALES.',
-    duplicate_phone: 'Ya tenemos una solicitud con esos datos en la lista beta de RIALES.',
-    invalid_device_type: 'Seleccioná si usás Android o iOS.',
     invalid_email: 'Revisá el correo electrónico.',
-    invalid_first_name: 'Revisá tu nombre.',
-    invalid_last_name: 'Revisá tu apellido.',
     invalid_payload: 'Revisá los datos del formulario.',
-    invalid_phone: 'Revisá el teléfono celular.',
     origin_not_allowed: 'Este formulario solo funciona desde el sitio oficial de RIALES.',
-    waitlist_full: 'La beta ya alcanzó el cupo disponible. Te avisaremos cuando abramos más espacios.',
+    waitlist_full: 'El registro anticipado alcanzó el cupo disponible. Intentá más adelante.',
   };
 
   const setupTurnstile = async () => {
     if (!supabaseUrl || !turnstileSiteKey || !turnstileSlot) {
       setButtonDisabled(true);
-      setStatus('La lista beta estará disponible cuando completemos la configuración segura.', null);
+      setStatus('El registro anticipado no está disponible en este momento. Intentá más tarde.', null);
       return;
     }
 
@@ -85,7 +80,6 @@
         sitekey: turnstileSiteKey,
         callback: (token) => {
           turnstileToken = token;
-          setStatus('Usaremos estos datos solo para contactarte sobre la beta.', null);
         },
         'expired-callback': () => {
           turnstileToken = '';
@@ -95,9 +89,10 @@
           turnstileToken = '';
           setStatus('No pudimos cargar la verificación anti-spam.', 'error');
         },
+        size: 'flexible',
       });
       setButtonDisabled(false);
-      setStatus('Usaremos estos datos solo para contactarte sobre la beta.', null);
+      setStatus('Usaremos tu correo solo para contactarte sobre RIALES en iOS.', null);
     } catch (_) {
       setButtonDisabled(true);
       setStatus('No pudimos cargar la verificación anti-spam.', 'error');
@@ -108,20 +103,16 @@
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
+    if (submitting || !supabaseUrl || !turnstileSiteKey) return;
     const data = new FormData(form);
     const payload = {
-      first_name: String(data.get('first_name') || '').trim(),
-      last_name: String(data.get('last_name') || '').trim(),
-      phone: String(data.get('phone') || '').trim(),
       email: String(data.get('email') || '').trim().toLowerCase(),
-      device_type: String(data.get('device_type') || '').trim(),
-      country: 'Nicaragua',
+      device_type: 'ios',
       turnstileToken,
     };
 
-    if (!payload.first_name || !payload.last_name || !payload.phone ||
-      !payload.email || !payload.device_type) {
-      setStatus('Completá todos los campos para entrar a la beta.', 'error');
+    if (!payload.email) {
+      setStatus('Ingresá tu correo para completar el registro anticipado.', 'error');
       return;
     }
 
@@ -130,6 +121,7 @@
       return;
     }
 
+    submitting = true;
     setButtonDisabled(true);
     setStatus('Guardando tu solicitud...', null);
 
@@ -147,8 +139,7 @@
         const code = String(result.code || 'server_error');
         const message = errorMessages[code] ||
           'No pudimos guardar tu solicitud. Intentá nuevamente en un momento.';
-        const type = code === 'duplicate_email' || code === 'duplicate_phone' ? 'success' : 'error';
-        setStatus(message, type);
+        setStatus(message, 'error');
         resetTurnstile();
         return;
       }
@@ -157,11 +148,12 @@
       window.dataLayer.push({ event: 'beta_signup_success' });
       form.reset();
       resetTurnstile();
-      setStatus('Listo. Ya estás en la lista para la beta de RIALES.', 'success');
+      setStatus('Recibimos tu solicitud de registro anticipado. Si hay acceso disponible para iOS, te contactaremos por correo.', 'success');
     } catch (_) {
       setStatus('No pudimos guardar tu solicitud. Intentá nuevamente en un momento.', 'error');
       resetTurnstile();
     } finally {
+      submitting = false;
       setButtonDisabled(false);
     }
   });
