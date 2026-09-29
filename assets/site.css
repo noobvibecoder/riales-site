@@ -3533,3 +3533,116 @@ h1 {
     backdrop-filter: blur(16px);
   }
 }
+
+
+/* A single set of plan lists keeps the mobile and desktop offer in sync. */
+.pricing-plans {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.pricing-plan {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line-strong);
+  border-radius: 1.25rem;
+  background: #fff;
+  color: var(--ink);
+}
+
+.pricing-plan-pro {
+  border-color: var(--brand-strong);
+  background: linear-gradient(150deg, #e9f7f5, #fff 60%);
+  box-shadow: 0 12px 36px rgba(16, 48, 72, .08);
+}
+
+.pricing-plan-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 750;
+}
+
+.pricing-plan-header p {
+  color: var(--muted-strong);
+  line-height: 1.5;
+}
+
+.pricing-plan-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: 1.5rem;
+}
+
+.pricing-plan-price strong {
+  font-family: Manrope, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  line-height: 1.2;
+  font-weight: 750;
+}
+
+.pricing-approx,
+.pricing-billing-detail {
+  font-size: .85rem;
+}
+
+.pricing-includes {
+  margin: 1.5rem 0 1rem;
+  font-weight: 700;
+}
+
+.pricing-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.pricing-benefits li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: .8rem;
+  line-height: 1.5;
+}
+
+.pricing-benefits li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: 800;
+}
+
+.pricing-plan-action {
+  display: block;
+  margin-top: auto;
+  padding: .9rem 1rem;
+  border: 1px solid var(--brand-strong);
+  border-radius: .75rem;
+  color: var(--brand-strong);
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pricing-plan-pro .pricing-plan-action {
+  color: #fff;
+  background: var(--brand-strong);
+}
+
+.pricing-price-note {
+  margin: 1rem 0 0;
+  color: var(--muted-strong);
+  font-size: .85rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .pricing-plans {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

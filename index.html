@@ -15,10 +15,10 @@
     <title>RIALES | Finanzas personales para Nicaragua</title>
     <meta
       name="description"
-      content="RIALES organiza tus cuentas en córdobas y dólares, tus movimientos y tus pagos; además convierte los SMS bancarios de Android en gastos pendientes que revisás antes de guardar."
+      content="RIALES organiza tus cuentas en córdobas y dólares, tus movimientos y tus pagos; además, con Pro, convierte los SMS bancarios de Android en gastos pendientes que revisás antes de guardar."
     />
     <link rel="canonical" href="https://riales.app/" />
-    <link rel="stylesheet" href="/assets/site.css?v=20260922a" />
+    <link rel="stylesheet" href="/assets/site.css?v=20260926a" />
     <script src="/assets/beta-config.js?v=20260922a" defer></script>
     <script src="/assets/community.js?v=20260922a" defer></script>
     <script src="/assets/beta.js?v=20260916a" defer></script>
@@ -59,7 +59,7 @@
           <p class="hero-copy">
             Organizá tus cuentas en córdobas y dólares, registrá movimientos,
             controlá tus pagos y proyectá tu efectivo.
-            RIALES también prepara automáticamente tus gastos desde los SMS de
+            Con Pro, RIALES también prepara automáticamente tus gastos desde los SMS de
             tu banco.
           </p>
           <div class="hero-community" id="hero-community" role="group" aria-label="Comunidad RIALES" hidden>
@@ -139,7 +139,7 @@
           <div class="sms-copy">
             <h2>Tus gastos bancarios, listos para registrar.</h2>
             <p class="section-lead">
-              Agregá el remitente de tu banco. Cuando llegue un SMS de compra,
+              Con Pro en Android, agregá el remitente de tu banco. Cuando llegue un SMS de compra,
               RIALES te enviará una notificación para que confirmés la
               clasificación de tu gasto y lo guardés, ¡sin complicaciones!
             </p>
@@ -398,196 +398,57 @@
           </div>
 
           <div class="pricing-body">
-            <div
-              class="pricing-comparison-wrap"
-              data-pricing-card
-              data-billing="monthly"
-              role="region"
-              aria-label="Comparación de planes de RIALES"
-            >
-              <table class="pricing-comparison">
-                <thead>
-                  <tr>
-                    <th scope="col" class="feature-heading">Concepto</th>
-                    <th scope="col" class="plan-heading plan-free">
-                      <span>Gratis</span>
-                      <strong>C$ 0</strong>
-                    </th>
-                    <th scope="col" class="plan-heading plan-pro">
-                      <span>Pro</span>
-                      <strong
-                        class="billing-price"
-                        data-monthly="C$ 183"
-                        data-annual="C$ 1,537"
-                      >C$ 183</strong>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      <span class="pricing-feature-label">
-                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                          <path d="M7 3.75h10a2 2 0 0 1 2 2v14.5l-2.1-1.15-2.1 1.15-2.1-1.15-2.1 1.15-2.1-1.15-2.1 1.15V5.75a2 2 0 0 1 2-2Z" />
-                          <path d="M9 8h6M9 12h6M9 16h3" />
-                        </svg>
-                        <span>Registros financieros</span>
-                      </span>
-                    </th>
-                    <td data-plan="Gratis"><span class="limit-value">30/mes</span></td>
-                    <td data-plan="Pro"><span class="limit-value">Sin límite</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <span class="pricing-feature-label">
-                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                          <path d="M4 7.5h16v10H4z" />
-                          <path d="M7 7.5V5h10v2.5M8 12h8" />
-                        </svg>
-                        <span>Cuentas bancarias</span>
-                      </span>
-                    </th>
-                    <td data-plan="Gratis"><span class="limit-value">2</span></td>
-                    <td data-plan="Pro"><span class="limit-value">Sin límite</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <span class="pricing-feature-label">
-                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                          <rect x="3.5" y="5" width="17" height="14" rx="2.5" />
-                          <path d="M3.5 9h17M7.5 14h3" />
-                        </svg>
-                        <span>Tarjetas de crédito</span>
-                      </span>
-                    </th>
-                    <td data-plan="Gratis"><span class="limit-value">1</span></td>
-                    <td data-plan="Pro"><span class="limit-value">Sin límite</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <span class="pricing-feature-label">
-                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                          <path d="M5 5.5h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-7l-4.5 3v-3H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Z" />
-                          <path d="M7.5 10h9M7.5 13h5" />
-                        </svg>
-                        <span>Remitentes SMS</span>
-                      </span>
-                    </th>
-                    <td data-plan="Gratis"><span class="limit-value">1</span></td>
-                    <td data-plan="Pro"><span class="limit-value">Sin límite</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <span class="pricing-feature-label">
-                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                          <path d="M7 3.75h7l4 4v10.5A2.75 2.75 0 0 1 15.25 21h-8.5A2.75 2.75 0 0 1 4 18.25V6.5A2.75 2.75 0 0 1 6.75 3.75H7Z" />
-                          <path d="M14 3.75v4h4" />
-                          <path d="M8 12.5h8M8 16h5" />
-                        </svg>
-                        <span>Cargas de PDF bancario</span>
-                      </span>
-                    </th>
-                    <td data-plan="Gratis">
-                      <span class="availability-mark is-unavailable" aria-label="No incluido">×</span>
-                    </td>
-                    <td data-plan="Pro"><span class="limit-value">Sin límite</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <span class="pricing-feature-label">
-                        <svg class="pricing-feature-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                          <path d="M8 4.75h8A3.25 3.25 0 0 1 19.25 8v8A3.25 3.25 0 0 1 16 19.25H8A3.25 3.25 0 0 1 4.75 16V8A3.25 3.25 0 0 1 8 4.75Z" />
-                          <path d="M9 12h6M12 9v6" />
-                          <path d="M7 2.75v2M12 2.75v2M17 2.75v2M7 19.25v2M12 19.25v2M17 19.25v2" />
-                        </svg>
-                        <span>Exportación de datos para IA</span>
-                      </span>
-                    </th>
-                    <td data-plan="Gratis">
-                      <span class="availability-mark is-unavailable" aria-label="No incluido">×</span>
-                    </td>
-                    <td data-plan="Pro"><span class="limit-value">Sin límite</span></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="pricing-mobile-plans" aria-label="Planes completos de RIALES">
-                <article class="pricing-mobile-plan mobile-plan-free">
-                  <header>
-                    <span>Gratis</span>
-                    <strong>C$ 0</strong>
-                  </header>
-                  <dl>
-                    <div>
-                      <dt>Registros financieros</dt>
-                      <dd>30/mes</dd>
-                    </div>
-                    <div>
-                      <dt>Cuentas bancarias</dt>
-                      <dd>2</dd>
-                    </div>
-                    <div>
-                      <dt>Tarjetas de crédito</dt>
-                      <dd>1</dd>
-                    </div>
-                    <div>
-                      <dt>Remitentes SMS</dt>
-                      <dd>1</dd>
-                    </div>
-                    <div>
-                      <dt>Cargas de PDF bancario</dt>
-                      <dd>
-                        <span class="availability-mark is-unavailable" aria-label="No incluido">×</span>
-                      </dd>
-                    </div>
-                    <div>
-                      <dt>Exportación de datos para IA</dt>
-                      <dd>
-                        <span class="availability-mark is-unavailable" aria-label="No incluido">×</span>
-                      </dd>
-                    </div>
-                  </dl>
-                </article>
-
-                <article class="pricing-mobile-plan mobile-plan-pro">
-                  <header>
-                    <span>Pro</span>
-                    <div class="pricing-mobile-price">
-                      <strong
-                        class="billing-price"
-                        data-monthly="C$ 183"
-                        data-annual="C$ 1,537"
-                      >C$ 183</strong>
-                    </div>
-                  </header>
-                  <dl>
-                    <div>
-                      <dt>Registros financieros</dt>
-                      <dd>Sin límite</dd>
-                    </div>
-                    <div>
-                      <dt>Cuentas bancarias</dt>
-                      <dd>Sin límite</dd>
-                    </div>
-                    <div>
-                      <dt>Tarjetas de crédito</dt>
-                      <dd>Sin límite</dd>
-                    </div>
-                    <div>
-                      <dt>Remitentes SMS</dt>
-                      <dd>Sin límite</dd>
-                    </div>
-                    <div>
-                      <dt>Cargas de PDF bancario</dt>
-                      <dd>Sin límite</dd>
-                    </div>
-                    <div>
-                      <dt>Exportación de datos para IA</dt>
-                      <dd>Sin límite</dd>
-                    </div>
-                  </dl>
-                </article>
-              </div>
+            <div class="pricing-plans" data-pricing-card data-billing="monthly"
+              aria-label="Planes de RIALES">
+              <article class="pricing-plan pricing-plan-pro" aria-labelledby="pricing-pro-title">
+                <header class="pricing-plan-header">
+                  <h3 id="pricing-pro-title">Pro</h3>
+                  <p>Automatizá tus registros y mirá más adelante.</p>
+                  <div class="pricing-plan-price" aria-live="polite" aria-atomic="true">
+                    <span class="pricing-approx">Aprox.</span>
+                    <strong class="billing-price" data-monthly="C$ 183" data-annual="C$ 1,537">C$ 183</strong>
+                    <span data-monthly="/ mes" data-annual="/ año">/ mes</span>
+                  </div>
+                  <p class="pricing-billing-detail" data-monthly="US$ 5, facturado mensualmente."
+                    data-annual="US$ 42, facturado una vez al año.">US$ 5, facturado mensualmente.</p>
+                </header>
+                <p class="pricing-includes">Todo lo incluido en Gratis, más:</p>
+                <ul class="pricing-benefits">
+                  <li>Dictado por voz de ingresos y gastos.</li>
+                  <li>Captura de SMS bancarios en Android, con remitentes ilimitados.</li>
+                  <li>Cuentas bancarias ilimitadas.</li>
+                  <li>Tarjetas de crédito ilimitadas.</li>
+                  <li>Proyección detallada de efectivo.</li>
+                  <li>Plan de deudas.</li>
+                  <li>Importación de PDF bancario.</li>
+                  <li>Exportación de datos para IA.</li>
+                </ul>
+                <a class="pricing-plan-action" href="https://play.google.com/store/apps/details?id=app.riales" target="_blank" rel="noopener noreferrer">Elegí Pro desde la app</a>
+              </article>
+              <article class="pricing-plan pricing-plan-free" aria-labelledby="pricing-free-title">
+                <header class="pricing-plan-header">
+                  <h3 id="pricing-free-title">Gratis</h3>
+                  <p>Tu día a día financiero, en un solo lugar.</p>
+                  <div class="pricing-plan-price"><strong>C$ 0</strong></div>
+                </header>
+                <p class="pricing-includes">Incluye:</p>
+                <ul class="pricing-benefits">
+                  <li>Registros financieros ilimitados.</li>
+                  <li>Efectivo y una cuenta adicional por moneda.</li>
+                  <li>Una tarjeta de crédito con compras, saldos y pagos.</li>
+                  <li>Registro de activos y deudas.</li>
+                  <li>Metas de ahorro.</li>
+                  <li>Calendario, recurrentes y recordatorios.</li>
+                  <li>Indicadores financieros.</li>
+                  <li>Plan del mes en Resumen, con su gráfico.</li>
+                </ul>
+                <a class="pricing-plan-action" href="https://play.google.com/store/apps/details?id=app.riales" target="_blank" rel="noopener noreferrer">Empezá gratis</a>
+              </article>
             </div>
+            <p class="pricing-price-note">
+              Los montos en córdobas son aproximados. La tienda muestra el precio
+              final y las condiciones antes de confirmar.
+            </p>
           </div>
         </div>
       </section>
