@@ -15,10 +15,11 @@
     <title>RIALES | Finanzas personales para Nicaragua</title>
     <meta
       name="description"
-      content="RIALES organiza tus cuentas en córdobas y dólares, tus movimientos y tus pagos; además, con Pro, convierte los SMS bancarios de Android en gastos pendientes que revisás antes de guardar."
+      content="Organizá tus finanzas en córdobas y dólares. Con RIALES Pro, consultá a Chelín, tu asistente IA, y descargá tu resumen mensual en PDF."
     />
     <link rel="canonical" href="https://riales.app/" />
     <link rel="stylesheet" href="/assets/site.css?v=20261002b" />
+    <link rel="stylesheet" href="/assets/chelin.css?v=20261007a" />
     <script src="/assets/beta-config.js?v=20260922a" defer></script>
     <script src="/assets/community.js?v=20260922a" defer></script>
     <script src="/assets/pricing.js?v=20260704a" defer></script>
@@ -35,6 +36,7 @@
       </a>
       <nav class="nav" aria-label="Principal">
         <a href="#sms">Automatización</a>
+        <a href="#chelin">Chelín</a>
         <a href="#funciones">Funciones</a>
         <a href="#precios">Precios</a>
         <a class="nav-cta" href="#descargar">Descargar</a>
@@ -43,6 +45,7 @@
         <summary aria-label="Abrir menú">Menú</summary>
         <div class="mobile-menu-panel">
           <a href="#sms">Automatización</a>
+          <a href="#chelin">Chelín</a>
           <a href="#funciones">Funciones</a>
           <a href="#precios">Precios</a>
           <a href="#descargar">Descargar</a>
@@ -177,6 +180,62 @@
                 <div class="sms-popup-action">Revisar gasto <span aria-hidden="true">→</span></div>
               </aside>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section chelin-section" id="chelin" aria-labelledby="chelin-title">
+        <div class="chelin-panel">
+          <div class="chelin-feature">
+            <div class="chelin-copy">
+              <p class="eyebrow">CONOCÉ A CHELÍN <span class="chelin-pro">★ PRO</span></p>
+              <h2 id="chelin-title">Tus finanzas,<br />en una conversación.</h2>
+              <p class="section-lead">
+                Preguntale a Chelín por tus gastos, deudas, presupuesto o metas de ahorro.
+                Tu asistente IA te ayuda a entender los datos que llevás en RIALES,
+                con preguntas escritas o dictadas con tu voz.
+              </p>
+              <ul class="chelin-prompts" aria-label="Ejemplos de consultas a Chelín">
+                <li>¿En qué gasté más este mes?</li>
+                <li>¿Qué deudas tengo pendientes?</li>
+                <li>¿Cómo van mis metas de ahorro?</li>
+              </ul>
+            </div>
+            <figure class="chelin-demo chelin-chat" aria-label="Ejemplo de conversación con Chelín">
+              <div class="chelin-chat-head"><span class="chelin-avatar" aria-hidden="true">C</span><strong>Chelín</strong><span class="chelin-chat-label">Tu asistente IA</span></div>
+              <p class="chelin-question">¿En qué gasté más este mes?</p>
+              <div class="chelin-answer">
+                <p>Tu categoría con más gastos fue <strong>alimentación</strong>:
+                  <strong>C$ 4,200.00</strong>, el 35% de tus gastos del mes.</p>
+                <dl class="chelin-example-totals">
+                  <div><dt>Alimentación</dt><dd>C$ 4,200.00</dd></div>
+                  <div><dt>Transporte</dt><dd>C$ 2,400.00</dd></div>
+                  <div><dt>Otros gastos</dt><dd>C$ 5,400.00</dd></div>
+                </dl>
+              </div>
+            </figure>
+          </div>
+          <div class="chelin-feature chelin-monthly-feature">
+            <div class="chelin-monthly-copy">
+              <div class="chelin-monthly">
+                <span class="chelin-pdf-label" aria-hidden="true">PDF</span>
+                <div>
+                  <h3>Tu mes completo, en un resumen.</h3>
+                  <p>El día 1 de cada mes generamos el PDF del mes anterior:
+                    gráficos, avances y puntos por revisar de tus finanzas.
+                    Descargalo desde la app.</p>
+                </div>
+              </div>
+              <a class="button chelin-button" href="#precios">Conocé todo lo que incluye Pro <span aria-hidden="true">→</span></a>
+            </div>
+            <figure class="chelin-demo chelin-report-preview" aria-label="Ejemplo de resumen mensual en PDF">
+              <div class="chelin-report-heading"><span>RESUMEN MENSUAL</span><span class="chelin-file-type">PDF</span></div>
+              <h3>Una mirada a todo tu mes.</h3>
+              <div class="chelin-report-insight">
+                <div class="chelin-goal-ring" role="img" aria-label="Meta de ahorro ilustrativa: 75% completado"><span>75%<small>de tu meta</small></span></div>
+                <div><strong>Tus avances, conectados.</strong><p>Ahorro, deudas, cuentas y presupuesto, según los módulos que usés.</p></div>
+              </div>
+            </figure>
           </div>
         </div>
       </section>
@@ -355,7 +414,7 @@
               <article class="pricing-plan pricing-plan-pro" aria-labelledby="pricing-pro-title">
                 <header class="pricing-plan-header">
                   <h3 id="pricing-pro-title">Pro</h3>
-                  <p>Automatiza tus registros.</p>
+                  <p>Automatizá tus registros y entendé tus finanzas.</p>
                   <div class="pricing-plan-price" aria-live="polite" aria-atomic="true">
                     <strong class="billing-price" data-monthly="C$ 183" data-annual="C$ 1,537">C$ 183</strong>
                     <span data-monthly="/mes" data-annual="/año">/mes</span>
@@ -363,6 +422,8 @@
                 </header>
                 <p class="pricing-includes">Todo lo incluido en Gratis, más:</p>
                 <ul class="pricing-benefits">
+                  <li>Chelín, tu asistente IA para consultar tus finanzas por texto o voz.</li>
+                  <li>Resumen mensual en PDF, generado el día 1 de cada mes.</li>
                   <li>Dictado por voz de ingresos y gastos.</li>
                   <li>Captura de SMS bancarios en Android, con remitentes ilimitados.</li>
                   <li>Cuentas bancarias ilimitadas.</li>
@@ -372,6 +433,7 @@
                   <li>Importación de PDF bancario.</li>
                   <li>Exportación de datos para IA.</li>
                 </ul>
+                <p class="chelin-pricing-note">Las funciones de IA requieren tu permiso para compartir datos con OpenAI y están sujetas a límites de uso.</p>
                 <a class="pricing-plan-action" href="#descargar">Elegí Pro desde la app</a>
               </article>
               <article class="pricing-plan pricing-plan-free" aria-labelledby="pricing-free-title">

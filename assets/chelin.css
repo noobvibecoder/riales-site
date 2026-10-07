@@ -1,0 +1,132 @@
+.chelin-section {
+  scroll-margin-top: 100px;
+}
+
+.chelin-panel {
+  display: grid;
+  gap: 32px;
+  padding: clamp(24px, 4vw, 56px);
+  border-radius: 32px;
+  background: #eef7f6;
+}
+
+.chelin-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 76px);
+  align-items: center;
+  min-width: 0;
+}
+
+.chelin-monthly-feature {
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.chelin-copy .eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  color: var(--cyan);
+}
+
+.chelin-pro {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 999px;
+  color: #775b12;
+  background: #faf1d9;
+  font-size: 11px;
+  letter-spacing: .06em;
+}
+
+.chelin-copy h2 {
+  margin-bottom: 20px;
+  font-size: clamp(30px, 3.5vw, 46px);
+  line-height: 1.14;
+  letter-spacing: -.045em;
+}
+
+.chelin-copy .section-lead {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.chelin-prompts {
+  list-style: none;
+  margin: 22px 0 26px;
+  padding: 0;
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.chelin-prompts li {
+  padding: 8px 0 8px 22px;
+  position: relative;
+}
+
+.chelin-prompts li::before {
+  content: "↗";
+  position: absolute;
+  left: 0;
+  color: var(--cyan);
+  font-weight: 800;
+}
+
+.chelin-monthly {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.chelin-pdf-label {
+  flex: 0 0 auto;
+  padding: 12px 8px;
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.chelin-monthly h3 { margin: 0 0 8px; font-size: 18px; }
+.chelin-monthly p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.chelin-button { margin-top: 24px; gap: 10px; white-space: normal; text-align: center; }
+
+.chelin-demo { min-width: 0; margin: 0; }
+.chelin-chat { padding: clamp(20px, 3vw, 28px); background: var(--panel); border-radius: 24px; box-shadow: 0 18px 48px #0933310d; }
+.chelin-chat-head { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+.chelin-avatar { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 12px; background: #e6f4f2; color: var(--cyan); font-weight: 800; }
+.chelin-chat-label { color: var(--muted); font-size: 11px; margin-left: auto; }
+.chelin-question { width: fit-content; max-width: 95%; margin: 0 0 24px auto; padding: 13px 16px; border-radius: 16px 16px 4px 16px; background: var(--panel-2); font-size: 14px; }
+.chelin-answer p { font-size: 14px; line-height: 1.8; margin-bottom: 18px; }
+.chelin-example-totals { display: grid; gap: 14px; margin: 0; }
+.chelin-example-totals > div { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; font-size: 12px; }
+.chelin-example-totals dd { margin: 0; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.chelin-report-preview { padding: clamp(20px, 3vw, 28px); border-radius: 24px; background: var(--ink); color: var(--panel); }
+.chelin-report-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 10px; font-weight: 700; letter-spacing: .09em; color: #a3c9c5; }
+.chelin-file-type { letter-spacing: .03em; }
+.chelin-report-preview h3 { margin: 15px 0 20px; font-size: 21px; line-height: 1.35; letter-spacing: -.025em; }
+.chelin-report-insight { display: flex; align-items: center; gap: 20px; }
+.chelin-goal-ring { flex: 0 0 92px; width: 92px; height: 92px; display: grid; place-items: center; border-radius: 50%; background: conic-gradient(#58d3bc 75%, #29404b 0); }
+.chelin-goal-ring span { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 76px; height: 76px; border-radius: 50%; background: var(--ink); font-size: 21px; font-weight: 700; }
+.chelin-goal-ring small { font-size: 10px; font-weight: 400; color: #c6d6da; }
+.chelin-report-insight strong { font-size: 13px; }
+.chelin-report-insight p { margin: 8px 0 0; font-size: 12px; line-height: 1.6; color: #c6d6da; }
+.chelin-pricing-note { color: var(--muted); font-size: 12px; line-height: 1.6; margin: 0 0 20px; }
+
+@media (max-width: 860px) {
+  .chelin-panel { border-radius: 24px; }
+  .chelin-feature { grid-template-columns: 1fr; }
+  .chelin-demo { width: 100%; max-width: 480px; justify-self: center; }
+}
+
+@media (max-width: 380px) {
+  .chelin-panel { padding: 22px 16px; }
+  .chelin-chat, .chelin-report-preview { padding: 18px; }
+  .chelin-report-insight { gap: 12px; }
+  .chelin-goal-ring { flex-basis: 80px; width: 80px; height: 80px; }
+  .chelin-goal-ring span { width: 66px; height: 66px; }
+}
