@@ -19,7 +19,7 @@
     />
     <link rel="canonical" href="https://riales.app/" />
     <link rel="stylesheet" href="/assets/site.css?v=20261002b" />
-    <link rel="stylesheet" href="/assets/chelin.css?v=20261007a" />
+    <link rel="stylesheet" href="/assets/chelin.css?v=20261013b" />
     <script src="/assets/beta-config.js?v=20260922a" defer></script>
     <script src="/assets/community.js?v=20260922a" defer></script>
     <script src="/assets/pricing.js?v=20260704a" defer></script>
@@ -187,57 +187,48 @@
 
       <section class="section chelin-section" id="chelin" aria-labelledby="chelin-title">
         <div class="chelin-panel">
-          <div class="chelin-feature">
-            <div class="chelin-copy">
-              <p class="eyebrow">CONOCÉ A CHELÍN <span class="chelin-pro">★ PRO</span></p>
-              <h2 id="chelin-title">Tus finanzas,<br />en una conversación.</h2>
-              <p class="section-lead">
-                Preguntale a Chelín por tus gastos, deudas, presupuesto o metas de ahorro.
-                Tu asistente IA te ayuda a entender los datos que llevás en RIALES,
-                con preguntas escritas o dictadas con tu voz.
-              </p>
-              <ul class="chelin-prompts" aria-label="Ejemplos de consultas a Chelín">
-                <li>¿En qué gasté más este mes?</li>
-                <li>¿Qué deudas tengo pendientes?</li>
-                <li>¿Cómo van mis metas de ahorro?</li>
-              </ul>
-            </div>
-            <figure class="chelin-demo chelin-chat" aria-label="Ejemplo de conversación con Chelín">
-              <div class="chelin-chat-head"><span class="chelin-avatar" aria-hidden="true">C</span><strong>Chelín</strong><span class="chelin-chat-label">Tu asistente IA</span></div>
-              <p class="chelin-question">¿En qué gasté más este mes?</p>
-              <div class="chelin-answer">
-                <p>Tu categoría con más gastos fue <strong>alimentación</strong>:
-                  <strong>C$ 4,200.00</strong>, el 35% de tus gastos del mes.</p>
-                <dl class="chelin-example-totals">
-                  <div><dt>Alimentación</dt><dd>C$ 4,200.00</dd></div>
-                  <div><dt>Transporte</dt><dd>C$ 2,400.00</dd></div>
-                  <div><dt>Otros gastos</dt><dd>C$ 5,400.00</dd></div>
-                </dl>
-              </div>
-            </figure>
+          <div class="chelin-copy">
+            <p class="eyebrow">
+              <svg class="chelin-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 1.5h10c3.6 0 5.5 2 5.5 5.5v8.5c0 3.8-2.2 5.5-5.5 5.5H7.7l-4.9 1.4q-1.8.6-1.1-1.2l1-2.9q-1.2-1.3-1.2-3.6V7c0-3.5 1.9-5.5 5.5-5.5Z" fill="#6D28D9" />
+                <g fill="#fff"><ellipse cx="8.7" cy="9.8" rx="1.2" ry="2.2" /><ellipse cx="15.3" cy="9.8" rx="1.2" ry="2.2" /></g>
+                <path d="M10 14q2 1.8 4 0" stroke="#fff" stroke-width="1.4" stroke-linecap="round" />
+              </svg>
+              CONOCÉ A CHELÍN <span class="chelin-pro">PRO</span>
+            </p>
+            <h2 id="chelin-title">Tu asistente IA<br />dentro de RIALES.</h2>
+            <p class="section-lead">Preguntá por tus finanzas, por texto o con tu voz.</p>
+            <ul class="chelin-benefits" aria-label="Qué podés hacer con Chelín">
+              <li>
+                <span class="chelin-benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.3 8.3 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.3 8.3 0 0 1-3.8-.9L3 21l1.9-5.7a8.3 8.3 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.3 8.3 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z" /><path d="M8 10h8M8 14h5" /></svg>
+                </span>
+                <div><h3>Entendé tus números</h3><p>Gastos, deudas, presupuesto y metas.</p></div>
+              </li>
+              <li>
+                <span class="chelin-benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="m16 3 5 5M10 14l3-1 9-9-2-2-9 9-1 3Z" /></svg>
+                </span>
+                <div><h3>Prepará tus registros</h3><p>Pedís, revisás y confirmás antes de guardar.</p></div>
+              </li>
+            </ul>
+            <a class="button chelin-button" href="#precios">Conocé RIALES Pro <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="chelin-feature chelin-monthly-feature">
-            <div class="chelin-monthly-copy">
-              <div class="chelin-monthly">
-                <span class="chelin-pdf-label" aria-hidden="true">PDF</span>
-                <div>
-                  <h3>Tu mes completo, en un resumen.</h3>
-                  <p>El día 1 de cada mes generamos el PDF del mes anterior:
-                    gráficos, avances y puntos por revisar de tus finanzas.
-                    Descargalo desde la app.</p>
-                </div>
+          <figure class="chelin-visual">
+            <div class="chelin-phone-stage">
+              <div class="device-mockup chelin-device">
+                <img class="real-screen" src="/assets/screen-chelin.png?v=20261013a" alt="Pantalla real de Chelín con una conversación de ejemplo sobre gastos y metas de ahorro, historial y entrada por texto o voz" width="430" height="897" loading="lazy" decoding="async" />
               </div>
-              <a class="button chelin-button" href="#precios">Conocé todo lo que incluye Pro <span aria-hidden="true">→</span></a>
             </div>
-            <figure class="chelin-demo chelin-report-preview" aria-label="Ejemplo de resumen mensual en PDF">
-              <div class="chelin-report-heading"><span>RESUMEN MENSUAL</span><span class="chelin-file-type">PDF</span></div>
-              <h3>Una mirada a todo tu mes.</h3>
-              <div class="chelin-report-insight">
-                <div class="chelin-goal-ring" role="img" aria-label="Meta de ahorro ilustrativa: 75% completado"><span>75%<small>de tu meta</small></span></div>
-                <div><strong>Tus avances, conectados.</strong><p>Ahorro, deudas, cuentas y presupuesto, según los módulos que usés.</p></div>
-              </div>
-            </figure>
-          </div>
+            <figcaption>Pantalla de la app · Datos de ejemplo</figcaption>
+          </figure>
+          <aside class="chelin-monthly" aria-labelledby="chelin-monthly-title">
+            <span class="chelin-pdf-label" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M8 13h8M8 17h5" /></svg>
+              <small>PDF</small>
+            </span>
+            <div><h3 id="chelin-monthly-title">Tu mes, en un solo reporte.</h3><p>Generá y descargá tu resumen mensual desde la app.</p></div>
+          </aside>
         </div>
       </section>
 

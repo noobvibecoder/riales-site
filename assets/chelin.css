@@ -4,129 +4,117 @@
 
 .chelin-panel {
   display: grid;
-  gap: 32px;
-  padding: clamp(24px, 4vw, 56px);
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  grid-template-rows: 1fr auto;
+  column-gap: clamp(32px, 5vw, 80px);
+  row-gap: 36px;
+  padding: clamp(32px, 4.8vw, 64px);
   border-radius: 32px;
-  background: #eef7f6;
+  background: var(--panel);
 }
 
-.chelin-feature {
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
-  gap: clamp(24px, 5vw, 76px);
-  align-items: center;
+.chelin-copy {
+  align-self: center;
   min-width: 0;
-}
-
-.chelin-monthly-feature {
-  padding-top: 32px;
-  border-top: 1px solid var(--line);
 }
 
 .chelin-copy .eyebrow {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
-  color: var(--cyan);
+  gap: 10px;
+  margin: 0 0 26px;
+  color: var(--muted-strong);
+  font-size: 11px;
+  letter-spacing: .1em;
 }
 
+.chelin-mark { width: 28px; height: 28px; flex: 0 0 auto; }
+
 .chelin-pro {
-  display: inline-block;
-  padding: 5px 9px;
-  border-radius: 999px;
+  padding: 5px 8px;
+  border: 1px solid #e8d6a7;
+  border-radius: 6px;
   color: #775b12;
   background: #faf1d9;
-  font-size: 11px;
+  font-size: 10px;
+  font-weight: 800;
   letter-spacing: .06em;
 }
 
 .chelin-copy h2 {
-  margin-bottom: 20px;
-  font-size: clamp(30px, 3.5vw, 46px);
-  line-height: 1.14;
-  letter-spacing: -.045em;
+  margin: 0 0 22px;
+  font-size: clamp(36px, 4.2vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -.05em;
 }
 
-.chelin-copy .section-lead {
-  font-size: 16px;
-  line-height: 1.65;
-}
+.chelin-copy .section-lead { margin: 0; font-size: 16px; line-height: 1.7; }
 
-.chelin-prompts {
+.chelin-benefits {
+  display: grid;
+  gap: 22px;
   list-style: none;
-  margin: 22px 0 26px;
+  margin: 32px 0;
   padding: 0;
-  color: var(--ink);
-  font-size: 15px;
 }
 
-.chelin-prompts li {
-  padding: 8px 0 8px 22px;
-  position: relative;
-}
+.chelin-benefits li { display: flex; align-items: flex-start; gap: 14px; }
+.chelin-benefit-icon { display: grid; flex: 0 0 24px; place-items: center; color: #007d77; padding-top: 2px; }
+.chelin-benefit-icon svg { width: 23px; height: 23px; }
+.chelin-benefits h3 { margin: 0 0 5px; font-size: 16px; line-height: 1.4; letter-spacing: -.015em; }
+.chelin-benefits p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.chelin-button { gap: 28px; min-height: 50px; padding: 14px 22px; font-size: 14px; white-space: normal; text-align: center; }
+.chelin-button span { font-size: 20px; font-weight: 400; }
+.chelin-button:focus-visible { outline: 3px solid #007d77; outline-offset: 5px; }
 
-.chelin-prompts li::before {
-  content: "↗";
-  position: absolute;
-  left: 0;
-  color: var(--cyan);
-  font-weight: 800;
-}
+.chelin-visual { grid-column: 2; grid-row: 1 / 3; align-self: center; min-width: 0; margin: 0; }
+.chelin-phone-stage { display: grid; place-items: center; padding: 10px 0; }
+.chelin-device { --device-width: min(100%, 18.5rem); transform: rotate(2deg); }
+.chelin-visual figcaption { margin-top: 22px; color: var(--muted); font-size: 10px; text-align: center; letter-spacing: .015em; }
 
 .chelin-monthly {
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
+  align-items: center;
+  gap: 16px;
+  grid-column: 1;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+  min-width: 0;
 }
 
-.chelin-pdf-label {
-  flex: 0 0 auto;
-  padding: 12px 8px;
-  border-radius: 10px;
-  background: var(--panel);
-  color: var(--cyan);
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.chelin-monthly h3 { margin: 0 0 8px; font-size: 18px; }
-.chelin-monthly p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
-.chelin-button { margin-top: 24px; gap: 10px; white-space: normal; text-align: center; }
-
-.chelin-demo { min-width: 0; margin: 0; }
-.chelin-chat { padding: clamp(20px, 3vw, 28px); background: var(--panel); border-radius: 24px; box-shadow: 0 18px 48px #0933310d; }
-.chelin-chat-head { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
-.chelin-avatar { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 12px; background: #e6f4f2; color: var(--cyan); font-weight: 800; }
-.chelin-chat-label { color: var(--muted); font-size: 11px; margin-left: auto; }
-.chelin-question { width: fit-content; max-width: 95%; margin: 0 0 24px auto; padding: 13px 16px; border-radius: 16px 16px 4px 16px; background: var(--panel-2); font-size: 14px; }
-.chelin-answer p { font-size: 14px; line-height: 1.8; margin-bottom: 18px; }
-.chelin-example-totals { display: grid; gap: 14px; margin: 0; }
-.chelin-example-totals > div { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; font-size: 12px; }
-.chelin-example-totals dd { margin: 0; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
-
-.chelin-report-preview { padding: clamp(20px, 3vw, 28px); border-radius: 24px; background: var(--ink); color: var(--panel); }
-.chelin-report-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 10px; font-weight: 700; letter-spacing: .09em; color: #a3c9c5; }
-.chelin-file-type { letter-spacing: .03em; }
-.chelin-report-preview h3 { margin: 15px 0 20px; font-size: 21px; line-height: 1.35; letter-spacing: -.025em; }
-.chelin-report-insight { display: flex; align-items: center; gap: 20px; }
-.chelin-goal-ring { flex: 0 0 92px; width: 92px; height: 92px; display: grid; place-items: center; border-radius: 50%; background: conic-gradient(#58d3bc 75%, #29404b 0); }
-.chelin-goal-ring span { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 76px; height: 76px; border-radius: 50%; background: var(--ink); font-size: 21px; font-weight: 700; }
-.chelin-goal-ring small { font-size: 10px; font-weight: 400; color: #c6d6da; }
-.chelin-report-insight strong { font-size: 13px; }
-.chelin-report-insight p { margin: 8px 0 0; font-size: 12px; line-height: 1.6; color: #c6d6da; }
+.chelin-pdf-label { display: grid; justify-items: center; gap: 3px; flex: 0 0 44px; color: #007d77; }
+.chelin-pdf-label svg { width: 25px; height: 25px; }
+.chelin-pdf-label small { font-size: 8px; font-weight: 800; letter-spacing: .07em; }
+.chelin-monthly h3 { margin: 0 0 5px; font-size: 15px; line-height: 1.4; letter-spacing: -.02em; }
+.chelin-monthly p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
 .chelin-pricing-note { color: var(--muted); font-size: 12px; line-height: 1.6; margin: 0 0 20px; }
 
 @media (max-width: 860px) {
-  .chelin-panel { border-radius: 24px; }
-  .chelin-feature { grid-template-columns: 1fr; }
-  .chelin-demo { width: 100%; max-width: 480px; justify-self: center; }
+  .chelin-panel { gap: 30px 24px; padding: 32px; }
+  .chelin-copy h2 { font-size: 40px; }
+  .chelin-copy .section-lead { font-size: 14px; }
+  .chelin-device { --device-width: min(100%, 16.5rem); }
+  .chelin-benefits { gap: 18px; margin: 26px 0; }
+  .chelin-benefits h3 { font-size: 14px; }
+  .chelin-benefits p { font-size: 12px; }
 }
 
-@media (max-width: 380px) {
-  .chelin-panel { padding: 22px 16px; }
-  .chelin-chat, .chelin-report-preview { padding: 18px; }
-  .chelin-report-insight { gap: 12px; }
-  .chelin-goal-ring { flex-basis: 80px; width: 80px; height: 80px; }
-  .chelin-goal-ring span { width: 66px; height: 66px; }
+@media (max-width: 640px) {
+  .chelin-section { scroll-margin-top: 88px; }
+  .chelin-panel { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; gap: 34px; padding: 32px 24px; border-radius: 24px; overflow: hidden; }
+  .chelin-copy .eyebrow { margin-bottom: 22px; font-size: 10px; }
+  .chelin-copy h2 { font-size: clamp(34px, 9.5vw, 46px); margin-bottom: 18px; }
+  .chelin-copy .section-lead { font-size: 14px; }
+  .chelin-benefits h3 { font-size: 15px; }
+  .chelin-benefits p { font-size: 12px; }
+  .chelin-button { width: 100%; justify-content: space-between; }
+  .chelin-visual { grid-column: 1; grid-row: auto; }
+  .chelin-device { --device-width: min(100%, 17rem); transform: none; }
+  .chelin-visual figcaption { margin-top: 12px; }
+  .chelin-monthly { padding-top: 24px; gap: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chelin-button { transition: none; }
 }
