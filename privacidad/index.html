@@ -101,9 +101,10 @@
             </li>
             <li>
               <strong>Datos de importación:</strong> estados de cuenta PDF que
-              seleccionás voluntariamente. El archivo original se procesa en el
-              dispositivo y RIALES no lo transmite ni lo conserva en Supabase;
-              solo se sincronizan los movimientos y decisiones que confirmás.
+              seleccionás voluntariamente. Con Pro y tu permiso de IA, el PDF completo
+              se transmite a través de Supabase a OpenAI para leer movimientos.
+              RIALES no conserva el original en Supabase. Debés revisar y
+              confirmar los movimientos antes de guardarlos.
             </li>
             <li>
               <strong>Comprobantes compartidos:</strong> una imagen o PDF de una
@@ -252,7 +253,7 @@
               indicadores, deudas, activos, efectivo y balance.
             </li>
             <li>
-              Procesar localmente archivos, comprobantes compartidos o entradas
+              Procesar archivos bancarios con IA autorizada, comprobantes compartidos o entradas
               de voz que vos seleccionás para sugerir movimientos y
               clasificaciones.
             </li>
@@ -324,12 +325,18 @@
         </article>
 
         <article class="legal-card" id="inteligencia-artificial">
-          <h2>Chelín, voz y resumen mensual con IA</h2>
+          <h2>Chelín, SMS, PDF y resumen mensual con IA</h2>
           <p>Al aceptar el permiso de IA, tus mensajes, audios y los datos necesarios
             sobre movimientos, comercios, deudas, cuentas, tarjetas, metas, activos
             y planes salen de RIALES y se envían a OpenAI. No se agregan correo,
             identificadores de cuenta ni notas de movimientos al contexto financiero.
-            Lo que escribas o dictes puede contener datos personales.</p>
+            Los PDF bancarios completos y los SMS de remitentes configurados también
+            se envían a OpenAI bajo el mismo permiso. Estos archivos y mensajes
+            pueden contener datos personales y números bancarios.</p>
+          <p>El permiso actualizado debe aceptarse nuevamente si autorizaste una
+            versión anterior. Aceptarlo no activa la captura de SMS ni envía
+            documentos anteriores. Revocarlo bloquea nuevos envíos en las tres
+            funciones.</p>
           <p>Podés retirar el consentimiento desde IA para detener nuevos envíos y
             resúmenes automáticos. Eso no elimina información ya procesada por OpenAI.</p>
           <p>Los chats se guardan siete días desde el último mensaje enviado.
@@ -395,8 +402,11 @@
         <article class="legal-card">
           <h2>7. PDF, comprobantes compartidos, SMS, voz y permisos</h2>
           <p>
-            Si seleccionás un PDF bancario, RIALES lo procesa localmente para
-            sugerir movimientos. El archivo original no se envía a Supabase.
+            Si seleccionás un PDF bancario con Pro y aceptás el permiso de IA,
+            RIALES envía el archivo completo a OpenAI a través de Supabase para
+            sugerir movimientos. El original se procesa en memoria y no se almacena
+            en Supabase; los campos extraídos se conservan hasta 24 horas para
+            recuperar la respuesta sin repetir el procesamiento.
             Antes de guardar movimientos importados, debés revisarlos y confirmar
             que están correctos.
           </p>
@@ -414,7 +424,9 @@
           <p>
             La captura por SMS bancario está disponible solo en Android.
             Si la activás, RIALES procesa solo SMS
-            nuevos de remitentes que agregaste en la app. El texto del SMS puede
+            nuevos de remitentes que agregaste en la app. Con Pro y el permiso común
+            de IA vigente, el remitente y texto se envían a OpenAI para interpretar
+            la compra. Los campos extraídos quedan revisables. El texto del SMS puede
             guardarse temporalmente en el dispositivo hasta convertirlo en un
             gasto pendiente o descartarlo, con un máximo de 200 mensajes o siete
             días y cifrado mediante Android Keystore. Los campos extraídos pueden
