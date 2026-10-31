@@ -317,7 +317,14 @@ h1 {
   .hero-community {
     max-width: 28.75rem;
     margin: 1.6rem auto 0;
-    gap: 1rem;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 0.45rem 0.75rem;
+    text-align: center;
+  }
+
+  .hero-community > div {
+    display: contents;
   }
 
   .hero-community-count {
@@ -325,17 +332,20 @@ h1 {
   }
 
   .hero-community-label {
+    margin: 0;
     font-size: 1rem;
   }
 
   .hero-community-copy {
+    grid-column: 1 / -1;
+    max-width: none;
     font-size: 0.75rem;
   }
 }
 
 @media (max-width: 355px) {
   .hero-community {
-    gap: 0.75rem;
+    column-gap: 0.5rem;
   }
 
   .hero-community-label {
