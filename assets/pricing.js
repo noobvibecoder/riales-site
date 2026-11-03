@@ -6,6 +6,8 @@
     return;
   }
 
+  billingToggle.disabled = false;
+
   const billingSwitch = billingToggle.closest('.billing-switch');
   const billingTextNodes = pricingCard.querySelectorAll('[data-monthly][data-annual]');
 
