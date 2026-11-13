@@ -33,6 +33,100 @@
     <link rel="alternate" hreflang="es-CO" href="https://riales.app/co/" />
     <link rel="alternate" hreflang="es-US" href="https://riales.app/us/" />
     <link rel="alternate" hreflang="es-HN" href="https://riales.app/hn/" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://riales.app/#organization",
+      "name": "RIALES",
+      "url": "https://riales.app/",
+      "logo": "https://riales.app/assets/logo-app.png",
+      "email": "contacto@riales.app"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://riales.app/#website",
+      "name": "RIALES",
+      "url": "https://riales.app/",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://riales.app/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://riales.app/us/#webpage",
+      "url": "https://riales.app/us/",
+      "name": "RIALES | Finanzas personales para Estados Unidos",
+      "description": "Organiza tus cuentas en dólares, registra movimientos, controla tus pagos y proyecta tu efectivo con RIALES.",
+      "inLanguage": "es-US",
+      "isPartOf": {
+        "@id": "https://riales.app/#website"
+      },
+      "mainEntity": {
+        "@id": "https://riales.app/#app"
+      }
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://riales.app/#app",
+      "name": "RIALES",
+      "url": "https://riales.app/",
+      "description": "Organiza tus cuentas en dólares, registra movimientos, controla tus pagos y proyecta tu efectivo con RIALES.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": [
+        "Android",
+        "iOS"
+      ],
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://riales.app/#organization"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "RIALES Gratis",
+          "price": "0.00",
+          "priceCurrency": "USD",
+          "url": "https://riales.app/us/#precios"
+        },
+        {
+          "@type": "Offer",
+          "name": "RIALES Pro mensual",
+          "price": "5.00",
+          "priceCurrency": "USD",
+          "description": "Precio base antes de impuestos. Suscripción mensual.",
+          "url": "https://riales.app/us/#precios",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "5.00",
+            "priceCurrency": "USD",
+            "billingDuration": "P1M",
+            "valueAddedTaxIncluded": false
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "RIALES Pro anual",
+          "price": "42.00",
+          "priceCurrency": "USD",
+          "description": "Precio base antes de impuestos. Suscripción anual.",
+          "url": "https://riales.app/us/#precios",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "42.00",
+            "priceCurrency": "USD",
+            "billingDuration": "P1Y",
+            "valueAddedTaxIncluded": false
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
     <link rel="stylesheet" href="/assets/site.css?v=20261002b&amp;mobile=20261031a" />
     <link rel="stylesheet" href="/assets/chelin.css?v=20261013b" />
     <link rel="stylesheet" href="/assets/countries.css?v=20261102b" />
