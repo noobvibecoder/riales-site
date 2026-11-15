@@ -2052,6 +2052,7 @@ h1 {
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
+  row-gap: 0.5rem;
   margin-left: auto;
 }
 
@@ -2778,7 +2779,7 @@ h1 {
   }
 
   .footer-contact-row {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     font-size: clamp(0.82rem, 3.35vw, 0.9rem);
   }
 

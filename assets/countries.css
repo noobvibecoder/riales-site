@@ -33,7 +33,7 @@
 .country-downloads .app-store-badge-link { align-items: center; min-height: 2.75rem; width: min(100%, 10rem); }
 .country-downloads .google-play-badge-link { width: min(100%, 11.25rem); }
 .country-home-footer { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem 2rem; min-height: 5rem; padding: 1.2rem 2rem; background: #00111c; color: #d0dce2; font-size: .75rem; }
-.country-home-footer nav { display: flex; gap: 1.25rem; }
+.country-home-footer nav { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem 1.25rem; }
 .country-home-footer a { text-decoration: none; }
 .country-home-footer a:hover { text-decoration: underline; }
 @media (min-width: 1500px) {
